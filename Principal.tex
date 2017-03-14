@@ -1,0 +1,115 @@
+%\documentclass[11pt,a4paper]{book}
+\documentclass[twoside,titlepage,paper=a4,fontsize=12pt,numbers=noenddot,cleardoublepage=empty,BCOR=5mm,openright,bibliography=totoc]{scrreprt}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,dsfont,gensymb} %mathtools,
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{slashed}
+\hypersetup{
+  unicode=true,
+  urlcolor=purple
+}
+\usepackage{graphics}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage[us,24hr]{datetime}
+%\usepackage{lineno}
+%\usepackage[latin1]{inputenc}
+
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{moreverb}
+
+
+%\usepackage{adjustbox}
+
+%\usepackage{draftwatermark}
+%\SetWatermarkText{{\ddmmyyyydate\today}}
+%\SetWatermarkScale{1.25}
+%\SetWatermarkAngle{60}
+
+%\usepackage{verbatimbox}
+
+
+%\bibliographystyle{unsrt}
+\bibliographystyle{josenourl}
+%\bibliographystyle{utphys}
+%\usepackage[hyperref=true,
+%            style=numeric-comp,
+%            citereset=chapter,
+%            maxcitenames=3,
+%            maxbibnames=100,
+%            block=none]{biblatex}
+%\addbibresource{Biblio.bib}
+
+\title{Search for $Z'$ bosons decaying into tau pairs in p-p Collisions at $\sqrt{s}=$13 TeV with the CMS Detector}
+\author{Carlos Felipe Gonz\'{a}lez Hern\'{a}ndez}
+\date{Compiled on {\ddmmyyyydate\today} at \currenttime}
+
+\begin{document}
+%\linenumbers 
+\markboth{VersionX}{\today}
+\markright{\today}
+%\maketitle
+\pagenumbering{Roman}
+
+\raggedbottom % Makes all pages the height of the text on that page
+
+\pagestyle{plain}
+% Title
+\include{Portadas/titlepage}
+\cleardoublepage
+
+%\include{Portadas/Quotes}
+%\cleardoublepage
+
+%Resume
+%\include{Resume}
+
+%\include{Remerciements}
+
+\tableofcontents
+\cleardoublepage
+
+\pagenumbering{arabic}
+
+%Outline-Introduction                                                                                                                                                                               
+\include{Intro}
+%\include{Outline}
+
+%Theoretical models
+\include{Chapter1}
+
+%LHC and CMS chapter
+\include{Chapter2}
+
+%Tau Leptons
+\include{Chapter3}
+
+%High Mass resonances decaying into tau leptons.
+%\include{Chapter4}
+
+%Analysis chapter
+\include{Chapter5}
+
+%Conclusions
+\include{Conclusions}
+
+%Appepdices
+%\appendix
+%\include{DataDriven}
+%\include{SigMod}
+%\include{WindowStudy}
+
+%\bibliography{Biblio}
+%\printbibliography
+%\listoffigures
+%\listoftables
+
+\end{document}

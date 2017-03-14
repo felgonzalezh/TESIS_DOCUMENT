@@ -1,0 +1,117 @@
+\begin{center}
+
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.4}{
+          \includegraphics{figuras/Logo_Uniandes_large}}
+\end{center}
+\end{figure}
+
+%\begin{minipage}[c]{0.9\textwidth}
+%\begin{center}
+%\includegraphics{figuras/Logo_Uniandes_large.jpg} 
+%\end{center}
+%\end{minipage}
+
+\vspace{0.3em}
+
+{\Large Thèse\\}
+
+\vspace{0.3em}
+
+{\small présentée devant\\}
+
+\vspace{0.3em}
+
+{\large l'Université Claude Bernard -- Lyon 1\\
+
+\vspace{0.2em}
+
+École Doctorale de Physique et d'Astrophysique\\}
+
+\vspace{2.0em}
+
+pour l'obtention du \\
+
+\vspace{1.3em}
+
+{\Large \textsc{diplôme de doctorat}\\
+\small Spécialité: Physique des Particules \\
+(arrêté du 7 août 2006)}
+
+\end{center}
+
+\vspace{0.5em}
+
+\begin{center} \LARGE{\textbf{Search for $Z'$ bosons decaying into tau pairs in the
+in p-p Collisions at $\sqrt{s}=$13 TeV with the CMS Detector}}\\
+\vspace{0.5em}
+\small a thesis presented by\\
+\Large Carlos Felipe Gonz\'{a}lez Hern\'{a}ndez
+\end{center}
+
+\vspace{0.5em}
+
+to\\
+The Department of Physics
+in partial fulfillment of the requirements
+for the degree of
+Doctor of Philosophy
+in the subject of
+Physics
+
+\begin{center}
+\large
+Advisor:\\
+Juan Carlos Sanabria Arenas PhD.
+\end{center}
+
+\begin{center}
+\large Universidad de los Andes. 
+\end{center}
+
+\vspace{0.8em}
+
+\begin{center} \small
+Soutenu publiquement le 21 octobre 2015 \\
+Jury \\
+\begin{tabular}{ l l }
+Patrizia Azzi & Rapportrice \\
+Stéphanie Beauceron & Directrice de thèse \\
+Sabine Crepé-Renaudin & Rapportrice \\
+Aldo Deandrea & Examinateur \\
+José Ocariz &  Examinateur \\
+Patrice Verdier & Président du jury \\
+\end{tabular}
+
+\end{center}
+
+\vspace{0.1em}
+%\vfill
+
+
+
+%\begin{titlepage}
+
+%\begin{textblock}{1}(0.144,0.0511)
+%Numéro d'ordre XXXXXXXX
+%\end{textblock}
+%\oddsidemargin 0.4cm \evensidemargin 0.4cm \topmargin 0.0cm
+%\textwidth 15.7cm \textheight 21.0cm \headsep 1.2cm \footskip 1.0cm
+
+%\pagestyle{myheadings}
+
+%\author{\textbf{CARLOS FELIPE GONZÁLEZ HERNÁNDEZ}}
+%\title{BÚSQUEDA DE HSCPs EN COLISIONES PROTÓN-PROTÓN A UNA ENERGÍA DE 7 TeV USANDO LA TÉCNICA DE TIEMPO DE
+%VUELO CON LOS DETECTORES DT DEL EXPERIMENTO CMS}
+%\degree{\textbf{Maestría en Ciencias - Física}}
+%\supervisor{\textbf{Juan Carlos Sanabria Ph.D.}\\
+%{\footnotesize Co-ASESOR:} \textbf{Andrés Felipe Osorio Ph.D.}}
+%\cosupervidor{\textbf{Camilo Carrillo}}
+%\institution{Universidad de los Andes}
+%\faculty{Facultad de Ciencias}
+%\department{Bogotá, Mayo de 2012}
+
+%\end{titlepage}
+
+

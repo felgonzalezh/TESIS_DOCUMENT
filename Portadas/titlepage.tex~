@@ -1,0 +1,84 @@
+\oddsidemargin 0.4cm \evensidemargin 0.4cm \topmargin 1.0cm
+\textwidth 15.7cm \textheight 21.0cm \headsep 1.2cm \footskip 1.0cm
+
+\begin{center}
+\textbf{Department of Physics}\\
+ High energy Physics Group\\
+ \large{UNIVERSIDAD DE LOS ANDES}
+\end{center}
+
+\vspace{1.0cm}
+
+\begin{figure}[ht]
+\begin{center}
+\scalebox{0.4}{
+          \includegraphics{figuras/Logo_Uniandes_large}}
+\end{center}
+\end{figure}
+
+\vspace{1.0em}
+
+%\vspace{0.3em}
+\begin{center} 
+\rule{\linewidth}{0.5 mm}
+\LARGE{\textbf{Search for $Z'$ bosons decaying into tau pairs in 
+p-p Collisions at $\sqrt{s}=$13 TeV with the CMS Detector}}
+\rule{\linewidth}{0.5 mm} 
+\end{center}
+
+\vspace{1.5em}
+\begin{center}
+\small Thesis presented by\\
+\Large \textbf{Carlos Felipe Gonz\'{a}lez Hern\'{a}ndez}
+\end{center}
+
+\vspace{1.0em}
+\begin{center}
+for the degree of\\
+DOCTOR EN CIENCIAS FÍSICA.
+%Doctor of Philosophy\\
+%in the subject of\\
+\vspace{1.5em}
+\end{center}
+
+\begin{center}
+\large {Supervised by:}\\
+\textbf{Juan Carlos Sanabria Arenas PhD.}
+\end{center}
+
+\vspace{1.5em}
+\begin{center}
+Bogotá, Colombia.\\
+2017
+\end{center}
+
+
+
+%\vfill
+
+
+
+%\begin{titlepage}
+
+%\begin{textblock}{1}(0.144,0.0511)
+%Numéro d'ordre XXXXXXXX
+%\end{textblock}
+%\oddsidemargin 0.4cm \evensidemargin 0.4cm \topmargin 0.0cm
+%\textwidth 15.7cm \textheight 21.0cm \headsep 1.2cm \footskip 1.0cm
+
+%\pagestyle{myheadings}
+
+%\author{\textbf{CARLOS FELIPE GONZÁLEZ HERNÁNDEZ}}
+%\title{BÚSQUEDA DE HSCPs EN COLISIONES PROTÓN-PROTÓN A UNA ENERGÍA DE 7 TeV USANDO LA TÉCNICA DE TIEMPO DE
+%VUELO CON LOS DETECTORES DT DEL EXPERIMENTO CMS}
+%\degree{\textbf{Maestría en Ciencias - Física}}
+%\supervisor{\textbf{Juan Carlos Sanabria Ph.D.}\\
+%{\footnotesize Co-ASESOR:} \textbf{Andrés Felipe Osorio Ph.D.}}
+%\cosupervidor{\textbf{Camilo Carrillo}}
+%\institution{Universidad de los Andes}
+%\faculty{Facultad de Ciencias}
+%\department{Bogotá, Mayo de 2012}
+
+%\end{titlepage}
+
+
