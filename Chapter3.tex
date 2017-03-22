@@ -1,16 +1,120 @@
 \chapter[Particle Identification and Event Reconstruction]{Particle Identification and Event Reconstruction}
 \label{chap:ParticleID}
 
-\section{Jets Identification}
+
+
+
+\section{Particle Flow}
+\label{sec:PF}
+
+The Particle Flow (PF) algorithm \cite{CMS-PAS-PFT-09-001} identifies and reconstructs all the stable-visible particles produced in the hard interaction
+combining the information collected by the CMS sub-detectors in order to optimaze the determination of their direction, energy and type. The PF 
+technique performs the global event recostruction clasifying all the visible particles into five mutually exclusive groups: photons, 
+neutral hadrons, charged hadrons, electrons and muons. This list of individual particles (called ``PF Candidates'') are used 
+as an input in further algorithms to reconstruct higher level objects such as jets, missing transverse energy and tau-leptons. \\
+
+The capabilities of the CMS detector are ideal for using the PF technique as a global event reconstruction. The high 
+granularity of the inner tracker and the ECAL, the hermiticity of the HCAL, the high performance of the muon system 
+along with the strong and magnetic field provided by the superconducting solenoid allow PF technique to reach a 
+high performance reconstruction in all physics objects, in particular jets and MET \cite{CMS-PAS-PFT-10-001}.\\
+
+%and the ECAL, the hermicity of the HCand clusters with high efficiency.
+
+The PF technique is performed in three steps: First, the algorithm builts the so-called ``PF elements'' which consist of tracks 
+reconstructed in the Inner Tracker, energy clusters recostructed in the calorimeters and tracks observed in the muon system;
+the second stage addresses the topological association of the basic PF elements each other using the ``link-algorithm''; finally,
+individual particles are identified and reconstructed from the content of the linked elements. \\
+
+%Photons are reconstructed from its energy deposits in the ECAL (See section \ref{sec:Photon});
+%electrons are reconstructed by the combination of tracks and the energy deposits in the ECAL of the electron itself and the 
+%Brestrahlung radiation produced by its interaction with the tracker material (See section \ref{sec:Electron}); Muon reconstruction 
+%is performed connecting together the tracks reconstructed by the inner tracker and the muon system, it will be described in section \ref{sec:Muon};
+
+\subsection{Track Reconstruction}
+\label{subsec:TrackReco}
+The track reconstruction in the inner tracker is one of the most important keys of the global event reconstruction. The inner tracker, due to its
+high granularity, provides a precise recontruction of the charged-particle tracks and consecuently give rise to a accurate reconstruction 
+of the primary vertex, identifying it from the pileup interactions. \\
+
+The track reconstruction is performed in several steps by a process called \textit{iterative tracking}. In the initial iterations, 
+the iterative tracking applies a tight criteria in order to search for tracks easy to identify (tracks 
+with relative high $\textrm{p}_{\textrm{T}}$ produced near the interaction region). In the next iterations, the hits 
+unambiguously assigned to a track are removed. This reduces the combinatorial complexity in the subsectuent iterations 
+and allows to loosen the selection criteria to identify the tracks associated with low $\textrm{p}_{\textrm{T}}$. In the first three iterations, 
+the iterative tracking reaches an efficiency up to 99.5$\%$ for isolated muons and larger than 90$\%$ for 
+charged hadrons in jets \cite{CMS-PAS-PFT-09-001}. Last iterations relaxes the constrains on the origin of the vertex 
+to find tracks originated outside the beam spot (secondary charged particles from photon conversions in the tracker material) 
+and to reconstrcut the remaining tracks. Each iteration could be summarized in 4 steps:\\
+
+\begin{itemize}
+ \item Tracks are seeded using 2 o 3 hits, giving rise to the initial track candidates and their initial trajectory parameters.
+ \item The track is extrapolated outwards of the inner tracker with the purpose to find additional hits associated to the track. The track finder 
+ algorithm is based on the Kalman filter.
+ \item A fit on the track is performed to estimate the all the possible information of the trajectory.
+ \item Tracks are selected on basis of the quality flags, whether they are compatible with some 
+ criterias such as $\chi^{2}$ and if they are originated from the primary vertex.
+\end{itemize}
+
+The efficiency estimation of the track reconstruction is performed comparing the reconstructed tracks with MC samples which 
+contains just single muons or pions. Muons are ideal for this purpose since muons, unlike electrons, have a negligible energy loss
+through bremsstrahlung radiation due to the interaction with the tracker material. Unlike muons, charged pions (a tau decay product) do not 
+only undergo Coulomb scattering but it (as all hadrons) also lose energy though strong interactions with the tracker material. These nuclear 
+interactions are not taken into account int the track Finder algorithm reducing the track reconstruction effciency. The tracking efficiency 
+is higher than 99$\%$ for isolated muons with a $\textrm{p}_{\textrm{T}}>1 \textrm{GeV}$ while for charged pions is close 
+to 95$\%$ for $\textrm{p}_{\textrm{T}}>1 \textrm{GeV}$ \cite{Chatrchyan:2014fea} (See figure \ref{fig:Track_Efficiencies})
+
+\begin{figure}%[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{figuras/Chapter3/TrackEff_Muon_pt.png}
+    \includegraphics[width=0.4\textwidth]{figuras/Chapter3/TrackEff_Muon_eta.png}\hfill
+    \includegraphics[width=0.4\textwidth]{figuras/Chapter3/TrackEff_Pion_pt.png}
+    \includegraphics[width=0.4\textwidth]{figuras/Chapter3/TrackEff_Pion_eta.png}
+    \caption{Efficiency of reconstructed track as function of $p_{\textrm{T}}$ and $\eta$ for 
+    muons (top) and charged pions (bottom). Figure taken from \cite{Chatrchyan:2014fea}}
+    \label{fig:Track_Efficiencies}
+  \end{center}
+\end{figure}
+
+\subsection{Clustering}
+\label{subsec:Clustering}
+Other of the main parts for the PF technique, in addition to the tracks, is the reconstruction of the 
+calorimetric clusters. The calorimeter clusters are used to: identify the energy deposits which come from 
+%neutral-visible particles, such as photons and neutral hadrons, and discriminate them from the energy deposits 
+photons and neutral hadrons, and discriminate them from the energy deposits due charged hadrons; 
+besides it reconstructs the electrons along with their associated Bremsstrahlung radiation;
+and helps to determinate the track parameters of the charged hadrons which were not measured 
+accurate from the track reconstruction (for example, charged hadrons that are outside of the tracker acceptance, or 
+charged hadrons with high $p_{\textrm{T}}$). The clustering is performed for 
+each part of the CMS calorimeter system: ECAL, HCAL, HF and PS.\\
+
+The clustering algorithm proceeds from the ``cluster seeds'' identified at local level. Cluster seeds are selected 
+from individual calorimeter cells which have a maxima energy deposits above a given energy. Once the cluster seed is selected,
+the algorithm searches for energy deposits in the  boundarying cells with a common side. The algorithm aggregates to the cluster 
+at least one additional cell with a maxima energy higher than two standard desviations from the electronic noise: for the ECAL, 80 $\textrm{MeV}$ in 
+barrel and up to 300 $\textrm{MeV}$ in the end-caps for the ECAL, while 800 $\textrm{MeV}$ for the HCAL \cite{CMS-PAS-PFT-09-001}. The 
+combination of these cells are know as ``topological clusters''. The topological clusters are taken as ``particle flow clusters'' seeds
+in order to solve any overlapping among clusters.
+
+\subsection{Link algorithm}
+\label{subsec:Linkalgorithm}
+As mentioned earlier, a particle is expected to produce signatures in diferent subdetectors, giving rise to one or more 
+so-called PF elements: tracks, clusters and tracks in the muon system; for example, 
+a charged hadron, as the pion, would produce a track in the inner tracker along with 
+energy deposits in both calorimeters. PF uses the \textit{link algorithm} to perform a topological combination 
+of the PF elements recontructed in the different subdetectors with the aim of reconstructing fully each particle in the event. 
+%of the PF elements recontructed in the different subdetectors with the aim of identifying the type of each particle in the event. 
+
+
+\section{Jets Reconstruction}
 \label{sec:Jet}
 
 
-% Jets are reconstructed with the Particle Flow technique (PF) using the anti$-$k$_{T}$ algorithm \cite{Alwall:2011uj}. 
-The PF technique \cite{ParticleFlow} takes the information collected by the CMS subdetectors in order to identify and reconstruct 
-all the vissible final-state particles (electrons, muons, photons, charged hadrons and neutral hadrons) produced 
-in the hard interaction. The PF technique reconstructs the jet constituents individually from the 
-combination of tracks and calorimeter clusters. Then, the jet reconstruction is performed 
-with the anti$-$k$_{T}$ algorithm \cite{AntiKTAlgorithm} iterating over all the PF objects, using a distance parameter of 
+% Jets are reconstructed with the Particle Flow technique (PF) using the anti$-$k$_{T}$ algorithm \cite{Alwall:2011uj}.
+The PF technique \cite{CMS-PAS-PFT-09-001} takes the information collected by the CMS subdetectors in order to identify and reconstruct
+all the vissible final-state particles (electrons, muons, photons, charged hadrons and neutral hadrons) produced
+in the hard interaction. The PF technique reconstructs the jet constituents individually from the
+combination of tracks and calorimeter clusters. Then, the jet reconstruction is performed
+with the anti$-$k$_{T}$ algorithm \cite{AntiKTAlgorithm} iterating over all the PF objects, using a distance parameter of
 $\Delta R = 0.4$ in the $\eta-\phi$ plane, where $\Delta R = \sqrt{(\Delta \phi)^2+(\Delta \eta)^2}$.\\
 
 \begin{figure}%[!Hhtbp]
@@ -23,27 +127,27 @@ $\Delta R = 0.4$ in the $\eta-\phi$ plane, where $\Delta R = \sqrt{(\Delta \phi)
 
 The four-momentum of the reconstructed jet is the addition of the four-momenta of all the PF objects associated to the jet. However
 due to detector responses and experimental effects, the PF jet four-momentum does not correspond to the four-momentum
-at parton or hadron level; therefore, jet energy corrections (JEC) are required. Figure \ref{fig:JEC_levels} shows the different 
-levels of corrections which are applied in a fixed sequence. Each correction corresponds to a multiplicative factor $C$ on 
+at parton or hadron level; therefore, jet energy corrections (JEC) are required. Figure \ref{fig:JEC_levels} shows the different
+levels of corrections which are applied in a fixed sequence. Each correction corresponds to a multiplicative factor $C$ on
 the PF jet four-momentum ($p_{\mu}^{raw}$):
 
 \begin{equation}
  p_{\mu}^{corrected} = C \times p_{\mu}^{raw}
 \end{equation}
 
-The first step in the chain is the ``L1 corrections'' (also refered as ``pileup offset''). It attends the additional tracks and the excess of energy deposits 
-in the calorimeters due pile-up events . The amount of the pile-up contribution 
-to the jet energy can be estimated from the global per-event $p_{T,offset}$ density $\rho$ and the jet area \cite{JECpileup}. This amount 
+The first step in the chain is the ``L1 corrections'' (also refered as ``pileup offset''). It attends the additional tracks and the excess of energy deposits
+in the calorimeters due pile-up events . The amount of the pile-up contribution
+to the jet energy can be estimated from the global per-event $p_{T,offset}$ density $\rho$ and the jet area \cite{JECpileup}. This amount
 is obtained from simulated dijet events with and without PU. \\
 
-The second level of JEC is related with the detector response to hadrons (L2L3 MC-truth corrections), correcting 
+The second level of JEC is related with the detector response to hadrons (L2L3 MC-truth corrections), correcting
 the non-uniformity in $\eta$ and the non-linearity in $p_{T}$. The simulated jet response is determinated
 with QCD-multijet events generated with Pythia and with a simulation of the CMS detector based
 on Geant4.\\
 
-After these steps, the L2L3 Residual corrections are applied in order to address the remaining difference 
-between the jet response on data and MC (of the order of $1 \%$). This corrections are achieved with data-driven methods, using 
-dijet samples for $\eta$-dependent corrections and $\gamma /$Z+jets samples for the corrections to $p_{T}$. The last stage 
+After these steps, the L2L3 Residual corrections are applied in order to address the remaining difference
+between the jet response on data and MC (of the order of $1 \%$). This corrections are achieved with data-driven methods, using
+dijet samples for $\eta$-dependent corrections and $\gamma /$Z+jets samples for the corrections to $p_{T}$. The last stage
 of the JEC (L5) is optional and it accounts the jet-flavor corrections. \\
 
 %An efficiency larger than 80% is obtained for jets with a p T > 20 GeV/c. The 100% plateau is reached above
@@ -80,7 +184,7 @@ of the JEC (L5) is optional and it accounts the jet-flavor corrections. \\
 %particles than jets made from the sole calorimeter information, in energy, direction
 %and content. It is the purpose of this section to quantify this statement.
 
-%($c\tau > 1$ cm) 
+%($c\tau > 1$ cm)
 
 
 %\subsection{Online Identification}
@@ -89,29 +193,36 @@ of the JEC (L5) is optional and it accounts the jet-flavor corrections. \\
 %\subsection{Offline Identification}
 %\label{subsec:JetReconstruction}
 
-\section{Electron Identification}
-\label{sec:Electron}
+
 
 %\subsection{Online Identification}
 %\label{subsec:ElectronTrigger}
 
 %\subsection{Offline Identification}
 %\label{subsec:ElectronReconstruction}
-
-\section{Muon Identification}
-\label{sec:Muon}
-
-\section{B-Jet Identification}
-\label{sec:BJet}
-
 \section{MET}
 \label{sec:MET}
+
+\section{Photon Reconstruction}
+\label{sec:Photon}
+
+
+\section{Muon Reconstruction}
+\label{sec:Muon}
+
+\section{Electron Reconstruction}
+\label{sec:Electron}
+
+\section{B-Jet Reconstruction}
+\label{sec:BJet}
+
+
 
 \section{Tau Lepton}
 \label{sec:Tau}
 
-\subsection{Tau Identification}
-\label{subsec:TauTrigger}
+%\subsection{Tau Reconstruction}
+%\label{subsec:TauTrigger}
 
 \subsection{Tau Reconstruction}
 \label{subsec:TauReconstruction}
@@ -126,4 +237,4 @@ of the JEC (L5) is optional and it accounts the jet-flavor corrections. \\
 \label{subsec:FakeRates}
 
 \subsection{Perspectives Run III}
-\label{subsec:Perspectives}
+\label{subsec:Perspectives} 
