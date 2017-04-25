@@ -7,21 +7,42 @@
 \section{Particle Flow}
 \label{sec:PF}
 
-The Particle Flow (PF) algorithm \cite{CMS-PAS-PFT-09-001} identifies and reconstructs all the stable-visible particles produced in the hard interaction
-combining the information collected by the CMS sub-detectors in order to optimaze the determination of their direction, energy and type. The PF 
-technique performs the global event recostruction clasifying all the visible particles into five mutually exclusive groups: photons, 
+The Particle Flow (PF) algorithm \cite{CMS-PAS-PFT-09-001} identifies and reconstructs all the stable-visible particles produced in the hard interaction, by
+combining the information collected by the CMS sub-detectors in order to optimize the determination of their direction, energy and type. The PF 
+technique performs the global event reconstruction classifying all the visible particles into five mutually exclusive groups: photons, 
 neutral hadrons, charged hadrons, electrons and muons. This list of individual particles (called ``PF Candidates'') are used 
 as an input in further algorithms to reconstruct higher level objects such as jets, missing transverse energy and tau-leptons. \\
 
+%The capabilities of the CMS detector are ideal for using the PF technique as a global event reconstruction. The high 
+%granularity of the inner tracker and the ECAL, the hermiticity of the HCAL, the high performance of the muon system 
+%along with the strong magnetic field provided by the superconducting solenoid allow PF technique to reach a 
+%high performance reconstruction for the individual particles produced in the hard interaction, even for charged particles
+%with very low $\textrm{p}_{\textrm{T}}$ of an order of 100 MeV; this leads to an improvement in the energy jet corrections. Besides, the high performance of the individual particle reconstruction 
+%allows to discriminate between nearby tracks such as the decay products of the tau-lepton. The main advantage 
+%to use the PF technique as a global event reconstruction is the high performance reconstruction 
+%for all the physics objects, in particular jets, MET and tau-leptons \cite{CMS-PAS-PFT-10-001}.\\
+
+
 The capabilities of the CMS detector are ideal for using the PF technique as a global event reconstruction. The high 
 granularity of the inner tracker and the ECAL, the hermiticity of the HCAL, the high performance of the muon system 
-along with the strong and magnetic field provided by the superconducting solenoid allow PF technique to reach a 
-high performance reconstruction in all physics objects, in particular jets and MET \cite{CMS-PAS-PFT-10-001}.\\
+along with the strong magnetic field provided by the superconducting solenoid allow PF technique to reach a 
+high performance reconstruction for the individual particles produced in the hard interaction, even for charged particles
+with very low $\textrm{p}_{\textrm{T}}$ (of the order of 100 MeV). This leads to an improvement in the global event 
+reconstruction since, instead of using special sub-detectors designed to reconstruct an specific 
+object (like alternative event reconstruction techniques), PF algorithm uses a more completed information collected 
+by all CMS sub-detectors, avoiding any ambiguity to reconstruct the object. Besides, the 
+individual particle reconstruction provides a detailed information 
+about compositeness of high level objects like jets, allowing PF technique
+to determinate the hadron profile of the jet and its origin, which is important for the tau-identification. 
+Additionally, the high performance of individual particle reconstruction allows to discriminate between nearby tracks 
+such as the decay products of the tau-lepton. The main advantage 
+to use the PF technique as a global event reconstruction is the high performance reconstruction 
+for all the physics objects, in particular jets, MET and tau-leptons \cite{CMS-PAS-PFT-10-001}.\\
 
 %and the ECAL, the hermicity of the HCand clusters with high efficiency.
 
-The PF technique is performed in three steps: First, the algorithm builts the so-called ``PF elements'' which consist of tracks 
-reconstructed in the Inner Tracker, energy clusters recostructed in the calorimeters and tracks observed in the muon system;
+The PF technique is performed in three steps: First, the algorithm builds the so-called ``PF elements'' which consist of tracks 
+reconstructed in the Inner Tracker, energy clusters reconstructed in the calorimeters and tracks observed in the muon system;
 the second stage addresses the topological association of the basic PF elements each other using the ``link-algorithm''; finally,
 individual particles are identified and reconstructed from the content of the linked elements. \\
 
@@ -33,35 +54,48 @@ individual particles are identified and reconstructed from the content of the li
 \subsection{Track Reconstruction}
 \label{subsec:TrackReco}
 The track reconstruction in the inner tracker is one of the most important keys of the global event reconstruction. The inner tracker, due to its
-high granularity, provides a precise recontruction of the charged-particle tracks and consecuently give rise to a accurate reconstruction 
+high granularity, provides a precise reconstruction of the charged-particle tracks and consequently give rise to an accurate reconstruction 
 of the primary vertex, identifying it from the pileup interactions. \\
 
 The track reconstruction is performed in several steps by a process called \textit{iterative tracking}. In the initial iterations, 
 the iterative tracking applies a tight criteria in order to search for tracks easy to identify (tracks 
 with relative high $\textrm{p}_{\textrm{T}}$ produced near the interaction region). In the next iterations, the hits 
-unambiguously assigned to a track are removed. This reduces the combinatorial complexity in the subsectuent iterations 
+unambiguously assigned to a track are removed. This reduces the combinatorial complexity in the subsequent iterations 
 and allows to loosen the selection criteria to identify the tracks associated with low $\textrm{p}_{\textrm{T}}$. In the first three iterations, 
 the iterative tracking reaches an efficiency up to 99.5$\%$ for isolated muons and larger than 90$\%$ for 
 charged hadrons in jets \cite{CMS-PAS-PFT-09-001}. Last iterations relaxes the constrains on the origin of the vertex 
 to find tracks originated outside the beam spot (secondary charged particles from photon conversions in the tracker material) 
-and to reconstrcut the remaining tracks. Each iteration could be summarized in 4 steps:\\
+and to reconstruct the remaining tracks. Each iteration could be summarized in 4 steps:\\
 
 \begin{itemize}
- \item Tracks are seeded using 2 o 3 hits, giving rise to the initial track candidates and their initial trajectory parameters.
- \item The track is extrapolated outwards of the inner tracker with the purpose to find additional hits associated to the track. The track finder 
- algorithm is based on the Kalman filter.
- \item A fit on the track is performed to estimate the all the possible information of the trajectory.
+ \item Tracks are seeded using 2 or 3 hits, giving rise to the initial track candidates and their initial trajectory parameters.
+ \item The track finder algorithm is based on the Kalman filter \cite{Fruhwirth:1987fm}, which consist in an extrapolation outwards of the inner 
+       tracker layers with the purpose to find additional hits associated to the track and to estimate the track 
+       parameters. The filter recalculates the track parameters for each layer, accounting the energy loss and the 
+       multiple Coulomb scattering produced by the interaction of the charged particle and the tracker material.
+ \item A fit on the track is performed to estimate all the possible information of the trajectory.
  \item Tracks are selected on basis of the quality flags, whether they are compatible with some 
- criterias such as $\chi^{2}$ and if they are originated from the primary vertex.
+ criteria such as $\chi^{2}$ and if they are originated from the primary vertex.
 \end{itemize}
 
 The efficiency estimation of the track reconstruction is performed comparing the reconstructed tracks with MC samples which 
 contains just single muons or pions. Muons are ideal for this purpose since muons, unlike electrons, have a negligible energy loss
 through bremsstrahlung radiation due to the interaction with the tracker material. Unlike muons, charged pions (a tau decay product) do not 
-only undergo Coulomb scattering but it (as all hadrons) also lose energy though strong interactions with the tracker material. These nuclear 
-interactions are not taken into account int the track Finder algorithm reducing the track reconstruction effciency. The tracking efficiency 
-is higher than 99$\%$ for isolated muons with a $\textrm{p}_{\textrm{T}}>1 \textrm{GeV}$ while for charged pions is close 
-to 95$\%$ for $\textrm{p}_{\textrm{T}}>1 \textrm{GeV}$ \cite{Chatrchyan:2014fea} (See figure \ref{fig:Track_Efficiencies})
+only undergo Coulomb scattering but it (as all hadrons) also loses energy though strong interactions with the tracker material. These nuclear 
+interactions are not taken into account in the track Finder algorithm, reducing the track reconstruction efficiency. The tracking efficiency 
+is higher than 99$\%$ for isolated muons with a $\textrm{p}_{\textrm{T}}>1$ $\textrm{GeV}$ while for charged pions is close 
+to 95$\%$ for $\textrm{p}_{\textrm{T}}>1$ $\textrm{GeV}$ \footnote{Efficiencies were obtained from 2011 data for pp collision  
+at a centre-of-mass energy of $\sqrt{s} =$  7 TeV. For simulated events an average of 8 for pileup interactions was used, which corresponds
+roughly to the amount delivered by the LHC on 2011.} \cite{Chatrchyan:2014fea} (See Figure \ref{fig:Track_Efficiencies}). The PU interactions
+degrades significantly the tracking efficiency for tracks with $\textrm{p}_{\textrm{T}}<1$ $\textrm{GeV}$ \cite{Chatrchyan:2014fea}
+
+
+%The tracking
+%efficiency depends, besides on the $\textrm{p}_{\textrm{T}}$, on $\eta$ due the geometrical acceptance of the tracker and 
+%the PU which degrades the efficiency for tracks with $\textrm{p}_{\textrm{T}}<1$ $\textrm{GeV}$
+
+
+
 
 \begin{figure}[ht]
   \begin{center}
@@ -70,48 +104,117 @@ to 95$\%$ for $\textrm{p}_{\textrm{T}}>1 \textrm{GeV}$ \cite{Chatrchyan:2014fea}
     \includegraphics[width=0.35\textwidth]{figuras/Chapter3/TrackEff_Pion_pt.png}
     \includegraphics[width=0.35\textwidth]{figuras/Chapter3/TrackEff_Pion_eta.png}
     \caption{Efficiency of reconstructed track as function of $p_{\textrm{T}}$ and $\eta$ for 
-    muons (top) and charged pions (bottom). Figure taken from \cite{Chatrchyan:2014fea}}
+    muons (top) and charged pions (bottom). Efficiencies were obtained using pp collisions with a centre-of-mass 
+    energy of $\sqrt{s} =$  7 TeV, which corresponds to 2011 data. For simulated data an average of 8 pileup 
+    events was used, which is roughly the amount delivered by the LHC on 2011. Figure taken from \cite{Chatrchyan:2014fea}}
     \label{fig:Track_Efficiencies}
   \end{center}
 \end{figure}
 
+\subsection{Vertex Reconstruction}
+
+%Primary vertex reconstruction is performed with the purpose to measure the position, and the uncertainty, 
+%of all vertices produced in the pp collisions, such as the vertex produced by a hard interaction, secondary 
+%vertices coming from b-jets as well as pileup collisions. Vertex reconstruction first proceed with a 
+%track selection, then reconstructed tracks are clustered to identify vertices, and finally the vertex position
+%is determined by a fit. \\
+
+Primary vertex reconstruction is performed with the purpose to measure the position, and the uncertainty, 
+of all vertices produced in the pp collisions. Vertex reconstruction first proceed with a 
+track selection, then reconstructed tracks are clustered to identify vertices, and finally the vertex position
+is determined by a fit. The main criteria for track selection are the impact parameter relative to the beam spot, the
+number of reconstructed hits in the tracker and the $\chi^{2}$ associated to its trajectory. Then, the 
+selected tracks are grouped into clusters according to its z-coordinate with the aim of identifying
+all possible vertices even for inelastic collisions. Track clustering is performed with the 
+deterministic annealing (DA) algorithm \cite{VertexRecoBIB}. The DA algorithm resolves iteratively
+the z-coordinates of all the possible vertices and the cluster of tracks associated to them, in a similar way 
+to solve a physical system with many degrees of freedom, approaching iteratively to the state 
+of minimum energy \cite{Chatrchyan:2014fea}. Finally, the adaptive vertex fitter technique \cite{Frühwirth:1027031}
+is used in order to perform the best estimation of the vertex parameters, in particular the position,
+from fitting the cluster of tracks associated to the vertex. The primary vertex is selected from the vertex with the higher
+sum of $\textrm{p}_{\textrm{T}}^{2}$ of the cluster of tracks.\\
+
+The resolution of the primary vertex depends on the number of tracks associated to it. Figure \ref{fig:RecoVertex} 
+shows the resolution of x and z position for primary vertex reconstruction, using minimum vias samples 
+\footnote{minimum vias samples pass a suit of triggers and minimum requirements on hit 
+or track multiplicity} and jet-enriched data samples \cite{Chatrchyan:2014fea}. The resolution for x and z position 
+is, respectively, less than 20 $\mu$m and 25 $\mu$m for the minimum vias samples while it is 
+improved to less than 10 $\mu$m and 12 $\mu$m for jet-enriched samples. Figure \ref{fig:RecoVertex} c) shows
+the efficiency of primary-vertex reconstruction which depends on the number of tracks. 
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figuras/Chapter3/RecoVertex_x_resolution.png}
+    \includegraphics[width=0.3\textwidth]{figuras/Chapter3/RecoVertex_y_resolution.png}
+    \includegraphics[width=0.3\textwidth]{figuras/Chapter3/Effciiency_vertex_resolution.png}
+    \caption{Resolution of x and z position  for primary vertex reconstruction, using a) minimum vias samples and b) jet-enriched samples. 
+    Resolution is improved using jet-enriched samples since in these sample the mean of $\textrm{p}_{\textrm{T}}$ is larger than minimum vias samples.  
+    For efficiency of primary vertex reconstruction shown in c), minimum vias MC samples were used. Results were estimated 
+    with pp collisions with a centre-of-mass energy of $\sqrt{s} =$  7 TeV. Figures were taken from \cite{Chatrchyan:2014fea}.}
+    \label{fig:RecoVertex}
+  \end{center}
+\end{figure}
+
+%El algoritmo lo que hace es buscar la minima temperatura ``T'' local para el cual chi2 sea minima, 
+% comienza con T-> inf, todos los tracks estan asociados a un solo vertice, la T comienza a disminuir,
+% comienza a crecer el numero de vertices, se hace eso hasta que el sistema alcanza la Tcritica (el punto de inflexion de la energia libre F)
+% (chi2 hace las veces de la eneria)
+% una vez se encuentra el minimo local, cada vertice se convierte en dos, endonde el peso asociados a esos vertices es igual al vertice ``papa''
+% eso se hace iterativamente hasta alcanzar una T igual a 4 en donde ya hay una posibilidad de convertir un real vertice en dos.
+
+
 \subsection{Clustering}
 \label{subsec:Clustering}
-Other of the main parts for the PF technique, in addition to the tracks, is the reconstruction of the 
-calorimetric clusters. The calorimeter clusters are used to: identify the energy deposits which come from 
+Other important part of the PF technique, in addition to the tracks, is the reconstruction of the 
+calorimetric clusters. The calorimeter clusters are used to identify the energy deposits which come from 
 %neutral-visible particles, such as photons and neutral hadrons, and discriminate them from the energy deposits 
-photons and neutral hadrons, and discriminate them from the energy deposits due charged hadrons; 
-besides it reconstructs the electrons along with their associated Bremsstrahlung radiation;
+photons and neutral hadrons, and to discriminate them from the energy deposits due charged hadrons; 
+besides it reconstructs the electrons along with their associated Bremsstrahlung radiation
 and helps to determinate the track parameters of the charged hadrons which were not measured 
-accurate from the track reconstruction (for example, charged hadrons that are outside of the tracker acceptance, or 
+accurately from the track reconstruction (for example, charged hadrons that are outside of the tracker acceptance, or 
 charged hadrons with high $p_{\textrm{T}}$). The clustering is performed for 
 each part of the CMS calorimeter system: ECAL, HCAL, HF and PS.\\
 
 The clustering algorithm proceeds from the ``cluster seeds'' identified at local level. Cluster seeds are selected 
-from individual calorimeter cells which have a maxima energy deposits above a given energy. Once the cluster seed is selected,
-the algorithm searches for energy deposits in the  boundarying cells with a common side. The algorithm aggregates to the cluster 
-at least one additional cell with a maxima energy higher than two standard desviations from the electronic noise: for the ECAL, 80 $\textrm{MeV}$ in 
-barrel and up to 300 $\textrm{MeV}$ in the end-caps for the ECAL, while 800 $\textrm{MeV}$ for the HCAL \cite{CMS-PAS-PFT-09-001}. The 
-combination of these cells are know as ``topological clusters''. The topological clusters are taken as ``particle flow clusters'' seeds
+from individual calorimeter cells which have a maximal energy deposits above a given energy. Once the cluster seed is selected,
+the algorithm searches for energy deposits in the  boundary cells with a common side. The algorithm aggregates to the cluster 
+at least one additional cell with a maximum energy higher than two standard deviations from the electronic noise: for the ECAL, 80 $\textrm{MeV}$ in 
+barrel and up to 300 $\textrm{MeV}$ in the end-caps for the ECAL, while 800 $\textrm{MeV}$ for the HCAL \cite{CMS-PAS-PFT-09-001}. This
+cells combined are known as ``topological clusters''. The topological clusters are taken as ``particle flow clusters'' seeds
 in order to solve any overlapping among clusters.
 
 \subsection{Link algorithm}
 \label{subsec:Linkalgorithm}
-As mentioned earlier, a particle is expected to produce signatures in diferent subdetectors, giving rise to one or more 
+As mentioned earlier, a particle is expected to produce signatures in different sub-detectors, giving rise to one or more 
 so-called PF elements: tracks, clusters and tracks in the muon system; for example, 
-a charged hadron, as the pion, would produce a track in the inner tracker along with 
+a charged hadron as the pion, would produce a track in the inner tracker along with 
 energy deposits in both calorimeters. PF uses the \textit{link algorithm} to perform a topological combination 
-of the PF elements recontructed in the different subdetectors with the aim of reconstructing fully each particle in the event. 
+of the PF elements reconstructed in the different sub-detectors with the aim of reconstructing fully each particle in the event. \\
 %of the PF elements recontructed in the different subdetectors with the aim of identifying the type of each particle in the event. 
 
+The link between a charged particle track and a calorimeter cluster is performed as follows:
+
+\begin{itemize}
+ \item The track is extrapolated from the last hit reconstructed in the tracker to: the two layers in the PS, the expected depth
+ for an electron shower in the ECAL and one interaction length for an typical hadron shower in the HCAL. 
+ \item The track is linked to a cluster if the extrapolated position in the calorimeter is within the cluster boundaries. 
+ \item The distance in the $\eta-\phi$ plane between the extrapolated track position and the cluster position defines the quality of the link. 
+\end{itemize}
+
+Similarly, two calorimeter clusters (i.e. links between PS and ECAL clusters or links between ECAL and HCAL clusters) are linked when the 
+extrapolated position in the more granular calorimeter (PS or ECAL) is within 
+the boundaries of the less granular calorimeter (ECAL or HCAL). For example, the link between the ECAL and HCAL clusters
+produced by a pion is established when the extrapolated position from the ECAL is within the HCAL cluster boundary. Finally, the 
+link between a charged particle track reconstructed in the tracker and a track in the muon system (known as global muon) 
+is established by a global fit between the two tracks and its $\chi^{2}$ defines the quality of the link.  
 
 \section{Jets Reconstruction}
 \label{sec:Jet}
 
 
 % Jets are reconstructed with the Particle Flow technique (PF) using the anti$-$k$_{T}$ algorithm \cite{Alwall:2011uj}.
-The PF technique \cite{CMS-PAS-PFT-09-001} takes the information collected by the CMS subdetectors in order to identify and reconstruct
-all the vissible final-state particles (electrons, muons, photons, charged hadrons and neutral hadrons) produced
+The PF technique \cite{CMS-PAS-PFT-09-001} takes the information collected by the CMS sub-detectors in order to identify and reconstruct
+all the visible final-state particles (electrons, muons, photons, charged hadrons and neutral hadrons) produced
 in the hard interaction. The PF technique reconstructs the jet constituents individually from the
 combination of tracks and calorimeter clusters. Then, the jet reconstruction is performed
 with the anti$-$k$_{T}$ algorithm \cite{AntiKTAlgorithm} iterating over all the PF objects, using a distance parameter of
@@ -135,13 +238,13 @@ the PF jet four-momentum ($p_{\mu}^{raw}$):
  p_{\mu}^{corrected} = C \times p_{\mu}^{raw}
 \end{equation}
 
-The first step in the chain is the ``L1 corrections'' (also refered as ``pileup offset''). It attends the additional tracks and the excess of energy deposits
+The first step in the chain is the ``L1 corrections'' (also referred as ``pileup offset''). It corrects the additional tracks and the excess of energy deposits
 in the calorimeters due pile-up events . The amount of the pile-up contribution
 to the jet energy can be estimated from the global per-event $p_{T,offset}$ density $\rho$ and the jet area \cite{JECpileup}. This amount
 is obtained from simulated dijet events with and without PU. \\
 
-The second level of JEC is related with the detector response to hadrons (L2L3 MC-truth corrections), correcting
-the non-uniformity in $\eta$ and the non-linearity in $p_{T}$. The simulated jet response is determinated
+The second level of JEC is related to the detector response to hadrons (L2L3 MC-truth corrections), correcting
+the non-uniformity in $\eta$ and the non-linearity in $p_{T}$. The simulated jet response is determined
 with QCD-multijet events generated with Pythia and with a simulation of the CMS detector based
 on Geant4.\\
 
