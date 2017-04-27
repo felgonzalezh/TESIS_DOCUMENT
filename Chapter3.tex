@@ -1,7 +1,11 @@
 \chapter[Particle Identification and Event Reconstruction]{Particle Identification and Event Reconstruction}
 \label{chap:ParticleID}
 
+%PF jet reconstruction is an important key for the search of $Z'$ bosons in the di-hadronic tau channel since 
+%jets are used as initial seed for the tau-lepton reconstruction. \\
 
+%The energy of a jet is carried by charged hadrons ($~65 \%$), photons 
+%from $\pi^{0}$ decays ($~15 \%$) and neutral hadrons ($~20 \%$) \cite{CMS-PAS-PFT-10-001}. \\
 
 
 \section{Particle Flow}
@@ -42,7 +46,7 @@ for all the physics objects, in particular jets, MET and tau-leptons \cite{CMS-P
 %and the ECAL, the hermicity of the HCand clusters with high efficiency.
 
 The PF technique is performed in three steps: First, the algorithm builds the so-called ``PF elements'' which consist of tracks 
-reconstructed in the Inner Tracker, energy clusters reconstructed in the calorimeters and tracks observed in the muon system;
+reconstructed in the Inner Tracker, energy clusters reconstructed in the calorimeters and tracks observed in the muon system \ref{sec:MuonSys};
 the second stage addresses the topological association of the basic PF elements each other using the ``link-algorithm''; finally,
 individual particles are identified and reconstructed from the content of the linked elements. \\
 
@@ -80,14 +84,14 @@ and to reconstruct the remaining tracks. Each iteration could be summarized in 4
 
 The efficiency estimation of the track reconstruction is performed comparing the reconstructed tracks with MC samples which 
 contains just single muons or pions. Muons are ideal for this purpose since muons, unlike electrons, have a negligible energy loss
-through bremsstrahlung radiation due to the interaction with the tracker material. Unlike muons, charged pions (a tau decay product) do not 
+through bremsstrahlung radiation due to the interaction with the tracker material. Unlike muons, charged pions (a possible tau decay product) do not 
 only undergo Coulomb scattering but it (as all hadrons) also loses energy though strong interactions with the tracker material. These nuclear 
-interactions are not taken into account in the track Finder algorithm, reducing the track reconstruction efficiency. The tracking efficiency 
+interactions are not taken into account in the track Finder algorithm, reducing the track reconstruction efficiency in the tracker acceptance. The tracking efficiency 
 is higher than 99$\%$ for isolated muons with a $\textrm{p}_{\textrm{T}}>1$ $\textrm{GeV}$ while for charged pions is close 
-to 95$\%$ for $\textrm{p}_{\textrm{T}}>1$ $\textrm{GeV}$ \footnote{Efficiencies were obtained from 2011 data for pp collision  
-at a centre-of-mass energy of $\sqrt{s} =$  7 TeV. For simulated events an average of 8 for pileup interactions was used, which corresponds
-roughly to the amount delivered by the LHC on 2011.} \cite{Chatrchyan:2014fea} (See Figure \ref{fig:Track_Efficiencies}). The PU interactions
-degrades significantly the tracking efficiency for tracks with $\textrm{p}_{\textrm{T}}<1$ $\textrm{GeV}$ \cite{Chatrchyan:2014fea}
+to 95$\%$ for $\textrm{p}_{\textrm{T}}>1$ $\textrm{GeV}$ \cite{Chatrchyan:2014fea} (See Figure \ref{fig:Track_Efficiencies}). The PU interactions
+degrades significantly the tracking efficiency for tracks with $\textrm{p}_{\textrm{T}}<1$ $\textrm{GeV}$ \cite{Chatrchyan:2014fea}. Efficiencies 
+were obtained from 2011 data for pp collision at a centre-of-mass energy of $\sqrt{s} =$  7 TeV. For simulated events an average of 8 for pileup interactions was used, which corresponds
+roughly to the amount delivered by the LHC on 2011.
 
 
 %The tracking
@@ -120,23 +124,23 @@ degrades significantly the tracking efficiency for tracks with $\textrm{p}_{\tex
 %is determined by a fit. \\
 
 Primary vertex reconstruction is performed with the purpose to measure the position, and the uncertainty, 
-of all vertices produced in the pp collisions. Vertex reconstruction first proceed with a 
+of all vertices produced in the pp collisions. Vertex reconstruction proceed first with a 
 track selection, then reconstructed tracks are clustered to identify vertices, and finally the vertex position
 is determined by a fit. The main criteria for track selection are the impact parameter relative to the beam spot, the
 number of reconstructed hits in the tracker and the $\chi^{2}$ associated to its trajectory. Then, the 
-selected tracks are grouped into clusters according to its z-coordinate with the aim of identifying
+selected tracks are grouped into clusters according to their z-coordinates with the aim of identifying
 all possible vertices even for inelastic collisions. Track clustering is performed with the 
 deterministic annealing (DA) algorithm \cite{VertexRecoBIB}. The DA algorithm resolves iteratively
 the z-coordinates of all the possible vertices and the cluster of tracks associated to them, in a similar way 
 to solve a physical system with many degrees of freedom, approaching iteratively to the state 
-of minimum energy \cite{Chatrchyan:2014fea}. Finally, the adaptive vertex fitter technique \cite{Frühwirth:1027031}
+of minimum energy \cite{Chatrchyan:2014fea}. Finally, the adaptive vertex fitter technique \cite{Fruhwirth:1027031}
 is used in order to perform the best estimation of the vertex parameters, in particular the position,
 from fitting the cluster of tracks associated to the vertex. The primary vertex is selected from the vertex with the higher
 sum of $\textrm{p}_{\textrm{T}}^{2}$ of the cluster of tracks.\\
 
 The resolution of the primary vertex depends on the number of tracks associated to it. Figure \ref{fig:RecoVertex} 
 shows the resolution of x and z position for primary vertex reconstruction, using minimum vias samples 
-\footnote{minimum vias samples pass a suit of triggers and minimum requirements on hit 
+\footnote{Minimum vias samples pass a suit of triggers and minimum requirements on hit 
 or track multiplicity} and jet-enriched data samples \cite{Chatrchyan:2014fea}. The resolution for x and z position 
 is, respectively, less than 20 $\mu$m and 25 $\mu$m for the minimum vias samples while it is 
 improved to less than 10 $\mu$m and 12 $\mu$m for jet-enriched samples. Figure \ref{fig:RecoVertex} c) shows
@@ -178,7 +182,7 @@ each part of the CMS calorimeter system: ECAL, HCAL, HF and PS.\\
 The clustering algorithm proceeds from the ``cluster seeds'' identified at local level. Cluster seeds are selected 
 from individual calorimeter cells which have a maximal energy deposits above a given energy. Once the cluster seed is selected,
 the algorithm searches for energy deposits in the  boundary cells with a common side. The algorithm aggregates to the cluster 
-at least one additional cell with a maximum energy higher than two standard deviations from the electronic noise: for the ECAL, 80 $\textrm{MeV}$ in 
+at least one additional cell with a maximum energy higher than two standard deviations from the electronic noise: 80 $\textrm{MeV}$ in 
 barrel and up to 300 $\textrm{MeV}$ in the end-caps for the ECAL, while 800 $\textrm{MeV}$ for the HCAL \cite{CMS-PAS-PFT-09-001}. This
 cells combined are known as ``topological clusters''. The topological clusters are taken as ``particle flow clusters'' seeds
 in order to solve any overlapping among clusters.
@@ -211,14 +215,120 @@ is established by a global fit between the two tracks and its $\chi^{2}$ defines
 \section{Jets Reconstruction}
 \label{sec:Jet}
 
+Quarks and gluons produced by the pp collisions at parton level have a defined color charge, and 
+due to the confinement of the strong interaction they can not exist as free particles, instead they 
+will follow a process of fragmentation and combination with quarks and gluons from the vacuum to form 
+colourless bound states called hadrons; this process is known as hadronization. The hadronization will 
+give rise to showers of stable particles which propagate in a localized area. These stable particles 
+are detected and from their tracks or energy deposits, they are further clustered into so-called jets (See Figure \ref{fig:JetScketch}). The aim 
+of a jet reconstruction algorithm is to determinate the kinematics of the origin of the jet, this is reached with the PF 
+technique since it reconstructs all the particles individually from the information collected by CMS sub-detectors
+and then cluster them into the jet, making possible the determination of the compositeness and further the origin of the jet.\\
 
-% Jets are reconstructed with the Particle Flow technique (PF) using the anti$-$k$_{T}$ algorithm \cite{Alwall:2011uj}.
-The PF technique \cite{CMS-PAS-PFT-09-001} takes the information collected by the CMS sub-detectors in order to identify and reconstruct
-all the visible final-state particles (electrons, muons, photons, charged hadrons and neutral hadrons) produced
-in the hard interaction. The PF technique reconstructs the jet constituents individually from the
-combination of tracks and calorimeter clusters. Then, the jet reconstruction is performed
-with the anti$-$k$_{T}$ algorithm \cite{AntiKTAlgorithm} iterating over all the PF objects, using a distance parameter of
-$\Delta R = 0.4$ in the $\eta-\phi$ plane, where $\Delta R = \sqrt{(\Delta \phi)^2+(\Delta \eta)^2}$.\\
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figuras/Chapter3/JetSketch.png}
+    \caption{Schematic diagram of the evolution and detection of a jet.}
+    \label{fig:JetScketch}
+  \end{center}
+\end{figure}
+
+
+%further reconstructed and finally clustered into so-called jets. The aim of a jet reconstruction 
+
+For the jet reconstruction, the algorithm must consider the jet size. The jet particles are expected to be located 
+roughly into an area of $\pi R^{2}$ where $R$ corresponds to the radius parameter of the algorithm. The jet 
+area determinates the sensitivity of the jet to soft radiation since if the $R$ parameter is large enough,
+all possible particles coming from the hadronization are included in the jet reconstruction,
+but also contributions from underlying events (UE) or pileup collision (PU) might be included; this leads to 
+an overestimation in the jet energy. \\
+
+The other important qualities to be considered by the algorithm are the infrared and collinear safety (ICR). Infrared 
+and collinear processes refers, respectively, to soft QCD radiation and to parton splitting into collinear 
+components. If the algorithm is unsafe under these processes, soft radiations will be added to the jet reconstruction
+altering the jet components while parton splitting will lead to reconstruct a different number of jets.\\
+
+There are two different types of algorithms that have been used to reconstruct the jet: cone algorithms (SISCone)
+and sequential clustering algorithms (kT, Cambridge-Aachen, anti-kT). The main difference between them 
+is the way how the particles that belong to a jet are clustered. Cone algorithms consider that the particles 
+in a jet will spread out in a rigid conical region which results in an a fixed definition on the jet area, while 
+sequential algorithms assume fluctuations on the jet area which boundary is defined with a fixed maximum radius. 
+A brief description of the most common used ICR safe algorithms is presented:
+
+\begin{itemize}
+ \item The \textbf{SISCone} algorithm \cite{Salam:2007xv} checks all the particles in the event in order to identify stable combinations
+ that are coherent with a jet; it searches for a stable cone that contains all the particles associated to a jet and 
+ which axis corresponds to the sum of their momentum. The algorithm searches iteratively particles that are 
+ contained within a circle in the $\eta-\phi$ plane until a particle matches with the 
+ circumference of the cone. The matches are defined as stable cones. Then the particle is removed from 
+ the list and the procedure is performed again until no more stable cones are found. Finally stable cones are split or merged
+ to reconstruct the jets.
+ %i.e. the axis of the cone which contains the particles must be .0
+
+ \item \textbf{kT} algorithm \cite{Ellis:1993tq} estimates the following distance variable for all pair of particles ($i,j$):
+ \begin{equation}
+  \label{eq:kt}
+   d_{ij}=min(p_{Ti}^{2},p_{Tj}^{2})\Delta R_{ij}^{2}/R^{2} 
+  \end{equation}
+where $\Delta R_{ij}^{2}=\Delta(\eta_{i},\eta_{j})^{2}+\Delta(\phi_{i},\phi_{j})^{2}$ is the distance between particles $i$ and $j$
+in the $\eta-\phi$ plane and $R$ is the radius parameter that defines the size of the jet. Other distance variable estimated
+in the algorithm is the distance between the beam axis and the particle $i$, defined as $d_{iB}=p_{Ti}^{2}$. Then, the algorithm
+proceeds by finding the minimum distance between $d_{ij}$ and $d_{iB}$. If $d_{ij}$ is a minimum, the pair of particles $i,j$ 
+are recombined adding their four-momenta and are removed of the list of particles. If $d_{iB}$ is a minimum, the algorithm
+identify the particle $i$ as a jet. The distances are recalculated iteratively until all particles are part of a jet.
+ 
+ \item The \textbf{Cambridge-Aachen} algorithm \cite{Atkin:2015msa} proceed similar to the kT algorithm, but defining the variable distance:
+ \begin{equation}
+  \label{eq:antikt}
+  d_{ij}=\Delta R_{ij}^{2}/R;\; d_{iB}=1
+ \end{equation}
+ Since $d_{ij}$ is independent of the momentum, the jet size will not be clearly defined and UE and PU processes will be included in the jet reconstruction.
+ In spite of that this algorithm is used since it allows to determine the jet compositeness.
+ 
+ \item The \textbf{anti-kT} algorithm \cite{AntiKTAlgorithm} defines the distance variables as:
+ \begin{equation}
+  \label{eq:antikt}
+  d_{ij}=min\left(\frac{1}{p_{Ti}^{2}},\frac{1}{p_{Tj}^{2}}\right)\Delta R_{ij}^{2}/R^{2};\; d_{iB}=\frac{1}{p_{Ti}^{2}}
+ \end{equation} 
+ The anti-kT algorithm follows the same procedure of the kT algorithm: it calculates iteratively the variables $d_{ij}$ and $d_{iB}$
+ and searches the minimum of the set ${d_{ij},d_{iB}}$, identifying a jet as the smallest $d_{iB}$ distance. Since 
+ the anti-kT $d_{ij}$  variable is dominated by high $p_{\textrm{T}}$ particles, the algorithm will first merge them, resulting in an
+ accurate jet area estimation. 
+\end{itemize}
+
+CMS and ATLAS uses mainly the anti-kT algorithm although Cambridge-Aachen is also used for many CMS analysis. The advantage for using 
+anti-kT algorithm is related with the jet area safety. As mentioned above, the anti-kT algorithm prefers to calculate first the distance
+for high $p_{\textrm{T}}$ particles and then, recalculate it including low $p_{\textrm{T}}$ particles. This results in a slightly 
+fluctuation in the jet area which is important for removing any contribution from UE and PU processes. The jet area profile for the
+explained algorithms are shown in the Figure \ref{fig:JetsAlgos}. \\
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=0.43\textwidth]{figuras/Chapter3/herwig-parton-level-ev-siscone-R1-0-f0-75-ghosted4root.png}
+    \includegraphics[width=0.43\textwidth]{figuras/Chapter3/herwig-parton-level-ev-kt-R1-0-ghosted4root.png}
+    \includegraphics[width=0.43\textwidth]{figuras/Chapter3/herwig-parton-level-ev-cam-R1-0-ghosted4root.png}
+    \includegraphics[width=0.43\textwidth]{figuras/Chapter3/herwig-parton-level-ev-antikt-R1-0-ghosted4root.png}
+    \caption{Jets reconstruction using the algorithms SISCone (left-up), kT (right-up), Cambridge-Aachen 
+    (left-down) and anti-kT (right-down). Jet reconstruction was performed with MC samples using the same $R$
+    for all the algorithms. kT and Cambridge-Aachen jet reconstruction show an irregular jet area, while SISCone
+    reconstructs jets in smaller areas but identifies two different jets instead of the one grey jet \cite{Atkin:2015msa}.}
+    \label{fig:JetsAlgos}
+  \end{center}
+\end{figure}
+
+%The PF technique \cite{CMS-PAS-PFT-09-001} takes the information collected by the CMS sub-detectors in order to identify and reconstruct
+%all the visible final-state particles (electrons, muons, photons, charged hadrons and neutral hadrons) produced
+%in the hard interaction. The PF technique reconstructs the jet constituents individually from the
+%combination of tracks and calorimeter clusters. Then, the jet reconstruction is performed
+%with the anti$-$k$_{T}$ algorithm \cite{AntiKTAlgorithm} iterating over all the PF objects, using a distance parameter of
+%$\Delta R = 0.4$ in the $\eta-\phi$ plane, where $\Delta R = \sqrt{(\Delta \phi)^2+(\Delta \eta)^2}$.\\
+
+CMS use the anti-kT algorithm, using a distance parameter of $\Delta R = 0.4$. The four-momentum 
+of the reconstructed jet corresponds to the addition of the four-momenta of all the PF objects associated to the jet. 
+However due to detector responses and experimental effects, the PF jet four-momentum does not correspond to the four-momentum
+at parton or hadron level; therefore, jet energy corrections (JEC) are required. Figure \ref{fig:JEC_levels} shows the different
+levels of corrections which are applied in a fixed sequence:
 
 \begin{figure}[ht]%[!Hhtbp]
   \begin{center}
@@ -227,31 +337,30 @@ $\Delta R = 0.4$ in the $\eta-\phi$ plane, where $\Delta R = \sqrt{(\Delta \phi)
     \label{fig:JEC_levels}
   \end{center}
 \end{figure}
-
-The four-momentum of the reconstructed jet is the addition of the four-momenta of all the PF objects associated to the jet. However
-due to detector responses and experimental effects, the PF jet four-momentum does not correspond to the four-momentum
-at parton or hadron level; therefore, jet energy corrections (JEC) are required. Figure \ref{fig:JEC_levels} shows the different
-levels of corrections which are applied in a fixed sequence. Each correction corresponds to a multiplicative factor $C$ on
-the PF jet four-momentum ($p_{\mu}^{raw}$):
-
-\begin{equation}
- p_{\mu}^{corrected} = C \times p_{\mu}^{raw}
-\end{equation}
-
-The first step in the chain is the ``L1 corrections'' (also referred as ``pileup offset''). It corrects the additional tracks and the excess of energy deposits
-in the calorimeters due pile-up events . The amount of the pile-up contribution
-to the jet energy can be estimated from the global per-event $p_{T,offset}$ density $\rho$ and the jet area \cite{JECpileup}. This amount
-is obtained from simulated dijet events with and without PU. \\
-
-The second level of JEC is related to the detector response to hadrons (L2L3 MC-truth corrections), correcting
-the non-uniformity in $\eta$ and the non-linearity in $p_{T}$. The simulated jet response is determined
+% Jets are reconstructed with the Particle Flow technique (PF) using the anti$-$k$_{T}$ algorithm \cite{Alwall:2011uj}.
+\begin{itemize}
+ \item \textbf{Pileup correction}: Also referred as ``L1 corrections''. It corrects the additional tracks and the excess of energy deposits
+in the calorimeters due pileup events. The amount of the pile-up contribution
+to the jet energy can be estimated from the global per-event $p_{T,offset}$ density 
+$\rho$ and the jet area \cite{JECpileup}. This amount is obtained from 
+simulated dijet events with and without PU.
+ \item \textbf{True response}: The second level of JEC is related to the detector response to hadrons (L2L3 MC-truth corrections), correcting
+the non-uniformity in $\eta$ and the non-linearity in $p_{\textrm{T}}$. The simulated jet response is determined
 with QCD-multijet events generated with Pythia and with a simulation of the CMS detector based
-on Geant4.\\
-
-After these steps, the L2L3 Residual corrections are applied in order to address the remaining difference
+on Geant4.
+ \item \textbf{Residual corrections}: L2L3 Residual corrections are applied in order to address the remaining difference
 between the jet response on data and MC (of the order of $1 \%$). This corrections are achieved with data-driven methods, using
-dijet samples for $\eta$-dependent corrections and $\gamma /$Z+jets samples for the corrections to $p_{T}$. The last stage
-of the JEC (L5) is optional and it accounts the jet-flavor corrections. \\
+dijet samples for $\eta$-dependent corrections and $\gamma /$Z+jets samples for the corrections to $p_{\textrm{T}}$. 
+ \item \textbf{Flavor corrections}: The true corrections were performed considering QCD samples with mixture at parton level. 
+ Therefore, the flavor correction intends to correct the jet at parton level considering that the jet was produced 
+ by an specific parton flavor \cite{CMS-PAS-JME-07-002}. 
+
+\end{itemize}
+
+
+
+ 
+
 
 %An efficiency larger than 80% is obtained for jets with a p T > 20 GeV/c. The 100% plateau is reached above
 %40 GeV/c, at which point the mismatched jet rate is negligible
@@ -303,41 +412,43 @@ of the JEC (L5) is optional and it accounts the jet-flavor corrections. \\
 
 %\subsection{Offline Identification}
 %\label{subsec:ElectronReconstruction}
-\section{MET}
-\label{sec:MET}
 
-\section{Photon Reconstruction}
-\label{sec:Photon}
+%%%% DEFINED
+%\section{MET}
+%\label{sec:MET}
 
-
-\section{Muon Reconstruction}
-\label{sec:Muon}
-
-\section{Electron Reconstruction}
-\label{sec:Electron}
-
-\section{B-Jet Reconstruction}
-\label{sec:BJet}
+%\section{Photon Reconstruction}
+%\label{sec:Photon}
 
 
+%\section{Muon Reconstruction}
+%\label{sec:Muon}
 
-\section{Tau Lepton}
-\label{sec:Tau}
+%\section{Electron Reconstruction}
+%\label{sec:Electron}
+
+%\section{B-Jet Reconstruction}
+%\label{sec:BJet}
+
+
+
+%\section{Tau Lepton}
+%\label{sec:Tau}
 
 %\subsection{Tau Reconstruction}
 %\label{subsec:TauTrigger}
 
-\subsection{Tau Reconstruction}
-\label{subsec:TauReconstruction}
+%\subsection{Tau Reconstruction}
+%\label{subsec:TauReconstruction}
 
-\subsection{Working Points}
-\label{subsec:wp}
+%\subsection{Working Points}
+%\label{subsec:wp}
 
-\subsubsection{Efficiency of Working Points}
-\label{subsubsec:Eff_WP}
+%\subsubsection{Efficiency of Working Points}
+%\label{subsubsec:Eff_WP}
 
-\subsection{Fake Rates}
-\label{subsec:FakeRates}
+%\subsection{Fake Rates}
+%\label{subsec:FakeRates}
 
-\subsection{Perspectives Run III}
-\label{subsec:Perspectives} 
+%\subsection{Perspectives Run III}
+%\label{subsec:Perspectives} 
