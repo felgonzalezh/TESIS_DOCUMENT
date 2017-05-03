@@ -1,0 +1,8 @@
+*.aux
+Principal.pdf
+*.backup
+Principal.bbl
+Principal.blg
+Principal.log
+Principal.out
+				

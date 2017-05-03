@@ -357,9 +357,82 @@ dijet samples for $\eta$-dependent corrections and $\gamma /$Z+jets samples for 
 
 \end{itemize}
 
+\section{b-jets Reconstruction}
+\label{sec:Jet}
+The identification of jets originated from the decay of bottom quarks, i.e. b-tagging, exploits 
+the properties of the B-hadrons such as their large decay life-times ($c\tau~$450 $\mu$m, which leads
+to displaced tracks in the tracker) as well as the presence of leptons in the final 
+state due their semileptonic decays. CMS has developed 
+several algorithms for b-jet identification \cite{Chatrchyan:2012jua} based on 
+the properties of the B-hadron decays such as large impact parameter with respect to the primary 
+vertex of charged particle tracks, a possible secondary vertex 
+reconstructed inside the jet, the mass and number of tracks associated to the secondary
+vertex as well as the possible presence of soft leptons and the number of tracks in the jet. The 
+algorithm used in the analyses is the Combined Secondary Vertex (CSV) and shows the best 
+performance for b-jet identification \cite{CMS:2013vea}. CSV algorithm makes 
+use of Multivariate Variable Analysis (MVA) in order to  
+discriminate b-jets, combining the variables (mentioned above) based 
+on displaced tracks, secondary vertex information and jet kinematics; the method
+provides from a likelihood ratio a single discriminator that defines the compatibility of a jet to be originated
+from a b-quark. The CSV discriminator defines three possible working points that 
+allow to select a high b-tagging efficiency (CSVL, loose working point) or 
+a high purity of b-jet samples (CSVT, tight working point); the remaining
+working point shows a high efficiency preserving high purity 
+(CSVM, middle working point). The three working points are defined 
+according to their b-tagging misidentification rate (probability of an non-b jet to be tagged as a b-jet)
+and their b-tagging efficiency (probability of a real b-jet to be tagged by the algorithm). Table 
+\ref{table:b-tagWP} shows the b-tagging efficiency for the three working points.\\
+
+%\ref{table:b-tagWP} shows the b-tagging misidentification rate and the b-tagging efficiency
+%for the three working points.\\
+
+\begin{table}[ht]%[!Hhtbp]
+\centering{
+% TABLA CON MISTAG PROBABILITY FOR RUN I... NECESITA SER ACTUALIZADA
+%  \begin{tabular}{ | c | c | c | c |} \hline 
+%             \textbf{Working Point} & \textbf{CSVv2 discriminator} & \textbf{Mistag probability}  & \textbf{b-tagging efficiency} \\ \hline \hline
+%	      Loose                 & $\geq$ 0.460               & 10 $\%$                      &  $\approx$ 83 $\%$ \\ \hline
+%	      Medium                & $\geq$ 0.800               & 1 $\%$                       &  $\approx$ 69 $\%$ \\ \hline
+%	      Tight                 & $\geq$ 0.935               & 0.1 $\%$                     &  $\approx$ 49 $\%$ \\ \hline
+%  \end{tabular}
+  \begin{tabular}{ | c | c | c |} \hline 
+             \textbf{Working Point} & \textbf{CSVv2 discriminator}   & \textbf{b-tagging efficiency} \\ \hline \hline
+	      Loose                 & $\geq$ 0.460                   &  $\approx$ 83 $\%$ \\ \hline
+	      Medium                & $\geq$ 0.800                   &  $\approx$ 69 $\%$ \\ \hline
+	      Tight                 & $\geq$ 0.935                   &  $\approx$ 49 $\%$ \\ \hline
+  \end{tabular}
+
+\caption{CSVv2 discriminator threshold and corresponding efficiency for the three working points, using 
+b-jets with transverse momentum above 30 GeV in simulated $t\bar{t}$ events with pp collisions 
+at $\sqrt{s}=13$ TeV. The numbers of this table can be used as reference since they depends on
+$p_{T}$ and $\eta$ distributions of the jets \cite{CMS:2016kkf}.\label{table:b-tagWP}}
+}
+\end{table}
+
+%Loose (CSVL) ≥ 0.244 10 % 80 %
+%Medium (CSVM) ≥ 0.679 1 % 65 %
+%Tight (CSVT) ≥ 0.898 0.1 % 50 %
 
 
- 
+The b-tagging algorithm has been improved for Run II (CSVv2) with the main aim of reducing
+%The off-line b-jet identification algorithm has been improved for Run II (CSVv2) with the main aim of reducing
+the execution time. CVSv2 includes an updated multivariate algorithm
+that makes use of a Neural Network method instead a simple likelihood rate to estimate the CSV discriminator, 
+besides it uses a new algorithm for secondary vertex reconstruction (Inclusive Vertex Finder, IVF) as well as   
+an improved track selection. The improvement of the CSVv2 algorithm lead to an increase about 10 $\%$ in 
+the b-jet identification efficiency compared to the CSV used for Run I \cite{1742-6596-664-8-082055}. See Figure \ref{fig:bjetRun1vsRun2}.
+
+\begin{figure}[ht]%[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{figuras/Chapter3/bjet_run1vsrun2.png}
+    \caption{Efficiency of non-b jets to be misidentified as b jet as a function of the efficiency to correctly identify
+             b jets for the comparison between CSV and CSVv2 configuration using $t\bar{t}$ events with pp collisions 
+	     at $\sqrt{s}=13$ TeV. Figure taken from \cite{1742-6596-664-8-082055}}
+    \label{fig:bjetRun1vsRun2}
+  \end{center}
+\end{figure}
+
+
 
 
 %An efficiency larger than 80% is obtained for jets with a p T > 20 GeV/c. The 100% plateau is reached above
