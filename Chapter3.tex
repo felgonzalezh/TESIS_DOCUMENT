@@ -357,25 +357,27 @@ dijet samples for $\eta$-dependent corrections and $\gamma /$Z+jets samples for 
 
 \end{itemize}
 
-\section{b-jets Reconstruction}
-\label{sec:Jet}
+
+
+\section{b-jets Identification}
+\label{sec:bJet}
 The identification of jets originated from the decay of bottom quarks, i.e. b-tagging, exploits 
-the properties of the B-hadrons such as their large decay life-times ($c\tau~$450 $\mu$m, which leads
+the properties of the $B$-hadrons such as their large decay life-times ($c\tau~$450 $\mu$m, which leads
 to displaced tracks in the tracker) as well as the presence of leptons in the final 
-state due their semileptonic decays. CMS has developed 
-several algorithms for b-jet identification \cite{Chatrchyan:2012jua} based on 
-the properties of the B-hadron decays such as large impact parameter with respect to the primary 
+state due their semileptonic decays. CMS has developed several algorithms for b-jet 
+identification \cite{Chatrchyan:2012jua} based on the properties of the $B$-hadron 
+decays such as large impact parameter with respect to the primary 
 vertex of charged particle tracks, a possible secondary vertex 
-reconstructed inside the jet, the mass and number of tracks associated to the secondary
-vertex as well as the possible presence of soft leptons and the number of tracks in the jet. The 
+reconstructed inside the jet, the mass and the number of tracks associated to the secondary
+vertex, the number of tracks in the jet as well as the possible presence of soft leptons. The 
 algorithm used in the analyses is the Combined Secondary Vertex (CSV) and shows the best 
 performance for b-jet identification \cite{CMS:2013vea}. CSV algorithm makes 
 use of Multivariate Variable Analysis (MVA) in order to  
-discriminate b-jets, combining the variables (mentioned above) based 
+discriminate b-jets, combining the variables based 
 on displaced tracks, secondary vertex information and jet kinematics; the method
 provides from a likelihood ratio a single discriminator that defines the compatibility of a jet to be originated
 from a b-quark. The CSV discriminator defines three possible working points that 
-allow to select a high b-tagging efficiency (CSVL, loose working point) or 
+allows to select a high b-tagging efficiency (CSVL, loose working point) or 
 a high purity of b-jet samples (CSVT, tight working point); the remaining
 working point shows a high efficiency preserving high purity 
 (CSVM, middle working point). The three working points are defined 
@@ -397,9 +399,9 @@ and their b-tagging efficiency (probability of a real b-jet to be tagged by the 
 %  \end{tabular}
   \begin{tabular}{ | c | c | c |} \hline 
              \textbf{Working Point} & \textbf{CSVv2 discriminator}   & \textbf{b-tagging efficiency} \\ \hline \hline
-	      Loose                 & $\geq$ 0.460                   &  $\approx$ 83 $\%$ \\ \hline
-	      Medium                & $\geq$ 0.800                   &  $\approx$ 69 $\%$ \\ \hline
-	      Tight                 & $\geq$ 0.935                   &  $\approx$ 49 $\%$ \\ \hline
+	      Loose                 & $\geq$ 0.5426                   &  $\approx$ 83 $\%$ \\ \hline
+	      Medium                & $\geq$ 0.8484                   &  $\approx$ 69 $\%$ \\ \hline
+	      Tight                 & $\geq$ 0.9535                   &  $\approx$ 49 $\%$ \\ \hline
   \end{tabular}
 
 \caption{CSVv2 discriminator threshold and corresponding efficiency for the three working points, using 
@@ -424,14 +426,115 @@ the b-jet identification efficiency compared to the CSV used for Run I \cite{174
 
 \begin{figure}[ht]%[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{figuras/Chapter3/bjet_run1vsrun2.png}
-    \caption{Efficiency of non-b jets to be misidentified as b jet as a function of the efficiency to correctly identify
-             b jets for the comparison between CSV and CSVv2 configuration using $t\bar{t}$ events with pp collisions 
-	     at $\sqrt{s}=13$ TeV. Figure taken from \cite{1742-6596-664-8-082055}}
+    \includegraphics[width=0.6\textwidth]{figuras/Chapter3/bjet_performance_algos.pdf}
+    \caption{Efficiency of non-b jets to be misidentified as b-jet as a function of the efficiency to correctly identify
+             b-jets for several jet identification algorithms, using enriched $t\bar{t}$ events with 2.6 fb$^{-1}$ of pp 
+             collision data collected in 2015 at at $\sqrt{s}=13$ TeV and a BX of 25 ns. Although cMVAv2 algorithm 
+             shows the best performance, the CSVv2 algorithm is used for many analysis and shows an improvement compared 
+             with the CSV algorithm used in Run I. Figure taken from \cite{CMS:2016kkf}}
     \label{fig:bjetRun1vsRun2}
   \end{center}
 \end{figure}
 
+\section{MET}
+\label{sec:MET}
+
+%Almost all the final states that come from a pp collision can be detected and
+%identified by the CMS sub-systems because of their electromagnetic and/or 
+%strong interaction with the detector material. However, neutral particles 
+%that only interact weakly with matter, such as the neutrino or the hypothetical neutralino, 
+%can scape from the CMS subsystems without detection carr
+
+Almost all the final states coming from a pp collision 
+can be measured and identified by the CMS detector with exception 
+of neutral particles that only interacts weakly with matter, such as 
+the neutrino and the hypothetical neutralino. Although these particles 
+scape from CMS without detection, it is possible to infer the 
+transverse momenta carried by all of them making use of the 
+transverse momentum conservation. The total momentum imbalance in the orthogonal 
+plane to the beam line of all detected particles determines the transverse
+momentum carried by all weakly interacting particles, also called 
+the missing transverse momentum ($\vec{\not{E}_{T}}$). There are several algorithms for 
+the $\vec{\not{E}_{T}}$ reconstruction in CMS \cite{Chatrchyan:2011tn}, 
+but the most important are: PF $\vec{\not{E}_{T}}$ algorithm which is based on the PF technique 
+and the Calo$-\vec{\not{E}_{T}}$ which uses the deposited energy in the calorimeter towers.
+The PF $\vec{\not{E}_{T}}$ reconstruction is widely used by the CMS analysis in which PF 
+$\vec{\not{E}_{T}}$ is defined as the negative of the vectorial 
+sum of transverse momenta of all PF particles, and its module is 
+known as missing transverse energy ($\not{E_{T}}$).\\
+
+However, as well as the jet reconstruction, the missing transverse momentum
+can be overestimated due to detector responses and experimental effects such 
+as pileup, the non-linearity and non-uniformity of the detector response to 
+hadrons (see section \ref{sec:Jet}). With the purpose to address the overestimation, 
+there are three kinds of corrections can be applied to the $\vec{\not{E}_{T}}$ 
+measurement:
+
+\begin{itemize}
+ \item \textbf{Type-0 Correction}: Removes the pileup contribution subtracting
+ from $\vec{\not{E}_{T}}$ the charged hadrons that might be originated 
+ from a pile-up interaction. Besides, it estimates the contribution of neutral 
+ hadrons that come from pile-up interactions and removes them from $\vec{\not{E}_{T}}$.
+
+  \item \textbf{Type-I Correction}: This correction makes use of the JEC 
+ for the $\vec{\not{E}_{T}}$ reconstruction. It identifies all the particles that can be 
+ clustered into jets and replaces their momentum with the sum of the transverse momenta of the 
+ jets to which JEC applied:
+
+\begin{equation}
+  \label{eq:METcorrection}
+  \vec{\not{E_{T}}}^{corr}= \vec{\not{E_{T}}} - \sum_{jets}(\vec{p_{T,jet}^{corr}}-\vec{p_{T,jet}})
+\end{equation} 
+where ``corr'' refers to the corrected values \cite{CMS-PAS-JME-16-004}. 
+ 
+ \item \textbf{xy-Shift Correction}: the $\not{E}_{T}$ measurement should be independent of $\phi$
+ due the cylindrical symmetry of the CMS detector, however a dependency on $\phi$ is observed which 
+ might come from anisotropic detector responses, inactive calorimeter cells and detector 
+ misalignment. Besides, the $\phi$ dependency on $\not{E}_{T}$ is also correlated with the pileup
+ contributions and can be mitigated by shifting the origin of the transverse momentum plane
+\end{itemize}
+
+The ``type-I'' correction to $\vec{\not{E}_{T}}$ is widely preferred by CMS analyses. For Run II, 
+``type-I'' correction requires jets with $p_{T} >$ 15 GeV (including JEC) which deposited 
+energy fraction in the ECAL is less than 0.9 \cite{CMS-PAS-JME-16-004}. \\
+
+The performance and resolution of $\not{E_{T}}$ reconstruction are estimated 
+from events which a Z boson is identified (It is also estimated with events 
+with an isolated photon). The resolution of $\not{E_{T}}$ is dominated 
+by the hadron activity in the event due the high momentum resolution of the leptons, which varies 
+from 1-6$\%$ for muons, 1-4$\%$ for eletrons$/$photons and 5-15$\%$ for jets. The Figure FIGURE shows the 
+good agreement between data and simulated events for the $\not{E_{T}}$ distribution in the 
+ channels $Z\rightarrow \mu^{-}\mu^{+}$ and $Z\rightarrow e^{-}e^{+}$ \cite{CMS-PAS-JME-16-004}.
+ %The performance of the $\not{E_{T}}$ reconstruction is measured from a comparison between the momentum of the Z boson with hadron recoil 
+ 
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=0.43\textwidth]{figuras/Chapter3/METPerformancemumu.pdf}
+    \includegraphics[width=0.43\textwidth]{figuras/Chapter3/METPerformanceee.pdf}
+    \caption{$\not{E_{T}}$ distribution for $Z\rightarrow \mu^{-}\mu^{+}$ (left) and $Z\rightarrow e^{-}e^{+}$ (right). Data 
+    correspond to pp collisions at 13 TeV collected by CMS detector during 2016 (integrated luminosity up to 12.9 fb$^{-1}$).
+    Figure taken from \cite{CMS-PAS-JME-16-004}.}
+    \label{fig:MetPerfomance}
+  \end{center}
+\end{figure} 
+
+%The $\vec{\not{E}_{T}}$ is corrected taking into account those corrections performed to the jet $p_{T}$:
+
+%CMS can be considered as an hermetic detector since almost all the final states 
+%coming from a pp collision can be measured and identified, with exception
+%of neutral particles that only interacts weakly with matter such as 
+%the neutrino and the hypothetical neutralino. Although these particles 
+%scape from CMS without detection, it is possible to infer the 
+%transverse momenta carried by all of them making use of the 
+%transverse momentum conservation. The missing transverse momentum ($E_{T}^{miss}$),
+%the momentum (in the orthogonal plane to the beam line) carried by all particles that only interact weakly, is defined
+%as the momentum imbalance in the transverse plane to the beam line of all
+%particles detected. 
+
+
+
+%excluding the region close to the beam
+%pipe and the gaps between the various subdetectors and between the di↵erent modules of each
 
 
 
@@ -487,8 +590,7 @@ the b-jet identification efficiency compared to the CSV used for Run I \cite{174
 %\label{subsec:ElectronReconstruction}
 
 %%%% DEFINED
-%\section{MET}
-%\label{sec:MET}
+
 
 %\section{Photon Reconstruction}
 %\label{sec:Photon}
