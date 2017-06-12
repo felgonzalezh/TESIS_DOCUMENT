@@ -1,6 +1,7 @@
 \chapter[Particle Identification and Event Reconstruction]{Particle Identification and Event Reconstruction}
 \label{chap:ParticleID}
-
+%PONER PARRAFO de introduccion al capitulo.
+%fo
 %PF jet reconstruction is an important key for the search of $Z'$ bosons in the di-hadronic tau channel since 
 %jets are used as initial seed for the tau-lepton reconstruction. \\
 
@@ -11,10 +12,11 @@
 \section{Particle Flow}
 \label{sec:PF}
 
-The Particle Flow (PF) algorithm \cite{CMS-PAS-PFT-09-001} identifies and reconstructs all the stable-visible particles produced in the hard interaction, by
-combining the information collected by the CMS sub-detectors in order to optimize the determination of their direction, energy and type. The PF 
-technique performs the global event reconstruction classifying all the visible particles into five mutually exclusive groups: photons, 
-neutral hadrons, charged hadrons, electrons and muons. This list of individual particles (called ``PF Candidates'') are used 
+The CMS Particle Flow algorithm (PF) identifies and reconstructs all the stable visible 
+particles produced in the hard interaction by combining the information collected by the sub-detectors in order 
+to optimize the determination of direction, energy and type \cite{CMS-PAS-PFT-09-001}. The PF technique performs the global 
+event reconstruction classifying all the visible particles into five mutually exclusive groups: photons, 
+neutral hadrons, charged hadrons, electrons and muons. This list of individual particles, called ``PF Candidates'', are used 
 as an input in further algorithms to reconstruct higher level objects such as jets, missing transverse energy and tau-leptons. \\
 
 %The capabilities of the CMS detector are ideal for using the PF technique as a global event reconstruction. The high 
@@ -27,28 +29,27 @@ as an input in further algorithms to reconstruct higher level objects such as je
 %for all the physics objects, in particular jets, MET and tau-leptons \cite{CMS-PAS-PFT-10-001}.\\
 
 
-The capabilities of the CMS detector are ideal for using the PF technique as a global event reconstruction. The high 
-granularity of the inner tracker and the ECAL, the hermiticity of the HCAL, the high performance of the muon system 
-along with the strong magnetic field provided by the superconducting solenoid allow PF technique to reach a 
-high performance reconstruction for the individual particles produced in the hard interaction, even for charged particles
+The capabilities of the CMS detector are ideal for using the PF technique for global event reconstruction. The high 
+granularity of the inner tracker and the ECAL, the hermiticity of the HCAL, the high performance of the muon system, 
+along with the strong magnetic field allow the PF technique to reach a 
+high performance in the reconstruction of individual particles, even for charged particles
 with very low $\textrm{p}_{\textrm{T}}$ (of the order of 100 MeV). This leads to an improvement in the global event 
 reconstruction since, instead of using special sub-detectors designed to reconstruct an specific 
-object (like alternative event reconstruction techniques), PF algorithm uses a more completed information collected 
-by all CMS sub-detectors, avoiding any ambiguity to reconstruct the object. Besides, the 
+object like alternative event reconstruction techniques, the PF algorithm uses a more completed information collected 
+by all CMS sub-detectors, avoiding any ambiguity. Besides, the 
 individual particle reconstruction provides a detailed information 
-about compositeness of high level objects like jets, allowing PF technique
-to determinate the hadron profile of the jet and its origin, which is important for the tau-identification. 
-Additionally, the high performance of individual particle reconstruction allows to discriminate between nearby tracks 
-such as the decay products of the tau-lepton. The main advantage 
-to use the PF technique as a global event reconstruction is the high performance reconstruction 
+about the compositeness of high level objects like jets, allowing to determinate the hadron 
+profile of the jet and its origin, which is important for tau-identification. Additionally, the high performance of 
+individual particle reconstruction allows to identify the decay products of the tau-lepton. The main advantage 
+of using the PF technique as a global event reconstruction is the high reconstruction performance
 for all the physics objects, in particular jets, MET and tau-leptons \cite{CMS-PAS-PFT-10-001}.\\
 
 %and the ECAL, the hermicity of the HCand clusters with high efficiency.
 
-The PF technique is performed in three steps: First, the algorithm builds the so-called ``PF elements'' which consist of tracks 
-reconstructed in the Inner Tracker, energy clusters reconstructed in the calorimeters and tracks observed in the muon system \ref{sec:MuonSys};
-the second stage addresses the topological association of the basic PF elements each other using the ``link-algorithm''; finally,
-individual particles are identified and reconstructed from the content of the linked elements. \\
+The PF technique is performed in three steps: in first stage the algorithm builds the so-called ``PF elements'' which consist of tracks 
+reconstructed in the Inner Tracker, energy clusters reconstructed in the calorimeters and tracks reconstructed in the muon system \ref{sec:MuonSys};
+in the second stage the algorithm performs a topological association of the basic PF elements in the so-called ``link-algorithm''; finally, in t
+he third stage individual particles are identified and reconstructed from the content of the linked elements. \\
 
 %Photons are reconstructed from its energy deposits in the ECAL (See section \ref{sec:Photon});
 %electrons are reconstructed by the combination of tracks and the energy deposits in the ECAL of the electron itself and the 
@@ -57,41 +58,45 @@ individual particles are identified and reconstructed from the content of the li
 
 \subsection{Track Reconstruction}
 \label{subsec:TrackReco}
-The track reconstruction in the inner tracker is one of the most important keys of the global event reconstruction. The inner tracker, due to its
-high granularity, provides a precise reconstruction of the charged-particle tracks and consequently give rise to an accurate reconstruction 
-of the primary vertex, identifying it from the pileup interactions. \\
+The track reconstruction in the inner tracker is one of the most important steps in the global event reconstruction. The high granularity of 
+he inner tracker allows for a precise reconstruction of the charged-particle tracks and, consequently, gives rise to an accurate reconstruction 
+of the primary vertex, discriminating it from the pileup vertexes. \\
 
 The track reconstruction is performed in several steps by a process called \textit{iterative tracking}. In the initial iterations, 
-the iterative tracking applies a tight criteria in order to search for tracks easy to identify (tracks 
-with relative high $\textrm{p}_{\textrm{T}}$ produced near the interaction region). In the next iterations, the hits 
-unambiguously assigned to a track are removed. This reduces the combinatorial complexity in the subsequent iterations 
-and allows to loosen the selection criteria to identify the tracks associated with low $\textrm{p}_{\textrm{T}}$. In the first three iterations, 
+the algorithm applies a tight criterion in order to search for  easy-to-identify tracks (tracks 
+with relative high $\textrm{p}_{\textrm{T}}$ produced near the interaction region). In the next iterations the
+hits associated to these tracks are removed. This reduces the combinatorial complexity in the subsequent iterations 
+and allows to loosen the selection criteria to identify tracks associated with low $\textrm{p}_{\textrm{T}}$. In the first three iterations 
 the iterative tracking reaches an efficiency up to 99.5$\%$ for isolated muons and larger than 90$\%$ for 
-charged hadrons in jets \cite{CMS-PAS-PFT-09-001}. Last iterations relaxes the constrains on the origin of the vertex 
-to find tracks originated outside the beam spot (secondary charged particles from photon conversions in the tracker material) 
-and to reconstruct the remaining tracks. Each iteration could be summarized in 4 steps:\\
+charged hadrons in jets \cite{CMS-PAS-PFT-09-001}. The last iterations relax the constrains on the origin of the vertex in order
+to find tracks originated outside the beam spot, for instance secondary charged particles from photon conversions in the tracker material, 
+and to reconstruct them as well as the all the remaining tracks resulting associated with a small number of hits. Each iteration could be summarized in 4 steps:\\
+
+MIRAR ESOS CON A SMALL NUMBER OF HITS
 
 \begin{itemize}
  \item Tracks are seeded using 2 or 3 hits, giving rise to the initial track candidates and their initial trajectory parameters.
- \item The track finder algorithm is based on the Kalman filter \cite{Fruhwirth:1987fm}, which consist in an extrapolation outwards of the inner 
-       tracker layers with the purpose to find additional hits associated to the track and to estimate the track 
-       parameters. The filter recalculates the track parameters for each layer, accounting the energy loss and the 
-       multiple Coulomb scattering produced by the interaction of the charged particle and the tracker material.
+ \item A Kalman filter \cite{Fruhwirth:1987fm} recalculates the track parameters for each layer, to account for the energy loss and the 
+       multiple Coulomb scattering produced by the interaction of the charged particle and the tracker material. The Kalmar filter
+       performs an extrapolation outwards of the inner tracker layers with the purpose to find additional hits associated to the track 
+       and to estimate the track parameters.
  \item A fit on the track is performed to estimate all the possible information of the trajectory.
- \item Tracks are selected on basis of the quality flags, whether they are compatible with some 
- criteria such as $\chi^{2}$ and if they are originated from the primary vertex.
+ \item Tracks are selected based on the quality flags, using criteria such as the $\chi^{2}$ of the fit and
+ the origin of the track in the primary vertex.
 \end{itemize}
 
-The efficiency estimation of the track reconstruction is performed comparing the reconstructed tracks with MC samples which 
-contains just single muons or pions. Muons are ideal for this purpose since muons, unlike electrons, have a negligible energy loss
-through bremsstrahlung radiation due to the interaction with the tracker material. Unlike muons, charged pions (a possible tau decay product) do not 
-only undergo Coulomb scattering but it (as all hadrons) also loses energy though strong interactions with the tracker material. These nuclear 
-interactions are not taken into account in the track Finder algorithm, reducing the track reconstruction efficiency in the tracker acceptance. The tracking efficiency 
-is higher than 99$\%$ for isolated muons with a $\textrm{p}_{\textrm{T}}>1$ $\textrm{GeV}$ while for charged pions is close 
-to 95$\%$ for $\textrm{p}_{\textrm{T}}>1$ $\textrm{GeV}$ \cite{Chatrchyan:2014fea} (See Figure \ref{fig:Track_Efficiencies}). The PU interactions
-degrades significantly the tracking efficiency for tracks with $\textrm{p}_{\textrm{T}}<1$ $\textrm{GeV}$ \cite{Chatrchyan:2014fea}. Efficiencies 
-were obtained from 2011 data for pp collision at a centre-of-mass energy of $\sqrt{s} =$  7 TeV. For simulated events an average of 8 for pileup interactions was used, which corresponds
-roughly to the amount delivered by the LHC on 2011.
+The estimation of the track reconstruction efficiency is performed by comparing the reconstructed tracks with those from 
+MC samples which contain only single muons or pions. Muons are ideal for this purpose since they, unlike electrons, 
+have a negligible energy loss due to bremsstrahlung. Pions on the other hand not only lose energy due to 
+Coulomb scattering but (as all hadrons) also due to nuclear interactions with the tracker material. The last kind of interactions
+is not taken into account in the track finder algorithm, reducing the track reconstruction efficiency in the angular region cover by the 
+tracker. The tracking efficiency is higher than 99$\%$ for isolated muons with a $\textrm{p}_{\textrm{T}}>1$ $\textrm{GeV}$ while in the
+case of charged pions is close to 95$\%$ (See Figure \ref{fig:Track_Efficiencies}). The pileup interactions
+degrade significantly the efficiency for tracks with $\textrm{p}_{\textrm{T}}<1$ $\textrm{GeV}$ \cite{Chatrchyan:2014fea}. 
+
+%Efficiencies were obtained from 2011 data for pp collision at a centre-of-mass energy of $\sqrt{s} =$  7 TeV. For 
+%simulated events an average of 8 for pileup interactions was used, which corresponds roughly 
+%to the amount delivered by the LHC on 2011.
 
 
 %The tracking
@@ -107,10 +112,10 @@ roughly to the amount delivered by the LHC on 2011.
     \includegraphics[width=0.35\textwidth]{figuras/Chapter3/TrackEff_Muon_eta.png}
     \includegraphics[width=0.35\textwidth]{figuras/Chapter3/TrackEff_Pion_pt.png}
     \includegraphics[width=0.35\textwidth]{figuras/Chapter3/TrackEff_Pion_eta.png}
-    \caption{Efficiency of reconstructed track as function of $p_{\textrm{T}}$ and $\eta$ for 
-    muons (top) and charged pions (bottom). Efficiencies were obtained using pp collisions with a centre-of-mass 
-    energy of $\sqrt{s} =$  7 TeV, which corresponds to 2011 data. For simulated data an average of 8 pileup 
-    events was used, which is roughly the amount delivered by the LHC on 2011. Figure taken from \cite{Chatrchyan:2014fea}}
+    \caption{Efficiency of reconstructed track as a function of $p_{\textrm{T}}$ (left) and $\eta$ (right) for 
+    muons (top) and charged pions (bottom). Efficiencies were obtained using data from pp collisions with a centre-of-mass 
+    energy of $\sqrt{s} =$  7 TeV, which corresponds to the 2011 data taking period. For simulated data an average of 8 pileup 
+    events was used, which is roughly the amount delivered by the LHC in 2011. Figure taken from \cite{Chatrchyan:2014fea}}.
     \label{fig:Track_Efficiencies}
   \end{center}
 \end{figure}
@@ -359,28 +364,26 @@ dijet samples for $\eta$-dependent corrections and $\gamma /$Z+jets samples for 
 
 
 
-\section{b-jets Identification}
+\section{b-jet Identification}
 \label{sec:bJet}
-The identification of jets originated from the decay of bottom quarks, i.e. b-tagging, exploits 
-the properties of the $B$-hadrons such as their large decay life-times ($c\tau~$450 $\mu$m, which leads
-to displaced tracks in the tracker) as well as the presence of leptons in the final 
-state due their semileptonic decays. CMS has developed several algorithms for b-jet 
-identification \cite{Chatrchyan:2012jua} based on the properties of the $B$-hadron 
-decays such as large impact parameter with respect to the primary 
-vertex of charged particle tracks, a possible secondary vertex 
+The identification of jets originated from bottom quark decays, i.e. b-tagging, exploits 
+the properties of the $B$-hadrons such as their large decay life-times ($c\tau~$450 $\mu$m) which leads
+to displaced tracks as well as the presence of leptons in the final state coming from semileptonic 
+decays. CMS has developed several algorithms for b-jet 
+identification \cite{Chatrchyan:2012jua} based on features as large impact parameter of the b-jet candidate 
+with respect to the primary vertex of charged particle tracks, a possible secondary vertex 
 reconstructed inside the jet, the mass and the number of tracks associated to the secondary
-vertex, the number of tracks in the jet as well as the possible presence of soft leptons. The 
-algorithm used in the analyses is the Combined Secondary Vertex (CSV) and shows the best 
-performance for b-jet identification \cite{CMS:2013vea}. CSV algorithm makes 
-use of Multivariate Variable Analysis (MVA) in order to  
-discriminate b-jets, combining the variables based 
-on displaced tracks, secondary vertex information and jet kinematics; the method
-provides from a likelihood ratio a single discriminator that defines the compatibility of a jet to be originated
-from a b-quark. The CSV discriminator defines three possible working points that 
-allows to select a high b-tagging efficiency (CSVL, loose working point) or 
-a high purity of b-jet samples (CSVT, tight working point); the remaining
+vertex, the number of tracks in the jet as well as possible presence of soft leptons. In this analysis,
+we use the Combined Secondary Vertex algorithm (CSV) which shows the best 
+performance for b-jet identification \cite{CMS:2013vea}. The CSV algorithm makes 
+use of Multivariate Variable Analysis (MVA) in order to  discriminate b-jets, combining the variables based 
+on displaced tracks, secondary vertex information and jet kinematics. The method
+provides a single discriminator to evaluate the compatibility of a given jet 
+with a b-jet. The CSV discriminator defines three possible working points that 
+allows to select a high b-tagging efficiency (CSVL: loose working point) or 
+a high purity of the b-jet sample (CSVT: tight working point); the third
 working point shows a high efficiency preserving high purity 
-(CSVM, middle working point). The three working points are defined 
+(CSVM: middle working point). The three working points have been defined 
 according to their b-tagging misidentification rate (probability of an non-b jet to be tagged as a b-jet)
 and their b-tagging efficiency (probability of a real b-jet to be tagged by the algorithm). Table 
 \ref{table:b-tagWP} shows the b-tagging efficiency for the three working points.\\
@@ -404,10 +407,10 @@ and their b-tagging efficiency (probability of a real b-jet to be tagged by the 
 	      Tight                 & $\geq$ 0.9535                   &  $\approx$ 49 $\%$ \\ \hline
   \end{tabular}
 
-\caption{CSVv2 discriminator threshold and corresponding efficiency for the three working points, using 
-b-jets with transverse momentum above 30 GeV in simulated $t\bar{t}$ events with pp collisions 
-at $\sqrt{s}=13$ TeV. The numbers of this table can be used as reference since they depends on
-$p_{T}$ and $\eta$ distributions of the jets \cite{CMS:2016kkf}.\label{table:b-tagWP}}
+\caption{CSVv2 discriminator threshold and corresponding efficiency for the three working points. 
+The efficiencies have been determined using b-jets with transverse momentum above 30 GeV, with simulated $t\bar{t}$ events 
+in pp collisions at $\sqrt{s}=13$ TeV. The numbers are presented just for illustration since they also depend 
+on the $p_{T}$ and $\eta$ distributions of the jets \cite{CMS:2016kkf}.\label{table:b-tagWP}}
 }
 \end{table}
 
@@ -415,23 +418,25 @@ $p_{T}$ and $\eta$ distributions of the jets \cite{CMS:2016kkf}.\label{table:b-t
 %Medium (CSVM) ≥ 0.679 1 % 65 %
 %Tight (CSVT) ≥ 0.898 0.1 % 50 %
 
-
-The b-tagging algorithm has been improved for Run II (CSVv2) with the main aim of reducing
 %The off-line b-jet identification algorithm has been improved for Run II (CSVv2) with the main aim of reducing
-the execution time. CVSv2 includes an updated multivariate algorithm
-that makes use of a Neural Network method instead a simple likelihood rate to estimate the CSV discriminator, 
-besides it uses a new algorithm for secondary vertex reconstruction (Inclusive Vertex Finder, IVF) as well as   
+
+%execution time (CPU com)
+The b-tagging algorithm has been improved for Run II (CSVv2) with the main aim of reducing
+the computing time. CVSv2 includes an updated multivariate algorithm that makes use of a 
+neural network method, instead of a simple likelihood rate, to estimate the CSV discriminator; 
+besides, it also uses a new algorithm for secondary vertex reconstruction (Inclusive Vertex Finder, IVF) as well as   
 an improved track selection. The improvement of the CSVv2 algorithm lead to an increase about 10 $\%$ in 
-the b-jet identification efficiency compared to the CSV used for Run I \cite{1742-6596-664-8-082055}. See Figure \ref{fig:bjetRun1vsRun2}.
+the b-jet identification efficiency, as compared to the CSV algorithm used for Run I \cite{1742-6596-664-8-082055}. 
+See Figure \ref{fig:bjetRun1vsRun2}.
 
 \begin{figure}[ht]%[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{figuras/Chapter3/bjet_performance_algos.pdf}
-    \caption{Efficiency of non-b jets to be misidentified as b-jet as a function of the efficiency to correctly identify
-             b-jets for several jet identification algorithms, using enriched $t\bar{t}$ events with 2.6 fb$^{-1}$ of pp 
-             collision data collected in 2015 at at $\sqrt{s}=13$ TeV and a BX of 25 ns. Although cMVAv2 algorithm 
-             shows the best performance, the CSVv2 algorithm is used for many analysis and shows an improvement compared 
-             with the CSV algorithm used in Run I. Figure taken from \cite{CMS:2016kkf}}
+    \caption{Efficiency of non-b jets to be misidentified as b-jet, as a function of the b-jet efficiency 
+	     for several jet-identification algorithms. An enriched $t\bar{t}$ sample with 2.6 fb$^{-1}$ 
+	     from the data collected in 2015 at $\sqrt{s}=13$ TeV and a BX of 25 ns. Although cMVAv2 algorithm 
+             shows the best performance, the CSVv2 algorithm is used for many analysis and shows 
+             an improvement compared with the CSV algorithm used in Run I. Figure taken from \cite{CMS:2016kkf}}
     \label{fig:bjetRun1vsRun2}
   \end{center}
 \end{figure}
