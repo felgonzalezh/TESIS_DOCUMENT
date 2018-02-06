@@ -23,17 +23,26 @@
 %\usepackage{lineno}
 %\usepackage[latin1]{inputenc}
 
+\usepackage[T1]{fontenc}
+\DeclareUnicodeCharacter{0301}{/}
+
+
 \usepackage{color}
 \usepackage{verbatim}
 \usepackage{moreverb}
+\usepackage{lmodern} 
 
-%\newcommand{\tau}{$\tau$}
+\newcommand{\pt}{p$_{T}$}
+\newcommand{\sqrts}{$\sqrt{s}=$~}
+\newcommand{\centermassenergy}{centre-of-mass energy}
 \newcommand{\tauh}{$\tau_{h}$}
 \newcommand{\Zprime}{Z$^{\prime}$}
-\newcommand{\ZprimeSSM}{Z$^{\prime}_{SSM}$}
-\newcommand{\Uprime}{U(1)$^{\prime}$}
-%\newcommand{\ZprimeTAT}{Z$^{\prime}_{\text{TAT}}$
+\newcommand{\ZprimeSSM}{Z$^{\prime}_{\text{SSM}}$}
+\newcommand{\Uprime}{U(1)$^{\prime}$~}
+\newcommand{\ZprimeTAT}{Z$^{\prime}_{\text{TAT}}$}
 \newcommand{\Zprimetotauh}{Z$^{\prime}\rightarrow \tau_{h}\tau_{h}$}
+\newcommand{\Zprimetoee}{Z$^{\prime}\rightarrow ee$}
+\newcommand{\Zprimetomumu}{Z$^{\prime}\rightarrow \mu\mu$}
 \newcommand{\Zprimetotautau}{Z$^{\prime}\rightarrow \tau\tau$ }
 \newcommand{\taue}{$\tau_{e}$}
 \newcommand{\taumu}{$\tau_{\mu}$}
@@ -48,6 +57,7 @@
 %\usepackage{verbatimbox}
 
 
+
 %\bibliographystyle{unsrt}
 \bibliographystyle{josenourl}
 %\bibliographystyle{utphys}
@@ -59,7 +69,7 @@
 %            block=none]{biblatex}
 %\addbibresource{Biblio.bib}
 
-\title{Search for $Z'$ bosons decaying into tau pairs in p-p Collisions at $\sqrt{s}=$13 TeV with the CMS Detector}
+\title{Search for $Z'$ bosons decaying into tau pairs in p-p collisions at $\sqrt{s}=$13 TeV with the CMS Detector}
 \author{Carlos Felipe Gonz\'{a}lez Hern\'{a}ndez}
 \date{Compiled on {\ddmmyyyydate\today} at \currenttime}
 
@@ -120,7 +130,8 @@
 %\include{SigMod}
 %\include{WindowStudy}
 
-\bibliography{Biblio}
+\bibliography{Biblio.bib}
+
 %\printbibliography
 %\listoffigures
 %\listoftables
