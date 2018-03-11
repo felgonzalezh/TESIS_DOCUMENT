@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,amsthm,dsfont,gensymb} %mathtools,
+\usepackage{mathrsfs}
 \usepackage{lipsum}
 \usepackage{hyperref}
 \usepackage{multirow}
@@ -16,11 +17,16 @@
   unicode=true,
   urlcolor=purple
 }
+\usepackage{url}
 \usepackage{graphics}
 \usepackage{bm}
 \usepackage{subfig}
 \usepackage{caption}
 \usepackage[us,24hr]{datetime}
+\usepackage[symbol]{footmisc}
+
+\usepackage{filecontents}
+
 %\usepackage{lineno}
 %\usepackage[latin1]{inputenc}
 
@@ -31,6 +37,8 @@
 \usepackage{verbatim}
 \usepackage{moreverb}
 \usepackage{lmodern} 
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 \newcommand{\pt}{p$_{T}$}
 \newcommand{\Et}{E$_{T}$}
@@ -61,6 +69,8 @@
 
 %\bibliographystyle{unsrt}
 \bibliographystyle{josenourl}
+%\usepackage{biblatex}
+
 %\bibliographystyle{utphys}
 %\usepackage[hyperref=true,
 %            style=numeric-comp,
@@ -103,7 +113,7 @@
 \pagenumbering{arabic}
 %\addc
 %Outline-Introduction                                                                                                                                                                               
-%\addcontentsline{toc}{chapter}{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 \include{Intro}
 %\include{Outline}
 
@@ -132,6 +142,7 @@
 %\include{WindowStudy}
 
 %\bibliography{Bibliography/BiblioIntroduction.bib,Bibliography/BiblioChapter2.bib}
+\bibliographystyle{IEEEtran}
 \bibliography{Bibliography/BiblioIntroduction.bib}
 %\addbibresource{Bibliography/BiblioIntroduction.bib}
 %\addbibresource{Bibliography/BiblioChapter2.bib}
