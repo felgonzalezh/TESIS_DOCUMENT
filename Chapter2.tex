@@ -475,28 +475,29 @@ pairs which, as mentioned above, is important for jet and tau reconstruction.
 
 \section{The Calorimeter System}
 
-\noindent The purpose of the Calorimeter System is to ``stop'' most of the particles 
+\noindent The purpose of the Calorimeter System is to stop most of the particles 
 coming out from the collision and to measure their energy with a good 
 granularity. Electrons, photons, and hadrons interact with the calorimeter 
-material and deposit all their energy on the detectors, allowing their energy 
-to be measured. The only SM particles that scape from the Calorimeter System are 
-muons and neutrinos: muons deposit a very low amount of their energy on the 
-calorimeters, and therefore there are additional detectors installed in the outer side 
-of CMS in order to identify them. In case of neutrinos, they escape without detection
-since they only interact weakly, which leads an energy imbalance in the event; therefore 
-the energy imbalance in an event is an indirect evidence of particles that only interact weakly, such 
-as neutrinos \footnote[1]{A big amount of energy 
-imbalance would be an evidence of dark matter candidates, since they only participate on weakly-interactions.}. \\
+material, depositing all their energy on the detectors which is sampled
+and measured. The only SM particles that scape from the Calorimeter System are 
+muons and neutrinos: muons deposit a very low amount of energy in this system, and 
+continue traveling beyond to the detectors installed in the outer part of CMS, 
+designed to reconstruct their tracks. In the case of neutrinos, they escape without detection
+since they only interact weakly, leaving an energy imbalance in the event; therefore, this imbalance 
+is an indirect evidence of their presence or the presence of any particle that only interacts weakly \footnote[1]{A big amount of energy 
+imbalance would be an evidence of dark matter candidates, since they only participate on weak interactions.}. \\
 
 \noindent The CMS Calorimeter is divided in two subsystems: the electromagnetic calorimeter (ECAL) and 
-the hadronic calorimeter (HCAL). The ECAL is the closest calorimeter subsystem to the interaction point, 
-it is designed to measure the energy of electrons and photons. The reconstruction of photons and 
-electrons are essential for many physics analyses, for instance for those analyses which 
-jets or taus are involved; for these analyses, the photon and electron 
-reconstruction are crucial for the energy measurement of the jet and for 
-the tau identification. The HCAL, the other calorimeter subsystem, is designed to measure the energy of the 
-hadrons. Figure \ref{figchp2:CMStrajectories} shows the arrangement of the 
-Calorimeter System and the energy deposits of the SM particles on it.
+the hadronic calorimeter (HCAL). The ECAL is the closest calorimeter subsystem to the interaction point; 
+it is designed to measure the energy of electrons and photons. The reconstruction of these particles 
+is essential for many physics analyses, for instance for those in which 
+jets or taus are involved. In these analyses, the photon and electron 
+reconstruction is crucial for the energy measurement of the jet and for 
+the tau identification. The HCAL, the other calorimeter subsystem, which is located 
+just outside of the ECAL, is designed to measure the energy of the hadrons. It plays a fundamental
+role in jet-like objects: QCD jets, b-jets, tau-jets; being able able to differentiate 
+among these objects is crucial, is crucial, in particular for these analyses. Figure \ref{figchp2:CMStrajectories} 
+shows the arrangement of the Calorimeter System and the energy deposits of SM particles on it.
 
 
 %a jet contains a copious amount of 
@@ -519,29 +520,31 @@ Calorimeter System and the energy deposits of the SM particles on it.
 \label{subsec:ECal}
 
 \noindent The Electromagnetic Calorimeter is designed to absorb the total energy 
-of electrons, and photons when they pass through it. The interaction between these 
-particles and the calorimeter material produces a cascade of electrons, and photons in a process 
-called electromagnetic showers. An electromagnetic shower starts when an energetic electron, 
-or photon enters to the high density material of the calorimeter and starts to lose energy
-due to its interaction with the calorimeter material. Electrons and 
-positrons losses their energy by bremsstrahlung radiation, while photons 
-losses their energy by electron-positron conversions. Therefore, a cascade
+of electrons and photons when they pass through it. The interaction between these 
+particles and the calorimeter material produces a cascade of electrons and photons in a process 
+called electromagnetic shower. An electromagnetic shower starts when an energetic electron, 
+or photon, enters into the high density medium of the calorimeter and starts to lose energy
+due to interactions with the medium. Electrons and 
+positrons lose their energy by bremsstrahlung radiation, while photons 
+lose their energy by electron-positron conversions. Therefore, a cascade
 of secondary particles is created and the energy losses continue through 
-these two processes (pair production and bremsstrahlung) until the energy of photons is not
-enough for pair production and the energy losses of electrons are dominated by other processes 
-than bremsstrahlung. As a result, the energy deposits of the electromagnetic shower 
-are spread on the calorimeter material; then, the energy of 
-the products of the electromagnetic cascade is measured using scintillators. The
-the energy profile (transverse and longitudinal) of the electromagnetic shower is 
-required to determinate the initial energy of the particle. Electromagnetic showers 
-are then described by two parameters which depend
-on the calorimeter material: the radiation length (X$_{0}$) and the Moli\`ere radius. The radiation length is 
+these two processes until the energy of the particles is not
+enough to produce new ones. As a result, the energy deposits of the electromagnetic shower 
+are spread over the calorimeter material and are sampled and measure using scintillators. The
+ profile (transverse and longitudinal) of the electromagnetic shower allows to 
+determine the energy of the incoming particle. Electromagnetic showers 
+are then described by two parameters which depend on the calorimeter 
+material: the radiation length (X$_{0}$) and the Moli\`ere radius. The radiation length is 
 the distance than an electron or photon travels until its energy is reduced by a factor 
 of $1/e$, while the Moli\`ere radius is the radius of a cylinder where 90$\%$ of 
 the electromagnetic shower is contained. In consequence, the calorimeter 
-is designed with a enough thickness (in terms of radiation length) to measure the total
+is designed with enough thickness (in terms of radiation lengths) to measure the total
 energy of the particles, and with a Moli\`ere radius small enough to achieve a good granularity. 
 The schematic view of an electromagnetic shower is shown in Figure \ref{figchp2:EMshower}. 
+
+
+%for pair production and the energy losses of electrons are dominated by other processes 
+%than bremsstrahlung
 
 \begin{figure}[ht]
     \begin{center}
@@ -551,16 +554,16 @@ The schematic view of an electromagnetic shower is shown in Figure \ref{figchp2:
     \end{center}
  \end{figure}
 
-\noindent The ECAL is a hermetic and cylindrical calorimeter whose scintillators are made of 
+\noindent The CMS ECAL has cylindrical and hermetic design with scintillators made of 
 lead tungstate crystals (PbWO$_{4}$), see Figure \ref{figchp2:ECALcrytal}. The PbWO$_{4}$ crystals are
-characterized by its high density (8.28 $g/cm^{3}$), its short radiation length (0.89 cm) and its
+characterized by its high density (8.28 g/cm$^{3}$), its short radiation length (0.89 cm) and its
 small Moli\`ere radius (2.2 cm), making them appropriate to achieve 
 accurate energy measurements with a good granularity \cite{chp2:CMS}; additionally,
-these crystals are radiation hardness and have a fast response, which make them
-suitable for the LHC environment. When these crystals are crossed by electrons 
-or photons, they emit a light pulse with a time response of $\sim$25 ns (about 80$\%$ of the times); that scintillator
-light is collected by photo-detectors that convert it into an electric signal. The photo-detectors used in the barrel 
-are Avalanche Photo-Diodes (APDs) while in the endcaps Vacuum Photo-Triodes (VPT) are used. \\
+these crystals have excellent radiation-hardness and have a fast response, which make them
+suitable for the LHC environment. When electrons or photons cross these crystals, they emit a light pulse 
+with a time response of $\sim$25 ns (about 80$\%$ of the times). The scintillator
+light is collected by photo-detectors that convert it into an electric signal. The photo-detectors 
+used in the barrel are Avalanche Photo-Diodes (APDs) while in the endcaps are Vacuum Photo-Triodes (VPT). \\
 
 \begin{figure}[ht]
     \begin{center}
@@ -572,21 +575,24 @@ are Avalanche Photo-Diodes (APDs) while in the endcaps Vacuum Photo-Triodes (VPT
  
 \noindent The ECAL has 61200 crystals in the barrel and 7324 crystals in each endcap \cite{chp2:CMSTDR}, covering a 
 $|\eta|$ range up to 3. The crystals are installed in a quasi-projective geometry 
-in such a way that each crystal points toward the center of the detector with an additional angle 
-of 3$^{\circ}$ with respect to this direction \footnote[1]{In the case of the endcaps, this angle 
-varies from 2$^{\circ}$  to 8$^{\circ}$.}; the purpose of this 
-geometrical arrangement is to avoid particles passing through inactive regions of the ECAL. In the 
-barrel region, the calorimeter (ECAL Barrel or EB) has a inner radius of 129 cm, covering a 
-pseudorapidity region of $|\eta| < $1.479. The EB crystals are 230 mm long (25.8 $X_{0}$) and 
-covers a cross-section at the front face of 0.0174 $\times$ 0.0174 
-in the $\eta-\phi$ plane ($22\times22$ mm$^{2}$). In the forward region,
-the ECAL (ECAL Endcaps or EE) is located at 314 cm from the collision point, covering 
+in such a way that each of them points toward the center of the detector, plus an additional angle
+of 3$^{\circ}$, with the purpose of avoiding particles passing through inactive regions of the ECAL. In the 
+particles passing through inactive regions. In the barrel region, the calorimeter (ECAL Barrel or EB) has a 
+inner radius of 129 cm, covering a pseudorapidity region of $|\eta| < $1.479. The EB crystals 
+are 230 mm long (25.8 $X_{0}$) and cover a cross-section at the front face of 0.0174 $\times$ 0.0174 
+in the $\eta-\phi$ plane (which corresponds to $22\times22$ mm$^{2}$). In the forward region,
+the ECAL Endcaps (EE) are located at 314 cm from the collision point, covering a pseudorapidity range of
 1,479 $ < |\eta| < $ 3,0. The EE crystals are 220 mm long (24.7 $X_{0}$) and cover
-a cross-section of 28.62 $\times$ 28.62 mm$^{2}$. In addition to the crystals, Preshower 
-Detectors are installed in the endcaps, covering a pseudorapidity range of  $1.65<|\eta|<2.6$. This detector consists of two 
+a cross-section of 28.62 $\times$ 28.62 mm$^{2}$. In addition to the crystals, \textit{Preshower Detectors}
+are installed in front of endcaps, covering a pseudorapidity range of  $1.65<|\eta|<2.6$. This detector consists of two 
 lead layers, each one followed by silicon sensors. Their main goal is 
-to identify the two photons produced by neutral-pion decays 
-in the forward region. The whole ECAL arrangement is shown in Figure \ref{figchp2:ECALcrytal}
+to identify the two photons produced by neutral-pion decays in the
+forward region. The complete ECAL arrangement is shown in Figure \ref{figchp2:ECALcrytal}.
+
+%with respect to this direction \footnote[1]{In the case of the endcaps, this angle 
+%varies from 2$^{\circ}$  to 8$^{\circ}$.}; the purpose of this 
+%geometrical arrangement is to avoid 
+
 
 \begin{center}
 \begin{figure}[h]
@@ -601,8 +607,9 @@ in the forward region. The whole ECAL arrangement is shown in Figure \ref{figchp
  \left(\frac{\sigma_{E}}{E}\right)^{2} = \left(\frac{2.8\%}{\sqrt{E}}\right)^{2} + \left(\frac{0.12\%}{E}\right)^{2} + \left(0.3\% \right)^{2} \;, 
 \end{equation}
 
-\noindent where 2.8$\%$ relies on the stochastic term due to electromagnetic showers, 12$\%$ comes from the 
-electronic noise and 0.3$\%$ refers to the systematic uncertainty produced by the calibration of the apparatus. As can be inferred from
+\noindent where the first term comes from the stochastic nature of electromagnetic showers, the second term is 
+related to electronic noise and the third term is related to the systematic uncertainty produced 
+by the calibration of the apparatus. As can be inferred from
 Eq. \ref{ECALenergyResolution}, the energy resolution for energetic particles is dominated by the systematic uncertainty, while
 the stochastic and noise terms are dominant for low energies. As an example, the energy resolution 
 obtained in the EB is close to 1$\%$ for all electrons that come from Z decays \cite{ECALperformance}.
@@ -616,14 +623,14 @@ a dense material called the absorber. The absorber is made of stainless
 steel and copper layers. When a hadron hits the absorber it produces a cascade of 
 particles, known as hadronic shower. The hadronic shower is a cascade of 
 secondary particles, mainly pions, originated by strong interactions between 
-the hadron and the atomic nuclei of the absorber material.  Due to the copious pion
-production, electromagnetic showers are also involved because of the 
-neutral pion decays. As the hadronic shower develops, the particles are detected by the scintillators, which
- produces light pulses when a particle passes through it; then, the light pulses are 
- collected by optical fibers. The amount of light collected is proportional to the amount 
+the hadron and the atomic nuclei of the absorber material. Due to copious pion
+production, the shower also acquires electromagnetic components through
+neutral pion decays into photons. As the hadronic shower develops, the particles 
+are detected by the scintillators, producing light pulses that are collected by 
+optical fibers. The amount of light collected is proportional to the amount 
  of energy deposited in the scintillator material, allowing the energy to be measured. A hadronic 
  shower is described by the absorption length, which is the average distance traveled by the 
- hadron trough the medium before it strongly-interacts with the absorber; it is given by:
+ hadron trough the medium before it interacts with the absorber; it is given by:
 
  \begin{equation}
  \lambda = \frac{A}{N_{A} \sigma_{abs}}  \;,
@@ -632,14 +639,12 @@ neutral pion decays. As the hadronic shower develops, the particles are detected
 \noindent where $A$ is the nuclei weight, $N_{A}$ is the Avogadro's number and $\sigma_{abs}$
 is the absorption cross-section.\\
 
-\noindent The HCAL arranged in the central pseudorapidity region, or 
-HCAL Barrel (HB), is radially restricted since it is placed within the remaining volume
-between the ECAL and the solenoid; for this reason, the Hadron Outer Calorimeter (HO) is 
-installed outside the solenoid in order to improve the hermiticity. In the 
-forward region, there are two subsystems installed: the HCAL Endcap (HE) 
-which covers the pseudorapidity range acceptance of $\eta <$ 3, and the HCAL 
-Forward (HF) which extends the $\eta$ coverage of the calorimeter up to 5.2. The HCAL structure 
-is shown in Figure \ref{figchp2:HCAL}.
+\noindent In the central pseudorapidity region (HCAL Barrel, HB) the volume
+is restricted due to the solenoid, for this reason, part of the calorimeter is installed 
+outside (Hadron Outer Calorimeter, HO) to achieve the desired level of the hermeticity. In 
+the forward region there are two subsystems installed: the HCAL Endcaps (HE) 
+which cover the pseudorapidity range of 1.4 $< |\eta| <$ 3; and the HCAL Forward (HF) which 
+extends the $\eta$ coverage up to 5.2. The HCAL structure is shown in Figure \ref{figchp2:HCAL}.
 
 %3$ < |\eta| < $5.2.
 
@@ -654,82 +659,74 @@ is shown in Figure \ref{figchp2:HCAL}.
 
 \noindent The HB is divided into two identical halves in the $z$-direction. Each half is composed of 18
 wedges, covering a range of $|\eta| < $ 1.4. Each wedge consists of brass absorber plates 
-staggered with plastic scintillators. The absorber material is made of brass 
-because it is a non-magnetic material and it has a small 
-radiation length ($\lambda = $ 16.42 cm), making it appropriate for the CMS environment. Between every
-two layers of absorbers, there is installed a plastic scintillator with a thickness of 3.7 mm; the scintillators
-send the light pulse through optical-fibers (WaveLenght Shifter, WLS) to reach the 
-photo-detectors (Hibryd Photodiode, HPD). The photo-detectors convert the light pulse 
-into the electric signal. The innermost and 
-outermost plates of the wedge are made of stainless steel in order to strengthen the structure. Each wedge 
+staggered with plastic scintillators. The brass is a non-magnetic material and it has a 
+small radiation length ($\lambda = $ 16.42 cm), making it appropriate for the CMS environment. Between every
+two layers of absorbers, there is plastic scintillator with a thickness of 3.7 mm; the scintillator 
+sends lights pulse through optical-fibers (WaveLenght Shifter, WLS) to the
+photo-detectors (Hibryd Photodiodes, HPD). The photo-detectors convert the light 
+into an electric signal. The innermost and outermost plates of 
+the wedge are made of stainless steel in order to strengthen the structure. Each wedge 
 is segmented in the $\eta$-direction by 16 structures called towers; each tower 
-covers an identical solid angle whose area in the $\Delta\phi\times\Delta\eta$ plane is 0,087$\times$0,087. \\
+covers an identical solid angle whose area in the $\phi-\eta$ plane is 0,087$\times$0,087. \\
 
 \noindent The HO is located outside the solenoid, covering $|\eta| < $ 1.26. It uses as absorber 
-material the solenoid itself and the most inner layer of the 
-iron-yoke structure. The HO is divided into
-5 wheels in the $z$-direction, similar to the geometrical disposition 
+material the solenoid itself and the inner most layer of the iron-yoke structure. The HO 
+is divided into 5 wheels in the $z$-direction, similar to the geometrical disposition 
 of the Muon Chambers (see section \ref{sec:MuonSys}). In the central wheel of the detector, there 
-are two layers of plastic scintillators staggered with the solenoid and the inner 
+are two layers of plastic scintillators staggered between the solenoid and the inner 
 layer of the iron yoke. Additionally, there is one scintillator installed in 
-each remaining wheel just behind the solenoid. The Figure \ref{figchp2:HCAL} shows the disposition of 
+each remaining wheel just behind the solenoid. Figure \ref{figchp2:HCAL} shows the disposition of 
 the HO plastic scintillators. \\
 
-\noindent In the forward region, the HE is installed just behind the EE, covering 
-1.4 $ < |\eta| <$ 3. The HE is a sampling detector, similarly than the HB, which 
-is composed of brass layers staggered with plastic scintillators of 3.7 mm of 
-thickness. The HF is located at 11.2 m from the interacting point in the $z$-direction,
-covering an extended $\eta$ region up to 5. The purpose of 
-the HF is to achieve a better hermiticity, which improves 
-the reconstruction of very forward jets as well as 
-the measurement of the energy imbalance in an event. \\
+\noindent The HE is a sampling detector similar to the HB, composed of brass layers 
+staggered with plastic scintillators of 3.7 mm of thickness. The HF 
+is located at 11.2 m from the interaction point in the $z$-direction,
+covering an extended $\eta$ region up to 5. The purpose of the HF is 
+to achieve a better hermeticity, which improves the reconstruction of very forward 
+jets as well as the measurement of the energy imbalance of the event. \\
 
-\noindent Due to the nature of a sampling detector as the HCAL, its energy resolution 
-is worse than the one obtained by the ECAL \cite{chp2:CMS}. For example, the energy
-resolution for pions is given by:
+\noindent Due to the nature of a sampling detector like the HCAL, its energy resolution 
+is worse than the one obtained by the ECAL. For example, for pion it is \cite{chp2:CMS}:
 
 \begin{equation} \label{ECALenergyResolution}
- \left(\frac{\sigma_{E}}{E}\right)^{2} = \left(\frac{138\%}{\sqrt{E}}\right)^{2} + \left(13\% \right)^{2} \;, 
+ \left(\frac{\sigma_{E}}{E}\right)^{2} = \left(\frac{138\%}{\sqrt{E}}\right)^{2} + \left(13\% \right)^{2} \;.
 \end{equation}
 
 \noindent Although the HCAL does not provide a high energy resolution, it is not crucial
-since the energy resolution is improved combining the information obtained by the HCAL
-with the other detector systems. 
+since this information is combined with the one of other detector systems.
 
 \section{The Muon System}
 \label{sec:MuonSys}
 
-\noindent The purpose of the Muon System, additional to the muon identification and reconstruction, is
-to trigger with muons since their presence in an event might indicate interesting physics. The Muon System
+\noindent The purpose of the Muon System is to identify and reconstruct muons but also,
+to generate trigger signal for the data acquisition system. This system
 is located outside the solenoid since the muons are the only known charged particles 
 than can cross the tracker, the calorimeters and the solenoid material. In order to achieve the
 muon reconstruction and to trigger with them, CMS has three different kinds of 
-Muon Detectors: Drift Tubes (DTs), Cathode Strip Chambers (CSCs) and Resistive 
-Plate Chambers (RPCs). The DTs and the CSCs are used for tracking the muon 
-signature and for measuring its momentum; they are placed in the barrel and 
-the endcaps, respectively. The RPCs are used for triggering due to their high time 
-resolution; they are used in both the barrel and the endcaps. The Muon System structure is 
-shown in Figure \ref{figchp2:MuonSystem}. In summary the three technologies used in the Muon Chambers are:
+Muon Detectors: Drift Tubes (DTs) in the barrel, Cathode Strip Chambers (CSCs) in endcaps and Resistive 
+Plate Chambers (RPCs) in both, in the barrel and the endcaps. The DTs and the CSCs are used for tracking 
+purposes. The RPCs are used for triggering due to their high time 
+resolution. The Muon System structure is shown in Figure \ref{figchp2:MuonSystem}. In summary, 
+the three technologies used in the Muon Chambers are:
 
 \begin{itemize} 
  \item \textbf{Drift Tubes}, or DTs, are gaseous detectors used for tracking due to their excellent spatial resolution.
 The DT basic cell is a tube filled with a gas mixture of 85$\%$ Ar and 15$\%$ CO$_{2}$.
 The anode is an aluminum wire placed longitudinally in the center of the tube.
-The tube has a cross section of 13 $\times$ 22 mm$^{2}$ and a length between 2-3 m depending on
-to the position of the chamber in the barrel. When a charged particle passes through the cell 
-the gas is ionized and produces an avalanche of electrons because of the high 
-electric field close to the wire. The wire picks up the electrons and the signal is later amplified. The
-accurate track reconstruction is performed by the structure of interleaved consecutive DT layers. 
- \item \textbf{Cathode Strip Chambers}, or CSCs, performs the muon track reconstruction in the endcaps. Each CSC chamber
+The tube has a cross section of 13 $\times$ 22 mm$^{2}$ and a length between 2 to 3 m,
+depending on to the position of the chamber in the barrel. When a charged particle passes through the cell 
+the gas is ionized and produces an avalanche of electrons, because of the high 
+electric field close to the wire. The signal deposited by the electrons in the wire is later amplified. 
+ \item \textbf{Cathode Strip Chambers}, or CSCs, perform the muon track reconstruction in the endcaps. Each CSC chamber
 has a trapezoidal shape in order to cover the 12 azimutal sectors of the detector. A CSC Chamber 
 has 6 planes of wires along the azimuthal direction, defining the radial coordinate of the track. The wire
 planes are intercalated with 7 panels of cathode strips that run radially and give the $\phi$ measurement 
-with a resolution of 10 mrad. There are a total 
-of 540 CSCs, where 72 new Chambers installed in the forth disk during the LS1. 
-\item \textbf{Resistive Plate Chambers}, or RPCs, are gaseous parallel-plate detectors with a time resolution of about 1 ns.
-This detector has an important roll for the trigger system since their excellent time resolution is suitable to
-identify unambiguously the BX associated to the muon detected. There are  6 RPC layers in the barrel
-and 4 disks in each endcap; the fourth disk was installed during LS1 (see Figure \ref{figchp2:MuonSystem}).
+with a resolution of 10 mrad. There are a total of 540 CSCs in the CMS detector. %, where 72 new Chambers installed in the forth disk during the LS1. 
+\item \textbf{Resistive Plate Chambers}, or RPCs, are gaseous parallel-plate detectors 
+with a time resolution of about 1 ns. These detectors have an important roll for the triggering
+system, since they have excellent time resolution suitable for the identification of the BX 
+associated to the detected muon. There are 6 RPC layers in the barrel
+and 4 disks in each endcap (see Figure \ref{figchp2:MuonSystem}). 
  \end{itemize}
 
 
@@ -744,30 +741,25 @@ CSCs are green and RPCs are blue. GEM Detectors, that will be installed in LS2, 
 
 \noindent In the barrel region, the Muon Chambers (DTs and RPCs) are inserted into the 
 five wheels of the iron yoke; they form four concentric cylindrical 
-layers, each layer is divided in 12 sectors in $\phi$. Then, the geometrical 
+layers, each of them divided on 12 sectors in $\phi$. Then, the geometrical 
 arrangement of the Muon System consists on 5 wheels in the $z$-direction, 4 layers in 
-the $r-$direction and 12 sectors in the $\phi-$direction. In the forward region, the Muon Chambers (CSCs and RPCs)
-are arranged in each endcap into 4 disks, where each disk is divided into 
-12 sectors in the $\phi-$direction and 4 rings in the $r-$direction. \\
+the $r-$direction and 12 sectors in the $\phi-$direction. In the forward region, the Muon 
+Chambers (CSCs and RPCs) are arranged into 4 disks in each endcap , where each disk is 
+divided into 12 sectors in the $\phi-$direction and 4 rings in the $r-$direction. \\
 
-\noindent The geometrical disposition of the Muon Chambers, the DTs and the RPCs in the barrel
-and the CSCs and the RPCs in the endcap, composes a complementary system which provides
-two independent sources of information in each region, which improves the
-muon reconstruction efficiency. The RPCs provides a fast response ($<$ 25 ns), allowing 
-the muon reconstructed track to be associated to a BX unambiguously. The DTs and CSCs provide 
-a high spatial resolution, providing an accurate energy 
-and momentum measurements. The information obtained from the Muon Chambers
-are combined with the one provided by the Tracker system in order to 
+\noindent The use of two types of detectors, DTs and RPCs in the barrel and CSCs and RPCs in the endcap
+improve the muon reconstruction resolution and efficiency. The RPCs provides a fast 
+response ($<$ 25 ns), allowing the identification of the BX, while the DTs and CSCs provide 
+a high spatial resolution. The information obtained from the Muon Chambers
+is combined with the one provided by the Tracker system in order to 
 improve the muon identification efficiency and the muon reconstruction. For instance,
-the momentum resolution for muons of \pt~$= 10$ GeV is 10$\%$ using only the information
-provided by Muon Chambers, while it decreases up to 1$\%$ combining their information with 
-the one obtained from the Tracker System \cite{chp2:CMSTDR}.\\
+the momentum resolution for muons of \pt~$= 10$ GeV is 10$\%$ using only the Muon Chambers information
+, while it becomes 1$\%$ when it is combined with the Tracker System information\cite{chp2:CMSTDR}.\\
 
-\noindent During the Long Shot Down, or LS2, Gas Electron Multipliers (GEMs) will be installed in 
-the endcaps in order to improve the muon identification efficiency and
-the momentum measurement resolution in these regions (see Figure \ref{figchp2:MuonSystem}). In 
-addition to their high granularity, GEMs will be used for triggering,
-due to their high time resolution.
+\noindent During the Long Shut Down 2 schedule to 2019 (LS2) Gas Electron Multipliers (GEMs) will be installed in 
+the endcaps in order to improve the muon identification efficiency and the momentum resolution in 
+these regions (see Figure \ref{figchp2:MuonSystem}). In addition to their 
+high granularity, GEMs will be used for triggering, due to their high time resolution.
 
 \section{The Trigger and Data Acquisition Systems}
 \label{sec:Trigger}
@@ -775,34 +767,36 @@ due to their high time resolution.
 \noindent The Trigger and the Data Acquisition (DAQ) Systems use the information 
 provided by the Tracker, the Calorimeter, and the Muon Systems in order 
 to identify the events with interesting physics and to store them to be 
-analyzed afterward. The information of an event is stored for a few $\mu s$ in 
-the read-out electronics of each sub-detector system; when these pieces of 
-information are combined, the data size of an event is around 1 MB, which means 
-that for each bunch crossing, 1 MB of data is produced. Considering that the LHC 
+analyzed afterward. The information of an event is stored in 
+the read-out electronics of each sub-detector system; when these 
+pieces are combined, the data size of an event is around 
+1 MB (1 MB is produced per BX). Considering that the LHC 
 operates with a collision rate of 40 MHz at nominal luminosity, CMS could 
-deliver up to 40 TB of information per second; although the data storage 
+deliver up to 40 TB of information per second. Although the data storage 
 for such high rate is impossible with the current technology, only the hard
 scattering collisions (interesting events) should be selected and stored. In 
-consequence, CMS uses the Trigger System to select only the interesting events, which 
+consequence, the Trigger System is used to select only the interesting events, which 
 reduces the event rate from 40 MHz to 100 Hz, making feasible the data 
-storage. Additionally, the data storage in the read-out electronics of 
-each detector has a limited time before the information is erased; therefore, the 
-read-out electronics keep the event information stored
-temporarily until it receives a signal from the Trigger System 
-to store the event definitely; but while the Trigger System is taking the decision 
-if an event is stored or discarded, the read-out electronics keep storing the 
-information of the following collisions. Therefore the data storage must 
-be synchronized with the Trigger System. Due to its complexity, CMS uses the 
-Data Acquisition System (DAQ) in order to storage the data.
+storage. CMS uses the Data Acquisition System (DAQ) in order to store
+the triggered events. 
+
+
+%The read-out electronics of each sub-detector can 
+%keep stored the information only for 3.2 $\mu$s before it is erased,
+%therefore they receive an electric signal from the Trigger System in order to 
+%deliver the event information to processor. Additionally, while the 
+%Trigger System is deciding if the event is selected or discarded, the 
+%read-out electronics must keep storing the information of the subsequent collisions. 
+
 
 \subsection{The Trigger System}
 \label{subsec:Trigger}
 
 \noindent The Trigger System performs the selection of the hard scattering events in two steps:
-The Level-1 Trigger (L1 Trigger) and the High Level Trigger (HLT). The first step, the Level-1 Trigger,
+the Level-1 Trigger (L1 Trigger) and the High Level Trigger (HLT). The first step, the Level-1 Trigger,
 is performed by programmable read-out electronics in order to reduce the event rate from 40 MHz 
 to 100 kHz. The second step, the HLT, is performed by about one thousand processors, which through
-software algorithms reduces the event rate up to 100 Hz. \\
+software algorithms reduce the event rate up to 100 Hz. \\
 
 \textbf{The Level-1 Trigger}\\
 
@@ -812,37 +806,39 @@ involves heavy particle production such as b-quarks, t-quarks, heavy bosons
 or hight-\pt~muons; then, interesting physics events usually content jets and muon signals. In 
 consequence, the Level-1 Trigger searches for signals into the read-out electronics 
 of the Calorimeter System and the Muon System. The information provided by these two sub-detectors
-is combined to be sent further to the Global Trigger System; this system takes the decision
-if the event is accepted sending a signal, known as L1-Accept, to the read-out electronics 
-in order to store the information \footnote[1]{If the L1-Accept signal is not produced for an event, it is erased from the 
-readout electronics memories.}. Once the event is stored by the DAQ System, the data is moved 
-to the HLT. Figure \ref{figchp2:TriggerSystem} shows the data flux performed by the L1 Trigger System
-in order to produce the L1-Accept signal. \\
+is combined and sent to the Global Trigger System; this system decides
+if the event is accepted sending a signal, known as \textit{L1-Accept}, to the read-out electronics so that
+it stores the information of the event \footnote[1]{If the L1-Accept signal is not produced for an event, the data associated to that event is 
+erased from the readout electronics memory.}. Once the event is stored by the DAQ System, the data is moved 
+to the HLT, where a second of triggering is performed. Figure \ref{figchp2:TriggerSystem} shows 
+the data flux through the L1 Trigger System. \\
 
 \begin{center}
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.35]{figuras/Chapter2/trigger}
-\caption{The Level-1 Trigger architecture. The L1-Accept signal is triggered when 
-the event passes the three components: local, regional and global.}\label{figchp2:TriggerSystem}
+\caption{The Level-1 Trigger architecture. The L1-Accept signal is produced when 
+the event passes the three trigger component criteria: local, regional and global.}\label{figchp2:TriggerSystem}
 \end{figure}
 \end{center}
 
 \textbf{The High Level Trigger}\\
 
-\noindent As mentioned above, the selected events by the L1 Trigger are delivered 
-to a farm of about one thousand processors, where the High Level Trigger is implemented. 
-Unlike L1 Trigger which event selection is hardware based, the HLT selection is 
-software based where a more complex requirements are applied. The event selection by the HLT starts 
-with the readout of the information that comes from each sub-detector system;
-then, the processors implement complex algorithms in order to reconstruct
-and to select events with interesting physics; the selected data is then moved
-to on-line servers with the purpose of studying the CMS performance, in a process 
-known as Data Quality Monitoring or DQM. Finally, those events that pass the HLT trigger (100 events per second) 
-are stored in disk. When the data is stored, they are labeled and grouped 
-according to the the physics objects identified in each selected event; for instance, 
-all the events triggered due to the presence of a muon are grouped into a dataset, hence 
-an research which involves muons in the final state can use the muon dataset for analysis. 
+\noindent As mentioned above, the selected events by 
+the L1 Trigger are delivered to a farm of about one thousand 
+processors, where the High Level Trigger is carried out. Unlike 
+the L1 Trigger, which is implemented at the hardware level, the 
+HLT selection is implemented at the software level where more 
+complex requirements are applied. The selection performed by the HLT starts with the readout of the 
+information coming from each sub-detector system; then, the
+processors apply algorithms on the data, in order to perform quick 
+reconstruction of the physics objects in an event; finally, the
+hard scattering events are identified. Those events that pass 
+the HLT trigger (100 events per second) are stored in disk. The stored data 
+is labeled according to the physics objects 
+identified on each event; for instance the triggered events due to the presence of a muon are 
+labeled as \textit{SingleMuon} dataset, and hence analyses which involves muons in the final state 
+only use  the muon dataset instead all the dataset stored in the CMS.
 
 
 %the collected data is moved to
@@ -855,42 +851,54 @@ an research which involves muons in the final state can use the muon dataset for
 \subsection{Data Acquisition System}
 \label{subsec:Trigger}
 
-\noindent The Data Acquisition System (DAQ) works synchronously with the Trigger System
-in order to store the hard-interaction events. The information of an event 
-is stored in read-out electronic devices in pipeline memories meanwhile 
-the L1 Trigger decision is being taken; then if the read-out electronics
-receive the L1-Accept signal, the event will be delivered to the HLT System, otherwise
-the event will be erased. Therefore, DAQ system is designed to operate with 
-same input frequency than the L1 Trigger and delivers the data with a similar 
-rate than the HLT. For this purpose electronic devices known as 
-front-end systems (FES) store data continuously in 40-MHz pipelined 
-buffers, where the information of an event is stored 
-for 3.2 $\mu s$, time in which the L1-Accept signal can reach FES electronics. When 
-L1 Accept signal arrives to the FES, the information is pushed into the DAQ system 
-via Front End Drivers (FED) devices; this information includes, for example, the BX 
-of the collision from which the detected signal comes, the position
-in the detector, etc. This information provided by several FEDs arrives to the 
-Front-end Read-out Link (FRL) and finally they are delivered to the 
-farm of processors through optical links, where the event information 
-is processed by the HLT. 
+\noindent The Data Acquisition System (DAQ) stores the selected events by the Trigger System. Since 
+the read-out electronics of each sub-detector can keep stored the information of an event 
+only for 3.2 $\mu$s, the data will be erased unless a L1-Accept signal is received before 
+that time. However, while the Trigger System is deciding if the event is selected or discarded, the 
+read-out electronics must keep storing the information of the subsequent collisions; for 
+this purpose electronic devices known as Front End Systems (FES) are used, which store data continuously 
+in 40-MHz pipelined buffers. Once the L1-Accept signal reaches the FES, the 
+data is pushed into the DAQ system via Front End Drivers (FED) devices. The DAQ System
+uses Front-end Read-out Link (FRL) devices in order to combine the information provided 
+by several FEDs of each sub-detectors, resulting in a data file suitable for the HLT processing. Finally,
+the event information is delivered to the farm of processors through optical links, where the HLT
+trigger is applied. The DAQ system is designed to operate with same input frequency 
+than the L1 Trigger and to deliver data to the HLT System.
+
+
+%therefore they receive an electric signal from the Trigger System in order to 
+%deliver the event information to processor. Additionally, while the 
+%Trigger System is deciding if the event is selected or discarded, the 
+%read-out electronics must keep storing the information of the subsequent collisions. 
+  
+
+%this information includes, for example, the BX 
+%of the collision from which the detected signal comes, the position
+%in the detector, etc. This information provided by several FEDs arrives to the 
+%Front-end Read-out Link (FRL) and finally they are delivered to the 
+%farm of processors through optical links, where the event information 
+%is processed by the HLT. 
 
 \subsection{Data Processing}
-\noindent Along this Chapter has been shown the process from the production of pp 
-collisions by the LHC, the detection of the products of a collision by 
-the CMS detector systems, up to the selection and storage of the interesting 
-events by the Trigger and DAQ systems. However, there are three stages of data 
-processing before they are used in a physics analysis. The selected events delivered 
-by the HLT have a RAW data format, that contains the information coming from the 
-detector but it is not suitable for analysis. Therefore, a reconstruction process is 
-performed on the RAW data in order to identify all the physics objects and their 
-kinematics in an event. CMS uses the Particle Flow algorithm in order to reconstruct 
-every particle coming from the pp collision; the Particle Flow algorithm and the 
-reconstruction of each particle are described in Chapter \ref{chap:ParticleID}. As a result, 
-the reconstructed physics objects are stored in the RECO data format; however, the 
-RECO data is still not appropriate for physics analysis due to the large size that they 
-occupy on disk. Hence, two skimming processes are performed on the RECO data, resulting in 
-a dataset with less size known as mini-AOD; the mini-AOD contains only the relevant information 
+\noindent There are several stages from the pp collision to the data analysis. 
+After the pp collision produced by the LHC, all the particles coming out from interaction
+are detected by the CMS Detector Systems. Then, the Trigger and the DAQ Systems select and 
+store the interesting events, resulting in a data file which contains all the information of 
+the event. The selected events delivered by the HLT have a RAW data format, which is not
+suitable for physics analysis; therefore a reconstruction process is performed on it in 
+order to identify all the physics objects and their kinematics in an event. CMS uses 
+the Particle Flow algorithm in order to reconstruct every particle coming from the pp collision; the 
+Particle Flow algorithm and the particle reconstruction are described 
+in Chapter \ref{chap:ParticleID}. As a result, the reconstructed physics objects are stored in a RECO data 
+format; nevertheless, the RECO data is still not appropriate for physics analysis due to its large 
+storage size on disk. Hence, two skimming processes are performed on the RECO data, resulting in 
+a data file known as mini-AOD; the mini-AOD data contains only the relevant information 
 of the physics objects, making them appropriate for physics analysis.\\
+
+%This Chapter has shown the process from the production of pp 
+%collisions by the LHC: the detection of the products of a collision by 
+%the CMS detector systems, the selection and the storage of the interesting 
+%events by the Trigger and DAQ systems. 
 
 
 %The full data are stored in pipelined-memories of processing elements, while waiting for the trigger decision.
