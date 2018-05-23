@@ -1,4 +1,4 @@
-\chapter[Experimental Setup]{The CMS experiment}
+\chapter[The CMS experiment]{The CMS experiment}
 \label{chap:CMSExp}
 %During the Run II, the Large Hadron Collider (LHC) has produced 
 %produced proton-proton collisions at an unprecedented ~\centermassenergy, 
@@ -164,6 +164,7 @@ demanding even higher luminosities. In addition, in each BX there are several pp
 \end{table}
 
 \subsubsection{Run I and Run II of the LHC}
+\label{subsubsec:LHCruns}
 
 The LHC operational period spanning from 2010 to 2012 is known as Run I. During 2010, the LHC 
 reached pp collisions at \centermassenergy~of 7 TeV and an integrated luminosity of around 
@@ -767,19 +768,17 @@ high granularity, GEMs will be used for triggering, due to their high time resol
 \noindent The Trigger and the Data Acquisition (DAQ) Systems use the information 
 provided by the Tracker, the Calorimeter, and the Muon Systems in order 
 to identify the events with interesting physics and to store them to be 
-analyzed afterward. The information of an event is stored in 
+analyzed afterwards. The information of an event is stored in 
 the read-out electronics of each sub-detector system; when these 
 pieces are combined, the data size of an event is around 
-1 MB (1 MB is produced per BX). Considering that the LHC 
+1 MB (1 MB per BX). Considering that the LHC 
 operates with a collision rate of 40 MHz at nominal luminosity, CMS could 
-deliver up to 40 TB of information per second. Although the data storage 
-for such high rate is impossible with the current technology, only the hard
-scattering collisions (interesting events) should be selected and stored. In 
-consequence, the Trigger System is used to select only the interesting events, which 
-reduces the event rate from 40 MHz to 100 Hz, making feasible the data 
-storage. CMS uses the Data Acquisition System (DAQ) in order to store
-the triggered events. 
-
+deliver up to 40 TB of information per second. The data storage 
+for such high rate is impossible with the current technology, but also only the hard
+scattering collisions (interesting events) should be selected and stored. These collisions
+happen very seldom, in consequence, the Trigger System is used to 
+select only those events, reducing the rate from 40 MHz to 100 Hz, and making 
+it feasible to store that data using the Data Acquisition System (DAQ).
 
 %The read-out electronics of each sub-detector can 
 %keep stored the information only for 3.2 $\mu$s before it is erased,
@@ -803,14 +802,14 @@ software algorithms reduce the event rate up to 100 Hz. \\
 \noindent The Level-1 Trigger performs the first event selection through hardware criteria programmed 
 in the read-out electronics of each sub-detector. A hard scattering event typically 
 involves heavy particle production such as b-quarks, t-quarks, heavy bosons 
-or hight-\pt~muons; then, interesting physics events usually content jets and muon signals. In 
+or hight-\pt~muons; then, interesting physics events usually contain high \pt~jets and muon signals. In 
 consequence, the Level-1 Trigger searches for signals into the read-out electronics 
 of the Calorimeter System and the Muon System. The information provided by these two sub-detectors
 is combined and sent to the Global Trigger System; this system decides
-if the event is accepted sending a signal, known as \textit{L1-Accept}, to the read-out electronics so that
+if the event is accepted sending a signal, known as \textit{L1-Accept}, to the read-out electronics, so that
 it stores the information of the event \footnote[1]{If the L1-Accept signal is not produced for an event, the data associated to that event is 
 erased from the readout electronics memory.}. Once the event is stored by the DAQ System, the data is moved 
-to the HLT, where a second of triggering is performed. Figure \ref{figchp2:TriggerSystem} shows 
+to the HLT, where a second level of triggering is performed. Figure \ref{figchp2:TriggerSystem} shows 
 the data flux through the L1 Trigger System. \\
 
 \begin{center}
@@ -824,21 +823,22 @@ the event passes the three trigger component criteria: local, regional and globa
 
 \textbf{The High Level Trigger}\\
 
-\noindent As mentioned above, the selected events by 
+\noindent As mentioned above, the events selected by 
 the L1 Trigger are delivered to a farm of about one thousand 
-processors, where the High Level Trigger is carried out. Unlike 
-the L1 Trigger, which is implemented at the hardware level, the 
-HLT selection is implemented at the software level where more 
-complex requirements are applied. The selection performed by the HLT starts with the readout of the 
-information coming from each sub-detector system; then, the
-processors apply algorithms on the data, in order to perform quick 
-reconstruction of the physics objects in an event; finally, the
-hard scattering events are identified. Those events that pass 
-the HLT trigger (100 events per second) are stored in disk. The stored data 
-is labeled according to the physics objects 
-identified on each event; for instance the triggered events due to the presence of a muon are 
+processors, where the High Level Trigger is executed. Unlike 
+the L1 Trigger, which is implemented in hardware, the 
+HLT selection is implemented in software since more 
+complex algorithms are applied. The selection performed by the 
+HLT starts with the readout of the information coming 
+from each sub-detector system; then, the
+processors apply algorithms to the data in order to perform a quick 
+reconstruction of the physics objects in the event; finally, the
+hard scattering events are identified. The events that pass 
+the HLT trigger, about 100 events per second, are stored in disk. The stored data 
+is labeled according to the physics objects identified on each event; for 
+instance the triggered events due to the presence of a muon are 
 labeled as \textit{SingleMuon} dataset, and hence analyses which involves muons in the final state 
-only use  the muon dataset instead all the dataset stored in the CMS.
+only use  the muon dataset instead of all the dataset stored by CMS.
 
 
 %the collected data is moved to
@@ -851,16 +851,16 @@ only use  the muon dataset instead all the dataset stored in the CMS.
 \subsection{Data Acquisition System}
 \label{subsec:Trigger}
 
-\noindent The Data Acquisition System (DAQ) stores the selected events by the Trigger System. Since 
-the read-out electronics of each sub-detector can keep stored the information of an event 
+\noindent The Data Acquisition System (DAQ) stores the events selected by the Trigger System. Since 
+the read-out electronics of each sub-detector can store the information of an event 
 only for 3.2 $\mu$s, the data will be erased unless a L1-Accept signal is received before 
 that time. However, while the Trigger System is deciding if the event is selected or discarded, the 
 read-out electronics must keep storing the information of the subsequent collisions; for 
 this purpose electronic devices known as Front End Systems (FES) are used, which store data continuously 
 in 40-MHz pipelined buffers. Once the L1-Accept signal reaches the FES, the 
-data is pushed into the DAQ system via Front End Drivers (FED) devices. The DAQ System
-uses Front-end Read-out Link (FRL) devices in order to combine the information provided 
-by several FEDs of each sub-detectors, resulting in a data file suitable for the HLT processing. Finally,
+data is pushed into the DAQ system via Front End Driver devices (FED). The DAQ System
+uses Front-end Read-out Link devices (FRL) in order to combine the information provided 
+by several FEDs of each sub-detector, resulting in a data file suitable for the HLT processing. Finally,
 the event information is delivered to the farm of processors through optical links, where the HLT
 trigger is applied. The DAQ system is designed to operate with same input frequency 
 than the L1 Trigger and to deliver data to the HLT System.
@@ -880,20 +880,30 @@ than the L1 Trigger and to deliver data to the HLT System.
 %is processed by the HLT. 
 
 \subsection{Data Processing}
-\noindent There are several stages from the pp collision to the data analysis. 
-After the pp collision produced by the LHC, all the particles coming out from interaction
-are detected by the CMS Detector Systems. Then, the Trigger and the DAQ Systems select and 
-store the interesting events, resulting in a data file which contains all the information of 
-the event. The selected events delivered by the HLT have a RAW data format, which is not
+\label{chap2:dataprocessing}
+
+\noindent The data recorded by the DAQ system results in a data file which contains all the information for
+the accepted events. The data delivered by the HLT have a RAW format, which is not
 suitable for physics analysis; therefore a reconstruction process is performed on it in 
-order to identify all the physics objects and their kinematics in an event. CMS uses 
+order to identify all the physics objects and determining their kinematics variables. CMS uses 
 the Particle Flow algorithm in order to reconstruct every particle coming from the pp collision; the 
 Particle Flow algorithm and the particle reconstruction are described 
 in Chapter \ref{chap:ParticleID}. As a result, the reconstructed physics objects are stored in a RECO data 
 format; nevertheless, the RECO data is still not appropriate for physics analysis due to its large 
 storage size on disk. Hence, two skimming processes are performed on the RECO data, resulting in 
-a data file known as mini-AOD; the mini-AOD data contains only the relevant information 
-of the physics objects, making them appropriate for physics analysis.\\
+a data file known as mini-AOD. The mini-AOD contains only the relevant information 
+of the physics objects, making them appropriate for physics analysis. \\
+
+
+
+%There are several stages from the pp collision to the data analysis. 
+%After the pp collision produced by the LHC, all the particles coming out from interaction
+%are detected by the CMS Detector Systems. Then, the Trigger and the DAQ Systems select and 
+%store the interesting events, resulting in a data 
+
+%file which contains all the information of 
+%the event. 
+
 
 %This Chapter has shown the process from the production of pp 
 %collisions by the LHC: the detection of the products of a collision by 

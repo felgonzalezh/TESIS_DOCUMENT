@@ -26,7 +26,9 @@
 \usepackage[symbol]{footmisc}
 
 \usepackage{filecontents}
+\usepackage{multicol}
 
+\usepackage{float}
 %\usepackage{lineno}
 %\usepackage[latin1]{inputenc}
 
@@ -37,25 +39,47 @@
 \usepackage{verbatim}
 \usepackage{moreverb}
 \usepackage{lmodern} 
+\usepackage{multirow}
+
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
-\newcommand{\pt}{p$_{T}$}
+\newcommand{\DR}{$\Delta R$}
+\newcommand{\DRt}{$\Delta R(\tau_{1}, \tau_{2})$}
+\newcommand{\MET}{$\not\!\!E_T$}
+\newcommand{\METv}{$\not\!\!\vec{E}_T$}
+\newcommand{\TeV}{$\textrm{TeV}$}
+\newcommand{\GeV}{$\textrm{GeV}$}
+\newcommand{\MeV}{$\textrm{MeV}$}
+\newcommand{\pt}{$\textrm{p}_{\textrm{T}}$}
 \newcommand{\Et}{E$_{T}$}
 \newcommand{\sqrts}{$\sqrt{s}=$~}
 \newcommand{\centermassenergy}{centre-of-mass energy}
 \newcommand{\tauh}{$\tau_{h}$}
-\newcommand{\Zprime}{Z$^{\prime}$}
-\newcommand{\ZprimeSSM}{Z$^{\prime}_{\text{SSM}}$}
-\newcommand{\Uprime}{U(1)$^{\prime}$~}
-\newcommand{\ZprimeTAT}{Z$^{\prime}_{\text{TAT}}$}
-\newcommand{\Zprimetotauh}{Z$^{\prime}\rightarrow \tau_{h}\tau_{h}$}
-\newcommand{\Zprimetoee}{Z$^{\prime}\rightarrow ee$}
-\newcommand{\Zprimetomumu}{Z$^{\prime}\rightarrow \mu\mu$}
-\newcommand{\Zprimetotautau}{Z$^{\prime}\rightarrow \tau\tau$ }
 \newcommand{\taue}{$\tau_{e}$}
 \newcommand{\taumu}{$\tau_{\mu}$}
 \newcommand{\tauell}{$\tau_{\ell}$}
+\newcommand{\picero}{$\pi^{0}$}
+\newcommand{\Zprime}{Z$^{\prime}$}
+\newcommand{\ZprimeSSM}{Z$^{\prime}_{\text{SSM}}$}
+\newcommand{\Zprimepsi}{Z$^{\prime}_{\psi}$}
+\newcommand{\Zprimechi}{Z$^{\prime}_{\chi}$}
+\newcommand{\Zprimeeta}{Z$^{\prime}_{\eta}$}
+\newcommand{\Uprime}{$U(1)^{\prime}$~}
+\newcommand{\ZprimeTAT}{Z$^{\prime}_{\text{TAT}}$}
+\newcommand{\Ztotauh}{Z$\rightarrow\tau_{h}\tau_{h}$}
+\newcommand{\Zprimetotauh}{Z$^{\prime}\rightarrow\tau_{h}\tau_{h}$}
+\newcommand{\Zprimetotaue}{Z$^{\prime}\rightarrow\tau_{e}\tau_{h}$}
+\newcommand{\Zprimetotaumu}{Z$^{\prime}\rightarrow\tau_{\mu}\tau_{h}$}
+\newcommand{\Zprimetoemu}{Z$^{\prime}\rightarrow\tau_{e}\tau_{\mu}$}
+\newcommand{\Zprimetoll}{Z$^{\prime}\rightarrow\ell\ell$}
+\newcommand{\Zprimetoee}{Z$^{\prime}\rightarrow ee$}
+\newcommand{\Zprimetomumu}{Z$^{\prime}\rightarrow\mu\mu$}
+\newcommand{\Zprimetotautau}{Z$^{\prime}\rightarrow \tau\tau$}
+\newcommand{\mass}{$m(\tau_{h},\tau_{h},\not\!\!E_T)$}
+
+\newcommand{\ttbar}{$t\bar{t}$}
+
 %\usepackage{adjustbox}
 
 %\usepackage{draftwatermark}
@@ -113,33 +137,35 @@
 \pagenumbering{arabic}
 %\addc
 %Outline-Introduction                                                                                                                                                                               
-\addcontentsline{toc}{chapter}{Introduction}
-\include{Intro}
+\include{Intro} % FALTA EL PARRAFO DEL RESUMEN DE LOS RESULTADOS.
 %\include{Outline}
 
 %Theoretical models
-\include{Chapter1}
+\include{Chapter1} %FALTA PONER BIBLIOGRAFIA ASI [1-16]
 
 %LHC and CMS chapter
-\include{Chapter2}
+\include{Chapter2} %FALTA EL PU PARA 2010 Y 2011, REFERENCIA A ECUACIONES. REFERENCIA A SECCION DE BACKGROUND.
 
 %Tau Leptons
-\include{Chapter3}
+ \include{Chapter3} %MIRAR ORDEN MUON ELECTRON JET. UTLIMO PARRAFO DE JET Y
+ %MER RECONSTRUCTION. % mirar ecuaciones y referencias del tau. parrafo para finalizar el capitulo
 
 %High Mass resonances decaying into tau leptons.
-\include{Chapter4}
+\include{Chapter4} %ojo referencia de tabla de decaymientos del tau
+% ecuaiones 
 
 %Analysis chapter
-\include{Chapter5}
+ \include{Chapter5}  % corregir cos y sin en math mode.
+%  \include{Chapter5_PLOTS}
 
 %Conclusions
 \include{Conclusions}
 
 %Appepdices
-%\appendix
-%\include{DataDriven}
-%\include{SigMod}
-%\include{WindowStudy}
+\appendix
+ \include{Appendices/TriggerStudies}
+ \include{Appendices/TauIDStudies}
+%  \include{Appendices/EventSelection}
 
 %\bibliography{Bibliography/BiblioIntroduction.bib,Bibliography/BiblioChapter2.bib}
 \bibliographystyle{IEEEtran}
