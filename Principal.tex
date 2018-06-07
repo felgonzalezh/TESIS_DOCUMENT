@@ -41,6 +41,7 @@
 \usepackage{lmodern} 
 \usepackage{multirow}
 
+\usepackage{cite}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
@@ -68,14 +69,14 @@
 \newcommand{\Uprime}{$U(1)^{\prime}$~}
 \newcommand{\ZprimeTAT}{Z$^{\prime}_{\text{TAT}}$}
 \newcommand{\Ztotauh}{Z$\rightarrow\tau_{h}\tau_{h}$}
-\newcommand{\Zprimetotauh}{Z$^{\prime}\rightarrow\tau_{h}\tau_{h}$}
-\newcommand{\Zprimetotaue}{Z$^{\prime}\rightarrow\tau_{e}\tau_{h}$}
-\newcommand{\Zprimetotaumu}{Z$^{\prime}\rightarrow\tau_{\mu}\tau_{h}$}
-\newcommand{\Zprimetoemu}{Z$^{\prime}\rightarrow\tau_{e}\tau_{\mu}$}
-\newcommand{\Zprimetoll}{Z$^{\prime}\rightarrow\ell\ell$}
-\newcommand{\Zprimetoee}{Z$^{\prime}\rightarrow ee$}
-\newcommand{\Zprimetomumu}{Z$^{\prime}\rightarrow\mu\mu$}
-\newcommand{\Zprimetotautau}{Z$^{\prime}\rightarrow \tau\tau$}
+\newcommand{\Zprimetotauh}{Z$^{\prime} \rightarrow \tau_{h}\tau_{h}$}
+\newcommand{\Zprimetotaue}{Z$^{\prime} \rightarrow \tau_{e}\tau_{h}$}
+\newcommand{\Zprimetotaumu}{Z$^{\prime} \rightarrow \tau_{\mu}\tau_{h}$}
+\newcommand{\Zprimetoemu}{Z$^{\prime} \rightarrow \tau_{e}\tau_{\mu}$}
+\newcommand{\Zprimetoll}{Z$^{\prime} \rightarrow \ell\ell$}
+\newcommand{\Zprimetoee}{Z$^{\prime} \rightarrow  ee$}
+\newcommand{\Zprimetomumu}{Z$^{\prime} \rightarrow \mu\mu$}
+\newcommand{\Zprimetotautau}{Z$^{\prime} \rightarrow  \tau\tau$}
 \newcommand{\mass}{$m(\tau_{h},\tau_{h},\not\!\!E_T)$}
 
 \newcommand{\ttbar}{$t\bar{t}$}
@@ -137,44 +138,38 @@
 \pagenumbering{arabic}
 %\addc
 %Outline-Introduction                                                                                                                                                                               
-\include{Intro} % FALTA EL PARRAFO DEL RESUMEN DE LOS RESULTADOS.
+\include{Intro} 
 %\include{Outline}
 
 %Theoretical models
-\include{Chapter1} %FALTA PONER BIBLIOGRAFIA ASI [1-16]
+\include{Chapter1} 
 
 %LHC and CMS chapter
-\include{Chapter2} %FALTA EL PU PARA 2010 Y 2011, REFERENCIA A ECUACIONES. REFERENCIA A SECCION DE BACKGROUND.
+\include{Chapter2} %FALTA EL PU PARA 2010 Y 2011.
 
 %Tau Leptons
- \include{Chapter3} %MIRAR ORDEN MUON ELECTRON JET. UTLIMO PARRAFO DE JET Y
- %MER RECONSTRUCTION. % mirar ecuaciones y referencias del tau. parrafo para finalizar el capitulo
+ \include{Chapter3} % parrafo para finalizar el capitulo
 
-%High Mass resonances decaying into tau leptons.
-\include{Chapter4} %ojo referencia de tabla de decaymientos del tau
-% ecuaiones 
+\include{Chapter4} %referencia de figuras de bkg
 
 %Analysis chapter
- \include{Chapter5}  % corregir cos y sin en math mode.
-%  \include{Chapter5_PLOTS}
+ \include{Chapter5} % cambiar figura ABCD %normailization of MC  % REF al articulo poner to be Published. %cross section of TAT 
 
 %Conclusions
 \include{Conclusions}
 
 %Appepdices
 \appendix
- \include{Appendices/TriggerStudies}
+ \include{Appendices/TriggerStudies} %REFERENCIAS
  \include{Appendices/TauIDStudies}
-%  \include{Appendices/EventSelection}
+ \include{Appendices/EventSelection}
 
-%\bibliography{Bibliography/BiblioIntroduction.bib,Bibliography/BiblioChapter2.bib}
 \bibliographystyle{IEEEtran}
-\bibliography{Bibliography/BiblioIntroduction.bib}
+\bibliography{Bibliography/BiblioIntroduction.bib,Bibliography/BiblioChapter1.bib,Bibliography/BiblioChapter2.bib,Bibliography/BiblioChapter3.bib,Bibliography/BiblioChapter4.bib,Bibliography/BiblioChapter5.bib,Bibliography/BiblioChapter6.bib}
 %\addbibresource{Bibliography/BiblioIntroduction.bib}
-%\addbibresource{Bibliography/BiblioChapter2.bib}
 
-%\printbibliography
-%\listoffigures
-%\listoftables
+% \printbibliography
+\listoffigures
+\listoftables
 
 \end{document}

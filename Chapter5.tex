@@ -88,7 +88,7 @@ in the equation \ref{eq:triggerEff}, the following conditions are required:
   \item the muon passes the medium isolation criterion,
   \item muon best track with d$_{xy}$ $<$ 0.2~cm and d$_{z}$ $<$ 0.045~cm with respect to the primary vertex,
   \item relative $\mu$ isolation $< 0.1$ (with $\delta\beta$ corrections),
-  \item at least one $\tau_{h}$ reconstructed using the HPS algorithm, with $|\eta| < 2.1$ and \pt~$> 20$ GeV,
+  \item at least one $\tau_{h}$ reconstructed using the HPS algorithm, with $|\eta| < 2.1$ and \pt~$> 20$ \GeV,
 %  \item d$_{xy}$ w.r.t PV $<$ 0.2 , d$_{z}$ w.r.t PV $<$ 0.045                                                                                
   \item MVA discriminator against electrons: ``againstElectronVLooseMVA6'',
   \item cutoff-based discriminator against muon: ``againstMuonTight3'',
@@ -109,7 +109,7 @@ that pass the $Z \rightarrow \tau\tau \rightarrow \mu\tau_{h}$ event selection, 
 identification criteria used for the \Zprimetotauh~analysis. Such criteria 
 are described in section \ref{subsec:TauSelection}. Figure \ref{fig:triggerEFf}
 shows the tau trigger efficiency, obtained from equation \ref{eq:triggerEff}, as a 
-function of the tau-\pt.
+function of the tau-\pt.\\
 
 \begin{figure}[ht]
 \begin{center}
@@ -133,6 +133,8 @@ pdf=P[0]+P[1]\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{y}e^{-\frac{t^{2}}{2}}dt \; ,
 \begin{equation}
 y=\frac{\sqrt{x}-\sqrt{P[2]}}{2P[3]}, \hspace{1cm} P[2]=\mu,\ P[3]=\sigma \; .
 \end{equation}
+
+\vspace{0.5cm}
 
 \noindent The trigger weight applied per tau lepton is obtained from 
 this fit.\\
@@ -158,7 +160,7 @@ This analysis uses the data collected by the CMS experiment
 from the proton-proton collisions at 
 \centermassenergy~of 13 \TeV~delivered by the LHC during 2016. The data 
 recorded corresponds to a total integrated 
-luminosity of 37.76 fb$^{-1}$ (figure \ref{figchp2:luminosityRunII}, right). However, 
+luminosity of 37.76 fb$^{-1}$ (Figure \ref{figchp2:luminosityRunII}, right). However, 
 the data validated by the CMS Data Quality Monitoring team (CMSDQM) to be used 
 for physics analyses has an integrated luminosity of 35.9 fb$^{-1}$. In order to guarantee 
 that the right data is used, an official JSON file is issued containing all 
@@ -238,7 +240,7 @@ calculations can be performed therefore Monte Carlo (MC) techniques is used
  usually includes Leading Order terms (LO) or 
  Next-to-Leading order terms (NLO), depending on the 
  availability of the calculations. Once the physics process of interest 
- is generated, then the subsequent hadronization proccesses are simulated
+ is generated, then the subsequent hadronization processes are simulated
  models built to describe them. Finally, the underlying event is simulated
  depending on the energy and the processes from which it was produced. As a 
  result of the event generation, the four momentum of each particle
@@ -247,8 +249,8 @@ calculations can be performed therefore Monte Carlo (MC) techniques is used
  \texttt{POWHEG} \cite{bib:Powheg1,bib:Powheg2} 
  \texttt{Comphep} \cite{bib:comphep}, \texttt{Sherpa} \cite{bib:sherpa}, among 
  others. \texttt{Pythia} is widely used due to the accurate modeling of parton shower production
-and fragmentation, while \texttt{POWHEG} has a very accuarate description of processes
-like top quark decay and \texttt{Madgraph} is very precise describinf SM processes like Drell-Yan. \\
+and fragmentation, while \texttt{POWHEG} has a very accurate description of processes
+like top quark decay and \texttt{Madgraph} is very precise describing SM processes like Drell-Yan. \\
 
  %  
 %  , which are the dominant at such 
@@ -292,7 +294,7 @@ for the W+Jets background but with the leading order version (LO$\_$MG5). The
 \texttt{Pythia8} generator was used for the production of Di-Boson background, while 
 the \texttt{POWHEG} generator was used for the $t\bar{t}$ background. \\
 
-The Drell-Yan MC samples were binned using the mass of the generated lepton pair, while the QCD and W+Jets MC samples 
+\noindent The Drell-Yan MC samples were binned using the mass of the generated lepton pair, while the QCD and W+Jets MC samples 
 were binned using $H_{T}$ \footnote{$H_{T}$, the transverse hadronic energy, is defined as the scalar sum of the
 transverse momenta of the jet constituents.}.\\
 
@@ -367,19 +369,19 @@ was split in two categories: the \tauh~identification and the topological select
   \begin{center}
   \begin{tabular}{| l | c | r | r |}
   \hline\hline
-       \scriptsize Process (mass point [GeV])                 &\scriptsize  MC generator  &\scriptsize width[\GeV] &\scriptsize cross-section (pb) \\ [0.5ex] \hline
+       \scriptsize Process (mass point [\GeV])                 &\scriptsize  MC generator  &\scriptsize width[\GeV] &\scriptsize cross-section (pb) \\ [0.5ex] \hline
 
     \footnotesize $\text{SSM}~$\Zprime~$ (500)$    &\scriptsize  PYTHIA8       &\scriptsize 14.73    &\scriptsize 5.75100      \\             
-    \footnotesize $\text{SSM}~$\Zprime~$ (750)$    &\scriptsize  PYTHIA8       &\scriptsize 22.89    &\scriptsize 1.23600      \\    
+%     \footnotesize $\text{SSM}~$\Zprime~$ (750)$    &\scriptsize  PYTHIA8       &\scriptsize 22.89    &\scriptsize 1.23600      \\    
     \footnotesize $\text{SSM}~$\Zprime~$ (1000)$   &\scriptsize  PYTHIA8       &\scriptsize 30.97    &\scriptsize 0.38650     \\  
-    \footnotesize $\text{SSM}~$\Zprime~$ (1250)$   &\scriptsize  PYTHIA8       &\scriptsize 39.02    &\scriptsize 0.14900      \\
+%     \footnotesize $\text{SSM}~$\Zprime~$ (1250)$   &\scriptsize  PYTHIA8       &\scriptsize 39.02    &\scriptsize 0.14900      \\
     \footnotesize $\text{SSM}~$\Zprime~$ (1500)$   &\scriptsize  PYTHIA8       &\scriptsize 47.05    &\scriptsize 0.06479    \\
     \footnotesize $\text{SSM}~$\Zprime~$ (1750)$   &\scriptsize  PYTHIA8       &\scriptsize 55.07    &\scriptsize 0.03104    \\
     \footnotesize $\text{SSM}~$\Zprime~$ (2000)$   &\scriptsize  PYTHIA8       &\scriptsize 63.10    &\scriptsize 0.01583    \\
     \footnotesize $\text{SSM}~$\Zprime~$ (2500)$   &\scriptsize  PYTHIA8       &\scriptsize 79.16    &\scriptsize 0.00468   \\
     \footnotesize $\text{SSM}~$\Zprime~$ (3000)$   &\scriptsize  PYTHIA8       &\scriptsize 95.24    &\scriptsize 0.00159   \\
     \footnotesize $\text{SSM}~$\Zprime~$ (3500)$   &\scriptsize  PYTHIA8       &\scriptsize 111.30    &\scriptsize 0.00059  \\
-    \footnotesize $\text{SSM}~$\Zprime~$ (4000)$   &\scriptsize  PYTHIA8       &\scriptsize 127.50    &\scriptsize 0.00024  \\
+%     \footnotesize $\text{SSM}~$\Zprime~$ (4000)$   &\scriptsize  PYTHIA8       &\scriptsize 127.50    &\scriptsize 0.00024  \\
   \hline                                                                                                                                                                                                                                                         
   \hline                                                                                                                                                                                                                                                         
   \end{tabular}                                                                                                                                                                                                                                                  
@@ -404,13 +406,13 @@ which is the dominant SM contamination of the \Zprimetotauh~sample. \\
 is reconstructed using the \textit{newDMF} discriminator. We used 1or3-prongs selection
 since it represents 95$\%$ of the hadronic tau decays; additionally,
 the unphysical 2-prong decay mode was not included, since it produced
-a decrease on the sensitivity of the analysis (Appendix \ref{Results:TauID-nprongs}). 
+a decrease on the sensitivity of the analysis (Appendix \ref{chap:TauIDStudies}). 
 Figure \ref{ntracks} shows the n-prongs for the leading $\tau$ after all tau requirements.
 On the other hand, the selection of the \textit{newDMF} discriminator was motivated by the agreement between 
 the data and the level of background extracted from a control region dominated by the Drell-Yan;
 this control region, used to validate the background simulation samples, will be described in
 see Section \ref{subsec:DY}. The comparison with the other discriminator (\textit{oldDMF}) is 
-presented  in Appendix \ref{chap:TauIDStudies}.  \textbf{\textcolor{red}{Revisar Numeros de los Apendices}}\\
+presented  in Appendix \ref{chap:TauIDStudies}.  \\
 
 \noindent Taus are required to have a transverse momentum greater than 70 \GeV~for two reasons:
 first, this high \pt~cut allows to reduce the QCD-contamination, which is expected 
@@ -479,9 +481,9 @@ analysis, is summarized in Table \ref{tab:tauID}.\\
 \begin{table}[H]
     \begin{center}
     \begin{tabular}{l|l} \hline \hline 
- \pt                    &  $>$  70 GeV \\
+ \pt                    &  $>$  70 \GeV \\
  $|\eta|$               &  $<$ 2.1 \\
- TauDecay               & \textit{1or3-prongs} \\
+ Tau Decay               & \textit{1or3-prongs} \\
                         & \textit{newDMF} \\
  Isolation Disc.        & \textit{byTightIsolationMVArun2v1DBnewDMwLT} \\
  Anti-electron Disc.    & \textit{againstElectronMVALooseMVA6} \\
@@ -570,8 +572,8 @@ after requiring the tau identification criteria and the \MET~cut.\\
  \end{figure}
 
  \noindent Since both taus coming from the \Zprime~decay are expected to be back-to-back
- in the transverse plane, the cos $\Delta \phi (\tau_{1},\tau_{2}) < -0.95$ cut is required in 
- the events. Figure \ref{cosDphi} shows the cos $\Delta \phi (\tau_{1},\tau_{2})$ distribution after applying
+ in the transverse plane, the $\cos\Delta \phi (\tau_{1},\tau_{2}) < -0.95$ cut is required in 
+ the events. Figure \ref{cosDphi} shows the $\cos\Delta \phi (\tau_{1},\tau_{2})$ distribution after applying
  the tau identification, the \MET, and the b-jet veto cuts. Since the production of the 
  two taus is uncorrelated for the QCD and W+Jets backgrounds, this requirement
  reduces those backgrounds by 58$\%$ and 24$\%$, respectively, while 
@@ -587,7 +589,7 @@ after requiring the tau identification criteria and the \MET~cut.\\
  \includegraphics[clip,width=0.43\textwidth]{figuras/Chapter5/TauID_Plots/EventSelection_cosDphi.pdf}
  \includegraphics[clip,width=0.43\textwidth]{figuras/Chapter5/TauID_Plots/EventSelection_cosDphi_log.pdf}
  \end{center}
- \caption{cos $\Delta \phi (\tau_{1},\tau_{2})$ distribution, normalized to unity, in linear (left) and log (right) scale, after requiring
+ \caption{$\cos\Delta \phi (\tau_{1},\tau_{2})$ distribution, normalized to unity, in linear (left) and log (right) scale, after requiring
  the tau identification, \MET, and b-jet veto criteria. QCD was estimated via data-driven method (see Section \ref{subsec:QCD}).}
  \label{cosDphi}
  \end{figure}
@@ -599,20 +601,20 @@ after requiring the tau identification criteria and the \MET~cut.\\
  there is a strong correlation between the \METv~and the direction of the visible 
  decay products of the tau; in the case of the QCD and W+jets backgrounds, there is 
  not such correlation, since the jet faking the tau signature is produced 
- in a random direction. Consequently, the cos $\Delta \phi (\tau_{lead},\not\!\!E_T) <$ -0.9 cut is 
+ in a random direction. Consequently, the $\cos\Delta \phi (\tau_{lead},\not\!\!E_T) <$ -0.9 cut is 
  required in order to reduce the background contamination of processes such as 
  QCD and W+Jets (67$\%$ and 59$\%$, respectively), while keeping 86$\%$ of the 
- signal events. Figure \ref{cosDphiTauMET} shows the cos $\Delta \phi (\tau_{lead},\not\!\!E_T)$
+ signal events. Figure \ref{cosDphiTauMET} shows the $\cos\Delta \phi (\tau_{lead},\not\!\!E_T)$
  distribution after applying the requirements mentioned above (tau identification, \MET, b-jet veto
- and cos $\Delta \phi (\tau_{1},\tau_{2})$ cuts). In previous analyses, other cuts have 
+ and $\cos\Delta \phi (\tau_{1},\tau_{2})$ cuts). In previous analyses, other cuts have 
  been applied, in order to consider the strong correlation for the signal events between the \METv~and the 
  direction of the visible decay products of the tau, such as the so-called 
  p$_{\zeta}$-cut, which was used for the previous version of this analysis
  using 2015 data \cite{CMSZprimetotautau2015}. For the 2016 data, the highest sensitivity
- is reached with the cos $\Delta \phi (\tau_{lead},\not\!\!E_T) <$ -0.9 requirement. The 
- study of the sensitivity reached for different cuts is described in Appendix \ref{EventSelection}.
+ is reached with the $\cos\Delta \phi (\tau_{lead},\not\!\!E_T) <$ -0.9 requirement. The 
+ study of the sensitivity reached for different cuts is described in Appendix \ref{chap:EventSelection}.
     
-%   that the cos $\Delta \phi (\tau_{lead},\not\!\!E_T) <$ -0.9 cut
+%   that the $\cos\Delta \phi (\tau_{lead},\not\!\!E_T) <$ -0.9 cut
 %  is the most sensitive one compared with 
 %  
 %  
@@ -625,7 +627,7 @@ after requiring the tau identification criteria and the \MET~cut.\\
  \includegraphics[clip,width=0.43\textwidth]{figuras/Chapter5/TauID_Plots/EventSelection_cosDphiTauMET.pdf}
  \includegraphics[clip,width=0.43\textwidth]{figuras/Chapter5/TauID_Plots/EventSelection_cosDphiTauMET_log.pdf}
  \end{center}
- \caption{cos $\Delta \phi (\tau_{lead},\not\!\!E_T)$ distribution, normalized to unity, in linear (left) and log (right) scale, after requiring
+ \caption{$\cos\Delta \phi (\tau_{lead},\not\!\!E_T)$ distribution, normalized to unity, in linear (left) and log (right) scale, after requiring
  the tau identification, \MET, and b-jet veto criteria. QCD was estimated via data-driven method (see Section \ref{subsec:QCD}).}
  \label{cosDphiTauMET}
  \end{figure}
@@ -641,7 +643,7 @@ in the previous sections allow to maintain a high selection efficiency
 for signal events, providing a strong background suppression, while 
 keeping a reduced influence of systematic effects. The final selection 
 criteria used in this analysis, known as signal region, is presented in 
-Table \ref{tab:tauID}.\\
+Table \ref{tab:signalRegion}.\\
 
 \noindent The relative efficiency, as well as the cumulative efficiency
 of each topological cut, for the signal and the backgrounds,
@@ -654,7 +656,7 @@ $t\bar{t}$, W+Jets and DiBoson processes to negligible levels.\\
  \begin{tabular}{l|l} \hline \hline 
  \pt                          &  $>$  70 \GeV \\
  $|\eta|$                     &  $<$ 2.1 \\
- TauDecay                     & \textit{1or3-prongs} \\
+ Tau Decay                     & \textit{1or3-prongs} \\
                               & \textit{newDMF} \\
  Isolation Disc.              & \textit{byTightIsolationMVArun2v1DBnewDMwLT} \\
  Anti-electron Disc.          & \textit{againstElectronMVALooseMVA6} \\
@@ -663,12 +665,12 @@ $t\bar{t}$, W+Jets and DiBoson processes to negligible levels.\\
  $\#$ b-jets (CSVv2 Loose WP) & $= 0$ \\
  $Ch_{\tau_{1}} \times Ch_{\tau_{2}} $ & $<$ 0 \\
  \DRt                         & $>$ 0.3  \\
- cos $\Delta \phi (\tau_{1},\tau_{2})$ & $<$ -0.95  \\
- cos $\Delta \phi (\tau_{lead},\not\!\!E_T)$ & $<$ -0.90 \\ \hline \hline 
+ $\cos\Delta \phi (\tau_{1},\tau_{2})$ & $<$ -0.95  \\
+ $\cos\Delta \phi (\tau_{lead},\not\!\!E_T)$ & $<$ -0.90 \\ \hline \hline 
   \end{tabular}
-  \caption{Signal Region}
+  \caption{Signal Region} \label{tab:signalRegion}
   }
-  \label{tab:signalRegion}
+  
 \end{table}
 
 \begin{table}[H]
@@ -684,8 +686,8 @@ TauID 1         &  0.9       &	 0.5029                 &     0.03  &	0.03046    
 TauID 2         &  0.5       &   0.0023                 &     0.73  &	0.00022           &	0.07  &	0.000017      &	    0.18   &	    0.00071    &    0.69   &      0.0021     &	14.5   &     6.3   \\
 \MET~cut        & 47.3       &	 0.0011                 &    61.79  &	0.00014           &    72.79  &	0.000012      &    83.66   &	    0.00059    &   75.76   &	  0.0016     &	93.8   &     5.9   \\
 b-jet veto      & 88.0       &   0.0009                 &    83.78  &   0.00011	          &    90.57  &	0.000011      &    23.27   &        0.00014    &   78.07   &      0.0012     &  90.0   &     5.3   \\
-cos $\Delta \phi(\tau_{1},\tau_{2})$    & 24.7 & 0.0002 &    38.92  &	0.00004	          &    40.41  &	0.000004      &	   34.88   &	    0.00005    &   23.20   &      0.0003     &	81.5   &     4.3   \\
-cos $\Delta \phi(\tau_{lead},\not\!\!E_T)$ & 33.1 & 0.0001 &    51.73  &	0.00002           &    40.56  &	0.000002      &	   34.38   &	    0.00002    &   41.11   & 	  0.0001     &	86.4   &     3.7   \\ \hline \hline
+$\cos\Delta \phi(\tau_{1},\tau_{2})$    & 24.7 & 0.0002 &    38.92  &	0.00004	          &    40.41  &	0.000004      &	   34.88   &	    0.00005    &   23.20   &      0.0003     &	81.5   &     4.3   \\
+$\cos\Delta \phi(\tau_{lead},\not\!\!E_T)$ & 33.1 & 0.0001 &    51.73  &	0.00002           &    40.56  &	0.000002      &	   34.38   &	    0.00002    &   41.11   & 	  0.0001     &	86.4   &     3.7   \\ \hline \hline
  
  \end{tabular}
 %
@@ -728,8 +730,8 @@ as the MC samples used.
  \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/NminusOne_QCD_MC/noCosDphiTauMET_QCD_MC.pdf}}
  \end{center}
  \caption{Distribution of variables after all requirements for the signal region, with the exception of the
-one plotted: \MET~(top left), number of b-jets (top right), cos $\Delta \phi (\tau_{1},\tau_{2})$ (bottom left), 
-cos $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right). The QCD estimation was performed using the MC samples listed in Table \ref{tab:mc_samples}.}
+one plotted: \MET~(top left), number of b-jets (top right), $\cos\Delta \phi (\tau_{1},\tau_{2})$ (bottom left), 
+$\cos\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right). The QCD estimation was performed using the MC samples listed in Table \ref{tab:mc_samples}.}
 \label{nminusone_MC} 
  \end{figure}
  
@@ -745,8 +747,8 @@ cos $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right). The QCD estimation 
  }
  \end{center}
  \caption{Distribution of variables after all requirements for the signal region, with the exception of the
-one plotted: \MET~(top left), number of b-jets (top right), cos $\Delta \phi (\tau_{1},\tau_{2})$ (bottom left), 
-cos $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right). The QCD background has been estimated with 
+one plotted: \MET~(top left), number of b-jets (top right), $\cos\Delta \phi (\tau_{1},\tau_{2})$ (bottom left), 
+$\cos\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right). The QCD background has been estimated with 
 the data-driven method described in section \ref{subsec:QCD}.}
 \label{nminusone} 
  \end{figure}
@@ -762,7 +764,7 @@ the data-driven method described in section \ref{subsec:QCD}.}
 %  \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/NminusOne/noCosDphiTauMET.pdf}}
 %  \end{center}
 %  \caption{Distribution of variables after all requirements for the signal region with exception of
-% one plotted. \MET~(top left), number of b-jets (top right), cos $\Delta \phi (\tau_{1},\tau_{2})$ (bottom left), $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right). 
+% one plotted. \MET~(top left), number of b-jets (top right), $\cos\Delta \phi (\tau_{1},\tau_{2})$ (bottom left), $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right). 
 % QCD background has been estimated with a data-driven method.}
 % \label{nminusone} 
 %  \end{figure}
@@ -922,7 +924,7 @@ can be considered as a constant in the effective mass spectrum.\\
  DY         & 46.88   $\pm$   6.82  & 0.13   $\pm$   0.07 \\ \hline 
  WJets      & 10.75   $\pm$   6.29  & 1.32   $\pm$   0.93 \\ \hline 
  DiBoson    & 0.62   $\pm$   0.40  & 0.15   $\pm$   0.09 \\ \hline 
- TTbar      & 0.56   $\pm$   0.44  & 0.34   $\pm$   0.34 \\ \hline 
+ \ttbar     & 0.56   $\pm$   0.44  & 0.34   $\pm$   0.34 \\ \hline 
  \textbf{nonQCD BKG} & \textbf{ 58.82   $\pm$  9.30}  & \textbf{ 261.00  $\pm$ 16.22} \\ \hline 
  Data - nonQCD & 346.18   $\pm$   22.17  & 259.06   $\pm$   16.19 \\ \hline  \hline
  TOTAL BKG & 405.00   $\pm$   24.04  & 261.00   $\pm$   16.22 \\ \hline  \hline
@@ -971,8 +973,8 @@ implies that the same method can be used to estimate QCD background in the signa
  \begin{center}
  \captionsetup[subfloat]{farskip=0pt,captionskip=0.0cm,labelformat=empty}
  \resizebox{\textwidth}{8.8cm}{
- \includegraphics[clip,width=0.4\textwidth]{figuras/Chapter5/QCD_Estimation/CR_B.pdf}
- \includegraphics[clip,width=0.4\textwidth]{figuras/Chapter5/QCD_Estimation/CR_B_log.pdf}
+ \includegraphics[clip,width=0.45\textwidth]{figuras/Chapter5/QCD_Estimation/CR_B.pdf}
+ \includegraphics[clip,width=0.45\textwidth]{figuras/Chapter5/QCD_Estimation/CR_B_log.pdf}
  }
  \end{center}
  \caption{\mass~distribution in OS tau-pairs with low-\MET~(control region B): Normal scale (left),
@@ -987,40 +989,21 @@ background contamination in the signal region, as well as the yield of
 data and background in the control region C. The QCD background in the signal 
 region is estimated using the same method described above, which consists of taking the \mass~shape
 from the like-signal di-hadronic tau events ($Data^{C} - nonQCD^{C}$) and normalizing
-it using the $OS/LS$ ratio. Table \ref{tab:QCDBGEstimationTable} shows the QCD yield estimated 
-in each control region. The final prediction of this background in the signal region 
+it using the $OS/LS$ ratio. The table also shows the expected signal events in the signal 
+region, as well as the contamination due to the signal in the control region C (1.6$\%$). Table \ref{tab:QCDBGEstimationTable} shows 
+the QCD yield estimated in each control region. The final prediction of this background in the signal region 
 is 382.67 $\pm$ 24.84 (right-most column of the table), where the uncertainty
 is fully statistical. The QCD purity in the signal region, 
 defined as $(Data^{C}-nonQCD^{C})/Data^{C}$, is 85$\%$ for effective 
 masses above 600 \GeV~(see Figure \ref{fig:QCDpurity}), where 
 the signal is expected.\\
 
- \begin{table}[ht] 
- \centering{ 
- \begin{tabular}{ | l | r | r |} \hline \hline 
-   &  \textbf{SR YIELDS}   & \textbf{CR C YIELDS} \\ \hline \hline 
- \textbf{Data}         & $---$    & \textbf{314.00  $\pm$  17.72} \\ \hline 
- DY         & 131.61   $\pm$   8.64  & 14.79   $\pm$   4.65 \\ \hline 
- WJets      & 41.91   $\pm$   5.17  & 11.65   $\pm$   2.73 \\ \hline 
- DiBoson    & 3.73   $\pm$   1.07  & 0.94   $\pm$   0.47 \\ \hline 
- TTbar      & 4.39   $\pm$   1.23  & 1.04   $\pm$   0.60 \\ \hline 
-%  \textbf{ nonQCD BKG } & \textbf{ 181.63   $\pm$  10.20}  & \textbf{ 28.42  $\pm$ 5.45} \\ \hline 
- QCD estimation & 382.67   $\pm$   24.84 & 285.58   $\pm$   18.54 \\ \hline  \hline
- TOTAL BKG & 564.30   $\pm$   10.20  & 314.00   $\pm$   19.32 \\ \hline  \hline
-%  \textcolor{blue}{$R_{OSLS}$} & \multicolumn{2}{|c|}{\textcolor{blue}{1.34     $\pm$   0.09}} \\ \hline 
- \end{tabular} 
- } 
-    \caption{Background yields in signal region and yields in control region C.}
-  \label{tab:signalregion}
- \end{table} 
-
-
-\noindent The other backgrounds in table \ref{tab:signalregion} were estimated from 
+\noindent The other backgrounds in Table \ref{tab:signalregion} were estimated from 
 simulated samples. As was mentioned before, the estimation of Drell-Yan processes, 
 which represents around 23$\%$ of the total background in the signal region,
 is validated using a $Z \rightarrow \tau\tau$ control region (see next section). 
 The remaining processes (W+Jets, \ttbar~and DiBoson), which represent only  
-8$\%$ of the background, are also estimated from simulated samples.\\
+8$\%$ of the background, are also estimated from simulated samples. \\
 
 \noindent Figure \ref{fig:SR_Result} shows the \mass~distribution in the 
 signal region. This distribution represents the most important plot for this analysis, since if a 
@@ -1029,7 +1012,44 @@ mass spectrum, as can be seen in the figure. Then, once the
 background estimation performed is validated (see Section \ref{subsec:Validation}), 
 the signal selection criteria are applied on real data samples and
 any excess in the \mass~distribution over the SM expectation 
-could represent the existence of a \Zprime~boson. \\
+could represent the existence of a \Zprime~boson. 
+% \vspace{-0.1cm}
+
+\begin{tiny}
+  \begin{table}[H] 
+ \centering{ 
+ \begin{tabular}{ | l | r | r |} \hline \hline 
+   &  \textbf{SR YIELDS}   & \textbf{CR C YIELDS} \\ \hline \hline 
+ \textbf{Data}         & $---$    & \textbf{314.00  $\pm$  17.72} \\ \hline 
+ DY           & 131.61   $\pm$   8.64  & 14.79   $\pm$   4.65 \\ \hline 
+ WJets      & 41.91   $\pm$   5.17  & 11.65   $\pm$   2.73 \\ \hline 
+ DiBoson    & 3.73   $\pm$   1.07  & 0.94   $\pm$   0.47 \\ \hline 
+ \ttbar     & 4.39   $\pm$   1.23  & 1.04   $\pm$   0.60 \\ \hline 
+%  \textbf{ nonQCD BKG } & \textbf{ 181.63   $\pm$  10.20}  & \textbf{ 28.42  $\pm$ 5.45} \\ \hline 
+ QCD estimation & 382.67   $\pm$   24.84 & 285.58   $\pm$   18.54 \\ \hline  \hline
+ TOTAL BKG & 564.30   $\pm$   10.20  & 314.00   $\pm$   19.32 \\ \hline  \hline
+ 
+ Z$'$(1500 \GeV)  & 73.83   $\pm$   0.71 & 5.06   $\pm$   0.19 \\ \hline 
+ Z$'$(2000 \GeV)  & 19.55   $\pm$   0.18 & 1.71   $\pm$   0.05 \\ \hline 
+ Z$'$(2500 \GeV)  & 5.60    $\pm$   0.05 & 0.63   $\pm$   0.02 \\ \hline 
+ Z$'$(3000 \GeV)  & 1.91    $\pm$   0.02 & 0.24   $\pm$   0.01 \\ \hline 
+%  Z$'$(3500 \GeV)  & 0.68    $\pm$   0.01 & 0.10   $\pm$   0.00 \\ \hline \hline
+%  \textcolor{blue}{$R_{OSLS}$} & \multicolumn{2}{|c|}{\textcolor{blue}{1.34     $\pm$   0.09}} \\ \hline 
+ \end{tabular} 
+ } 
+    \caption{Signal and background yields in signal region and control region C.}
+  \label{tab:signalregion}
+ \end{table} 
+\end{tiny}
+
+ \begin{figure}[H]
+ \begin{center}
+ \captionsetup[subfloat]{farskip=0pt,captionskip=0.0cm,labelformat=empty}
+ \includegraphics[clip,width=0.45\textwidth]{figuras/Chapter5/QCD_Estimation/QCD_purity.pdf}
+ \end{center}
+  \caption{QCD purity in the mass spectra of the signal region.}
+  \label{fig:QCDpurity}	
+ \end{figure}
 
 \noindent Figure \ref{fig:SignalRegionPlots} shows other distributions obtained 
 after applying the signal selection criteria (where the QCD background 
@@ -1050,14 +1070,6 @@ Total BG    & 261.00 $\pm$ 16.22 & 405.00 $\pm$ 24.04 & 314.00 $\pm$ 19.32 & 564
   \label{tab:QCDBGEstimationTable}
 \end{table}
 
- \begin{figure}[H]
- \begin{center}
- \captionsetup[subfloat]{farskip=0pt,captionskip=0.0cm,labelformat=empty}
- \includegraphics[clip,width=0.55\textwidth]{figuras/Chapter5/QCD_Estimation/QCD_purity.pdf}
- \end{center}
-  \caption{QCD purity in the mass spectra of the signal region.}
-  \label{fig:QCDpurity}	
- \end{figure}
 
 
 
@@ -1066,9 +1078,11 @@ Total BG    & 261.00 $\pm$ 16.22 & 405.00 $\pm$ 24.04 & 314.00 $\pm$ 19.32 & 564
 
  \begin{figure}[H]
  \begin{center}
- \captionsetup[subfloat]{farskip=0pt,captionskip=0.0cm,labelformat=empty}
-   \includegraphics[clip,width=0.45\textwidth]{figuras/Chapter5/QCD_Estimation/Result_SR.pdf}
-  \includegraphics[clip,width=0.45\textwidth]{figuras/Chapter5/QCD_Estimation/Result_SR_log.pdf}
+  \captionsetup[subfloat]{farskip=0pt,captionskip=0.0cm,labelformat=empty}
+%  \resizebox{\textwidth}{!}{
+ \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/QCD_Estimation/Result_SR.pdf}
+  \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/QCD_Estimation/Result_SR_log.pdf}
+%   }
  \end{center}
  \caption{\mass~distribution in signal region using normal scale (left) and log scale (right). QCD 
  background was estimated from like-sign di-hadronic taus events in the 
@@ -1105,7 +1119,7 @@ enriched \Ztotauh~control sample.
 \begin{tabular}{l|l} \hline \hline 
  \pt                          &  $>$  70 \GeV \\
  $|\eta|$                     &  $<$ 2.1 \\
- TauDecay                     & \textit{1or3-prongs} \\
+ Tau Decay                     & \textit{1or3-prongs} \\
                               & \textit{newDMF} \\
  Isolation Disc.              & \textit{byTightIsolationMVArun2v1DBnewDMwLT} \\
  Anti-electron Disc.          & \textit{againstElectronMVALooseMVA6} \\
@@ -1135,7 +1149,7 @@ enriched \Ztotauh~control sample.
  nominal-\MET~sideband, normalized with the $R_{OS/LS}$ ratio. The other backgrounds were estimated 
  directly from simulated samples. The uncertainty is only statistical. The variables plotted are:
  \pt~of the leading tau (top left),  \pt~of the second tau (top right), \MET~(middle left), number of b-jets (middle right), 
- cos $\Delta \phi (\tau_{1},\tau_{2})$ (bottom left) and $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right).}
+ $\cos\Delta \phi (\tau_{1},\tau_{2})$ (bottom left) and $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right).}
 \label{fig:SignalRegionPlots}
  \end{figure}
 
@@ -1157,10 +1171,10 @@ are well modeled by the simulated samples.
 \begin{tabular}{ | l | r |} \hline \hline 
  \multicolumn{2}{|c|}{DY CR Yields} \\ \hline \hline 
  \textbf{Data}         & \textbf{431.00}  $\pm$  \textbf{ 20.76} \\ \hline 
- DY         & 346.24   $\pm$   25.09 \\ \hline 
+ DY           & 346.24   $\pm$   25.09 \\ \hline 
  WJets      & 3.27   $\pm$   1.02 \\ \hline 
  DiBoson    & 17.43   $\pm$   1.39 \\ \hline 
- TTbar      & 1.70   $\pm$   0.77 \\ \hline 
+ \ttbar     & 1.70   $\pm$   0.77 \\ \hline 
  QCD        & 37.90   $\pm$   8.45 \\ \hline 
  \textbf{TOTAL BKG} & \textbf{ 406.54}   $\pm$  \textbf{ 26.54} \\ \hline 
  \textcolor{blue}{Data/MC}         & \textcolor{blue}{1.06}  $\pm$  \textcolor{blue}{ 0.09} \\ \hline 
@@ -1195,7 +1209,7 @@ for background estimation. Then, the validation
 region is defined by:
 
 \begin{itemize}
- \item -0.95 $<$ cos $\Delta \phi (\tau_{1},\tau_{2}) <$ 1.0
+ \item -0.95 $<$ $\cos\Delta \phi (\tau_{1},\tau_{2}) <$ 1.0
  \item \MET~$>$ 30 \GeV
  \item $\Delta \phi (\tau_{lead}, \not\!\!E_T) <$ -0.9
  \item no jets with \pt~greater than 30 \GeV~tagged as b-jets
@@ -1222,28 +1236,7 @@ described in this section.\\
 
 \noindent The official simulated samples, certified by the CMS collaboration, usually 
 are produced at the same time, or before, the data-taking period. Considering 
-that the pileup interactions depend
-
-\begin{figure}[H]
- \begin{center}
- \captionsetup[subfloat]{farskip=0pt,captionskip=0.0cm,labelformat=empty}
- \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/leadtaupt.pdf}
- \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/tau2pt.pdf} \hfill
- \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/MET.pdf}
- \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/Mass.pdf}\hfill
- \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/cosDphi.pdf}
- \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/cosDphiTauMET.pdf} \hfill
- \end{center}
- \caption{Distribution of variables after applying the signal selection criteria but inverting
- the cos $\Delta \phi (\tau_{1},\tau_{2})$ requirement. QCD background was estimated 
- using the data-driven method, while other backgrounds were estimated  directly 
- from simulated samples. The uncertainty is based on statistics. \pt~of the leading tau (top left),
- \pt~of the second tau (top right), \MET~(middle left), \mass~(middle right), 
- cos $\Delta \phi (\tau_{1},\tau_{2})$ (bottom left) and $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right).}
-\label{fig:cosDphiInv}
- \end{figure}
-
-\noindent on the LHC operational conditions, the simulated 
+that the pileup interactions depend on the LHC operational conditions, the simulated 
 samples are generated including the effect of the expected 
 pileup interactions during the data-taking period; however, exactly 
 the LHC operational parameters are not necessarily the same 
@@ -1271,6 +1264,26 @@ obtain $n$ interactions in a data event ($P_{data}(n)$) can be estimated. \\
 w(n) = \frac{P_{data}(n)}{P_{MC}(n)}
 \end{equation}
 
+\begin{figure}[H]
+ \begin{center}
+ \captionsetup[subfloat]{farskip=0pt,captionskip=0.0cm,labelformat=empty}
+ \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/leadtaupt.pdf}
+ \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/tau2pt.pdf} \hfill
+ \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/MET.pdf}
+ \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/Mass.pdf}\hfill
+ \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/cosDphi.pdf}
+ \includegraphics[clip,width=0.46\textwidth]{figuras/Chapter5/Plots_CosDphiInv/cosDphiTauMET.pdf} \hfill
+ \end{center}
+ \caption{Distribution of variables after applying the signal selection criteria but inverting
+ the $\cos\Delta \phi (\tau_{1},\tau_{2})$ requirement. QCD background was estimated 
+ using the data-driven method, while other backgrounds were estimated  directly 
+ from simulated samples. The uncertainty is based on statistics. \pt~of the leading tau (top left),
+ \pt~of the second tau (top right), \MET~(middle left), \mass~(middle right), 
+ $\cos\Delta \phi (\tau_{1},\tau_{2})$ (bottom left) and $\Delta \phi (\tau_{lead}, \not\!\!E_T)$ (bottom right).}
+\label{fig:cosDphiInv}
+ \end{figure}
+
+ 
 \noindent where $P_{MC}(n)$ is the probability to 
 obtain $n$ interactions in the simulated event. The pileup weights 
 were applied using the certified JSON file (minimum bias 
@@ -1314,141 +1327,293 @@ determined accurately. The measured SFs are dependent on the
 transverse momentum of the boson involved in the process. These corrections
 are only applied to the Drell-Yan and the W+Jets simulated samples.
 
+
+
 \section{Systematic Uncertainties}
 \label{sec:Systematics}
 
-In order to confirm or discard the existence of 
-a \Zprime~using the effective mass distribution, it is necessary 
-to consider systematic uncertainties which are caused by both, the 
-finite resolution of the detector in order to measure physical 
-variables such as the luminosity, the energy of the 
-particles, etc., and the modeling of the simulation, for example,
-the theoretical uncertainty on the cross-sections used to normalize
-the MC samples. \\
+In order to confirm or discard the existence of a \Zprime~boson using 
+the effective visible mass distribution, it is necessary 
+to consider systematic uncertainties. These uncertainties can be 
+caused by the finite resolution of the detector and the 
+simulations involved in the analysis. There are two types of 
+systematic uncertainties: the first type is related with the 
+normalization of the distributions, for instance, the uncertainty 
+in the luminosity measurement; while the second type is related 
+the shape of the distributions, for instance, the uncertainties on 
+the measurement of the variables need it to determine 
+the \mass~distribution. \\
 
-\noindent There are two types of systematic uncertainties: the first 
-type affects only the normalization of the distributions, for example 
-the uncertainty on the luminosity measurement, while the 
-second type affects the shape of the distributions, such as the 
-uncertainties on the measurements of variables involved to 
-obtain the \mass~distribution, for example the tau energy. \\
+% simulation 
+% the modeling of the simulation
+% to measure physical variables such as the luminosity, the energy of the 
+% particles, etc., and the modeling of the simulation, for example,
+% the theoretical uncertainty on the cross-sections used to normalize
+% the MC samples
 
 \noindent The different sources of systematic uncertainties considered
-in this analyses are:\\
+in this analyses are:
+
+\begin{itemize}
+ \item Luminosity,
+ \item Tau Identification,
+ \item Tau Trigger,
+ \item Tau Energy Scale,
+ \item b-jet Identification,
+ \item Jet Energy Scale,
+ \item Missing Transverse Energy,
+ \item Parton Distribution Functions,
+ \item bin-by-bin statistical uncertainty.
+ \item Background Estimations.
+\end{itemize}
 
 \textbf{Luminosity}\\
 
-\noindent Since the luminosity is used in order to scale the simulated samples, 
-(backgrounds and signal), the uncertainty on the luminosity 
-measurement must be included. The uncertainty on the integrated
-luminosity is 2.5$\%$, which is measured by the CMS Luminosity
-group \cite{Luminosity}.\\
-
+\noindent Since the luminosity is used to scale the simulated samples
+(backgrounds and signal), the uncertainty on its measurement must be considered. The 
+CMS Luminosity group has assigned a 2.5$\%$ uncertainty on the integrated luminosity of the 
+data collected during 2016 \cite{Luminosity}.\\
+ 
 \textbf{Tau Identification}\\
 
-\noindent This uncertainty depends on the reliability of 
-modeling the hadronic tau identification by the simulation.
-In this analysis, the HPS algorithm was used and its efficiency can 
-be affected by several factors such as: the efficiency
+\noindent This uncertainty is associated to the tau 
+tau identification algorithm. In this analysis, the HPS algorithm 
+was used to identify taus. The efficiency can be 
+affected by several factors such as: the efficiency
 of the track finding algorithm; the efficiency of
-identifying the decay mode; the probability of tracks, that
-come from an underlying event, to fall into the isolation cone;
+identifying the tau decay mode; the probability of tracks associated 
+to the underlying event, falling in the isolation cone; and
 the probability of pions to fall outside the signal cone. The CMS group
 dedicated to study the efficiency and reconstruction of 
 the hadronic tau (Tau Particle Object Group, TauPOG) measured 
 the overall systematic uncertainty and assigned to 
-it a value of 5$\%$ (see Ref. \cite{TauPOG}). In consequence, considering 
-that both taus are 100$\%$ correlated, the overall uncertainty 
-of 10$\%$ was assigned on the simulated samples due 
-to the di-tau identification. However, the TauPOG included an additional
-uncertainty related to the confidence of the high-\pt~taus 
-modeling, which affects the sensitivity of this analysis.
-This is an asymmetric uncertainty assigned per hadronic tau 
-which amounts to $5\%~\cdot~$\pt$~/~$\TeV~and to $-35\%~\cdot$~\pt$~/~$\TeV (see Ref. \cite{TauPOG});
-this results into an uncertainty of 10$\%$ for 
-reconstructed masses of 500 \GeV~and 25$\%$ at 2 \TeV. The uncertainty on the 
-high-\pt~tau identification is determined by applying the \pt~dependent 
-weights, per tau, and extracting varied mass templates, which are included 
-as shape systematics.\\
+it a value of 5$\%$ (see Ref. \cite{TauPOG}). Since in this analysis
+there are two correlated taus in the final state, an overall uncertainty 
+of 10$\%$ was assigned on the simulated samples due to 
+the di-tau identification. The TauPOG included an additional
+uncertainty related to the high-\pt~tau identification efficiency, which 
+affects the sensitivity of this analysis. This is an asymmetric 
+uncertainty assigned per hadronic tau, which depends on its momentum; 
+the uncertainty on the tau identification goes from $-35\%$ up to $5\%$ of 
+the tau momentum (see Ref. \cite{TauPOG}); this result in an uncertainty 
+of the order of 10$\%$ for masses around 500 \GeV~and of the order of 25$\%$ 
+for masses around 2 \TeV. The uncertainty on the high-\pt~tau identification 
+affects the shape of the \mass~distribution; this is determined by 
+applying the \pt~dependent weights, per tau, and extracting 
+varied mass templates, which are included as shape systematics.\\
 
 \textbf{Tau Trigger}\\
 
-\noindent A normalization uncertainty is applied to account the modeling
-of the trigger selection using the weights described in 
-Section \ref{subsec:TriggerEff}, which were determined, per hadronic tau,
-using the tag-and-probe method. Due to the inefficiency
-observed for taus whose \pt~is greater than 70 \GeV, 
-an systematic uncertainty of 5$\%$ is assigned, per 
-hadronic tau, on the trigger efficiency. The overall trigger 
-uncertainty is 10$\%$ considering both taus are fully 
-correlated, i.e., if the trigger uncertainty per tau is 5$\%$, then the total uncertainty 
-for the di-tau final state is 10$\%$ (2 $\cdot$ 5$\%$). \\
+\noindent Another source of uncertainty comes from the modeling
+of the tau trigger at simulation level (see 
+Section \ref{subsec:TriggerEff}). In order to model 
+the trigger for each hadronic tau, weights were 
+calculated using the tag-and-probe method. Due to the inefficiency observed for taus 
+whose \pt~is greater than 70 \GeV, a systematic uncertainty of 5$\%$ is assigned per 
+hadronic tau. The overall trigger uncertainty, when considering both taus, is 10$\%$.\\
 
-\vspace{1.0cm}
+% are fully 
+% correlated, i.e., if the trigger uncertainty per tau is 5$\%$, then the total uncertainty 
+% for the di-tau final state is 10$\%$ (2 $\cdot$ 5$\%$). \\
 
 \textbf{The Tau Energy Scale}\\
 
-\noindent The tau energy scale, defined as the ratio between the reconstructed tau energy
-and the tau energy (of the visible decay products) at generated level, represents the 
-detector response to the hadronic tau. Due to 
-the nature of the tau lepton, it is not possible to reconstruct its 
-4-momentum fully and, therefore, only a fraction of its energy can be measured 
-from its visible decay products. The precise measurement of the 4-momentum of the tau decay 
+\noindent The tau energy scale is calculated, using
+simulated data, as the ratio between the energy of the reconstructed tau
+and the energy of the visible decay products of the generated tau.
+It represents the detector response to the hadronic tau. The precise 
+measurement of the 4-momentum of the tau decay 
 components is important for this analysis since the effective visible mass is computed from them
-and from the missing transverse energy. However, there are systematic uncertainties
-inherent to the experimental tau identification that must be considered 
-in the final result of this analysis. One of the uncertainties comes from 
-the uncertainty to measure the tracks and the energy clusters of 
-the tau decay products; the other uncertainty comes from the fact that it 
-is not possible to known whether all the tau visible decay products
-were included in the tau reconstruction, for example neutral pions which fall 
-outside the signal cone. Studies performed by the TauPOG conclude that 
+and from the missing transverse energy. There are systematic uncertainties 
+inherent to the experimental identification of taus, that must be considered 
+in the final result of the analysis. There are two sources of uncertainty: 
+the first one comes from the measurement of energy clusters and 
+the track reconstruction of the individual tau decay products; the second one 
+comes from the fact that it is not possible to know whether all the tau visible 
+decay products were included or not (for example, neutral pions which 
+can fall outside the signal cone). Studies performed by the TauPOG conclude that 
 no corrections must be applied on the tau energy measurement and that 
-an overall tau energy scale uncertainty of 3$\%$, which is correlated among the 
-tau decay modes, must be applied \cite{TauPOG}. This uncertainty is included 
-as a shape uncertainty since the \mass~distribution depends on the tau energy.\\
+an overall tau energy scale uncertainty of 3$\%$, independently of the
+tau decay mode, must be applied \cite{TauPOG}. This systematic effect
+results in a 3$\%$ uncertainty in the signal yield and up to $\sim$11$\%$
+in the background yields.\\
+
+% This uncertainty is included 
+%  as a shape uncertainty since the \mass~distribution depends on the tau energy.\\
 
 \textbf{b-jet Identification}\\
 
+\noindent Another source of uncertainty comes from the b-tagging
+b-tagging identification algorithm used in this analysis. A 30$\%$ uncertainty on the 
+b-jet mis-tagging rate was measured by the CMS b-tagging group (see Ref. \cite{bjetID}). Since in this
+analysis there was a b-jet veto, this uncertainty must be taken into account. This was done 
+using the equation:
 
-AN nuestro
-We consider a 30% uncertainty on the mis-tag rate as mea-
-sured by the b-tagging POG \cite{bjetID}. 
+\begin{equation}
+\epsilon^{N\ b-tag \ < \ 1} = 1 - \sum_{n = 1} P(n) \cdot \sum_{m=1}^{n} \cdot C(n,m) \cdot f^{m} \cdot (1-f)^{n-m} \; , 
+\end{equation}
 
-
-For the case of our signal, the systematic uncer-
-tainty on the requirement of 0 jets mis-tagged as b-jets is determined by propagating
-the 30% uncertainty on the mis-tag rate through the following equation (which rep-
-resents the signal efficiency for requiring 0 jets mis-tagged as b-Jets):
-where P ( n ) is the probability to obtain n additional jets (non-tau and non-lepton) in
-the event, C ( n, m ) the combinatorial of n choose m, and f the mis-tag rate. The prob-
-ability to obtain at least one additional jet in the event is ∼ 10%. Therefore, based on
-the above equation, the mis-tag rate and uncertainty, and the probability to obtain at
-least one additional jet we calculate a systematic effect of ∼ 5% on our signal due to
-the mis-tag rate. The b-tagging/mis-tagging systematics are considered 100% cor-
-related across MC based backgrounds with similar composition (e.g. W + jets and
-DY + jets where there are typically no real b-jets), but completely uncorrelated to
-backgrounds that have different composition (e.g. tt̄ vs. DY + jets).
-
-Higgs 2016
-The uncertainties for the b-tagging and its corrections are derived following pre-defined
-procedures within the CMS collaboration \cite{bjetID}. Two dedicated uncertainties are derived
-accounting for the contribution of jets originating from bottom quarks not identified as
-b-tagged jet and other jets originating from other partons misidentified as b-tagged jets.
-This correction has a very minor effect on the spectrum of the total transverse mass and
-hence is taken into account as an normalisation uncertainty.
-
-
-
+\noindent where the second term on the right side represents 
+the efficiency of identifying at least one b-jet in the event, $n$ is the number 
+of jets, $P(n)$ is the probability to obtain $n$ jets in a event, $f$ is the 
+probability that a jet can be misidentified as a b-jet and $C(n,m)$ are
+the combinatorial factors. The systematic uncertainty due to the b-jet veto 
+requirement was estimated, using the equation, considering the misidentification rate at the 
+Loose CSVv2 working point (measured by the CMS b-tagging group) together with
+the probability to obtain at least one b-jet in an event ($\sim$10$\%$). The resulting 
+uncertainty is $\sim5\%$ on the signal samples is $\sim5\%$. The same uncertainty is 
+assigned to the background samples where b-jets are not expected in the event, such as Drell-Yan 
+and DiBoson samples. For backgrounds such as W+Jets, where at least one 
+real jet is expected, and \ttbar, where b-jets are expected, this uncertainty is 10$\%$. \\
+% 
+% This correction has a very minor effect on the spectrum of the total transverse mass and
+% hence is taken into account as an normalization uncertainty.
 
 \textbf{Jet Energy Scale}\\
 
-\textbf{pdf}\\
+\noindent The jet reconstruction and, in consequence, its energy measurement have many 
+sources of uncertainties such as the non-linear calorimeter response, the pileup 
+interactions, the underling event, the electronic noise, etc. Therefore,
+corrections are applied on the jet reconstruction, known as Jet Energy 
+Corrections (JEC), to account for all these effects, allowing
+an improved match between the MC predictions and the data (see section \ref{sec:Jet}). The 
+Jet  Energy Scale (JES) corrections are part of the JEC. As recommended by 
+the CMS JetMET POG, a 3$\%$ or 5$\%$ uncertainty (depending on 
+the $\eta$ and \pt~of the jet) must be included in order to take into account
+these systematic effects \cite{JetMETPOG}. This uncertainty makes the 
+signal and MC based backgrounds fluctuate up to $\sim$12$\%$. \\
 
-\textbf{bin-by-bin statistical uncertainty}\\
+\textbf{Missing Transverse Energy}\\
 
-\textbf{Closure and Normalization}\\
+\noindent Since the \MET~is inferred from the 4-momenta of all the 
+reconstructed final states in the event, its systematic 
+uncertainty depends on the topology of the signal process.
+The uncertainty due to the \MET~on the signal 
+acceptance depends mainly on the tau energy scale (TES),
+the jet energy scale (JES) and the unclustered energy (UCE). The 
+uncertainty on the UCE is 10$\%$, as recommended by the 
+CMS JetMET POG. Considering the uncertainties coming from UCE, TES and JES, one 
+gets a systematic uncertainty of 0.5$\%$ due to the \MET~on the 
+simulated background yields.\\
 
-% \textbf{}\\
+\textbf{Parton Distribution Functions}\\
+
+\noindent Another source of systematic uncertainty on the MC samples comes from the imprecise
+knowledge of the parton distribution functions (PDF) used in the event simulation. These
+uncertainties were estimated following the Run II recommendations given by the LHC 
+group dedicated to study the PDFs \cite{PDFUncertainty}. These uncertainties
+were estimated with the 68$\%$ confidence level using the ``PDF4LHC15\_mc'' sets
+of PDFs. As a result, the PDF uncertainties for the MC samples used in this 
+analysis are smaller than their bin-by-bin statistical uncertainties and, therefore,
+they are negligible for the MC background samples. In the case of the 
+signal, the PDF uncertainties varies from 0.7$\%$ for the \Zprime~sample with a mass 
+of 500 \GeV~up to 12$\%$ for the \Zprime~sample with a mass of 3 \TeV. \\
+
+ \textbf{bin-by-bin statistical uncertainty}\\
+ 
+ \noindent The finite statistics of the simulated samples
+ must be included as an additional uncertainty. With this purpose, 
+ a per-bin uncertainty is estimated by changing the yield of given bin, within 
+ its statistical uncertainty, while keeping the yields of the other bins unchanged, and 
+ evaluating its effect on the shape of the \mass~distribution.\\
+ 
+%  This uncertainty is known as bin-by-bin statistical uncertainty.
+
+ \textbf{Background Estimations}\\
+
+\noindent As described in section \ref{subsec:QCD}, the QCD background contamination
+was estimated using a data-driven method. Since, in order to estimate and subtract
+this background, simulated samples are used, the systematic effects on the MC samples mentioned 
+above must be considered. With this purpose, these uncertainties are propagated 
+throughout the subtraction.\\
+
+% in order to compute the uncertainty on the QCD background prediction
+% 
+% estimate the QCD background in 
+% 
+% the background simulated samples were subtracted from the data n order 
+% the control regions, the systematic effects on the MC samples, mentioned 
+% above, must be considered to compute the systematic uncertainty on the QCD 
+% background prediction;  
+
+\noindent Besides, a systematic uncertainty is assigned on the QCD estimation due to 
+the measurement of the $OS/LS$ transfer factor used to derive the contamination 
+of this background in the signal region. Since the measured $OS/LS$ ratio 
+is 1.34 $\pm$ 0.12, a relative uncertainty of 9$\%$ is considered on 
+the QCD background estimation. In the case of the Drell-Yan 
+background, an uncertainty of 8$\%$ is assigned due to the effect of the 
+ratio between the data and the expected background measured in the Drell-Yan 
+control region (see section \ref{subsec:DY}). In the case of the diBoson background, it is
+not possible to obtain a semi-clean enriched sample using the di-hadronic final state, due to the high 
+QCD contamination; therefore, this sample was defined using the 
+\Zprimetoemu~channel. As a result, the data$/$MC scale factor obtained 
+was 1.01 $\pm$ 0.20 and, consequently, a 20$\%$ systematic uncertainty was assigned
+on diBoson background \cite{ZaixingThesis}. These systematic uncertainties,
+due to the measurement of data$/$MC scale factors or the measurement of 
+transfer factors, are known as closure and normalization uncertainties. In the case of 
+W+Jets and \ttbar~backgrounds, these sources of uncertainty are not considered since 
+no scale factors nor transfer factors were used for their estimation. \\
+
+\textbf{Summary of the applied systematic uncertainties}\\
+
+\noindent Table \ref{table:SystematicsTable} shows the values of systematic
+uncertainties considered for the signal and backgrounds used in this analysis. The most 
+important source of systematic uncertainty is the high-\pt~tau identification which, as 
+mentioned above, corresponds to 25$\%$ uncertainty in the case of a reconstructed 
+effective visible mass of 2 \TeV, affecting considerably the sensitivity of the search.
+
+\begin{table}[ht]
+\begin{center}
+ \begin{tabular}{|l|c|c|c|c|c|c|} \hline \hline                                                                                                                                         
+ Source                           &  QCD &  DY  & W+Jets & \ttbar &  DiBoson  & Signal \\                 
+   \hline Lumi                    & --   &   L  &    L   &    L   &   L  &   L    \\                                                                       
+   \hline $\tau_{h}$ Trig         & --   &  10  &   10   &   10   &  10  &  10    \\                                                                       
+   \hline $\tau_{h}$ ID           & --   &  10  &   10   &   10   &  10  &  10    \\
+   \hline high-\pt~$\tau_{h}$ ID  & --   &   s  &    s   &    s   &   s  &   s    \\                                                                       
+   \hline TES                     & --   &  11  &   11   &   11   &   8  &   3    \\                                                                       
+   \hline b ID                    & --   &   5  &   10   &   10   &   5  &   5    \\                                                                       
+   \hline JES                     & --   &   8  &   12   &   12   &   8  &   2    \\                                                                        
+   \hline pdf                     & --   &  --  &   --   &   --   &  --  & (1-12) \\                                                                       
+   \hline bin-by-bin stat.        & s    &   s  &    s   &    s   &   s  &   s    \\                                                                       
+   \hline Closure+Norm.           & 9    &   8  &   --   &   --   &  20  &        \\                                                                       
+   \hline \hline                                                                                                                                                                        
+ \end{tabular}                                                                                                                                                                           
+ \caption{Summary of systematic uncertainties. Values are given in                                                                                                                      
+   percent.  ``s'' indicates template variations (``shape''                                                                                                                             
+   uncertainties). $\rm L=2.5\%$.}                                                                                                                                                      
+ \label{table:SystematicsTable}                                                                                                                                                         
+ \end{center}
+\end{table} 
+
+\section{Summary}
+\label{Summary}
+
+All the features involved in the search for \Zprime~bosons in the di-hadronic tau final 
+channel were presented in this chapter. The trigger selection for two-hadronic taus events
+was described in section \ref{sec:TriggerSelection}. The data collected by the CMS experiment 
+from the pp collisions at \sqrts~13 \TeV, delivered by the LHC during 2016, along with
+the simulated samples used for this search, were presented in section \ref{sec:Samples}. The event selection 
+carried out to optimize the signal selection and to reduce any background 
+contribution, minimizing the systematic uncertainties, was outlined in 
+section \ref{sec:EventSelection}. The background estimation in the signal region (Section \ref{sec:BackgroundEstimation}), 
+considering the corrections on the simulated samples, was performed and was validated using the 
+N-1 distributions (section \ref{subsec:ValidationSignalSelections}) and the inverted 
+$\cos \Delta\phi(\tau_{h},\tau_{h})$ control region (section \ref{subsec:Validation}). Finally, all the systematic
+uncertainties that affect the signal and background estimations are listed in section \ref{sec:Systematics}.
+As a result, the estimations of the backgrounds and of the expected signal are 
+reliable (Table \ref{tab:signalregion}) and, therefore, any excess observed in the 
+\mass~distribution (Figure \ref{fig:SR_Result}), with real data, would represent an evidence of 
+the existence of a \Zprime~boson. In the next chapter, the complete analysis, 
+assuming the nonexistence of a \Zprime~boson is presented and exclusion limits are estimated.
+
+
+% the search perform with the 2016 data
+% is presented. 
+% presented the performed statistical analysis,
+% assuming the nonexistence of a \Zprime~boson and, consequently, exclusion limits 
+% are estimated considering the involved systematic uncertainties. Additional to the final 
+% results, conclusions on the search for \Zprime~bosons in the di-hadronic tau final state
+% using 2016 data are presented in the following chapter.
+% 
 
 

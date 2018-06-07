@@ -23,10 +23,10 @@ the missing transverse energy reconstruction is also important for
 this search since the taus decay into tau neutrinos.\\
 
 \noindent This Chapter is organized as follows: first, a description of the PF algorithm is 
-presented in section \ref{sec:PF}; the electron and muon reconstruction are described in
+presented in section \ref{sec:PF}; the muon and electron reconstruction are described in
 sections \ref{sec:Muon}, and \ref{sec:Electron}; then, the jet and b-jet 
-reconstruction is presented in sections \ref{sec:Jet} and \ref{sec:bJet}; the missing 
-transverse energy reconstruction is presented in section  \ref{sec:MET}; ; finally, the tau reconstruction 
+reconstruction are presented in sections \ref{sec:Jet} and \ref{sec:bJet}; the missing 
+transverse energy reconstruction is presented in section  \ref{sec:MET}; finally, the tau reconstruction 
 and identification are presented in detail in section \ref{sec:RecoTau}.\\
 
 
@@ -61,7 +61,7 @@ for global event reconstruction. The high granularity of the inner tracker
 and of the ECAL, the hermeticity of the HCAL, the high performance of the muon
 system, and the strong magnetic field allow the PF algorithm to identify individual 
 particles, reaching a high performance reconstruction even for charged particles 
-with very low momentum (of the order of 100 MeV). The main advantage of using the PF 
+with very low momentum (of the order of 100 \MeV). The main advantage of using the PF 
 technique, instead of traditional event reconstruction methods, is the excellent 
 performance of the jet reconstruction. Alternative methods perform the jet 
 reconstruction using only the energy deposits on the calorimeter system, while 
@@ -93,7 +93,7 @@ tau-leptons \cite{PFAlgorithm}.\\
 provided by the inner tracker and the muon system, as will be described 
 in section \ref{sec:Muon}; the electron reconstruction is performed 
 combining the track information and the energy deposits in the 
-ECAL (see section \ref{sec:Electron}); charged hadrons are identified linking 
+ECAL (see Section \ref{sec:Electron}); charged hadrons are identified linking 
 their tracks with their energy deposits on the Calorimeter System; finally, the 
  particles, like the photons and the neutral hadrons, are reconstructed from the 
 information provided by the calorimeter system.
@@ -129,7 +129,7 @@ tracks associated to a small number of hits. Each iteration can be summarized in
  \item Tracks are seeded using 2 or 3 hits, giving rise to the initial track candidates and their initial trajectory parameters.
  \item The track parameters are recalculated using the Kalman filter algorithm \cite{KalmanAlgorithm} to 
        account for the energy loss and the multiple Coulomb scattering produced by the interaction of the 
-       charged particle and the tracker material. The Kalmar filter performs an extrapolation outwards of 
+       charged particle and the tracker material. The Kalman filter performs an extrapolation outwards of 
        the inner tracker layers with the purpose to find additional hits associated to the track 
        and to estimate the track parameters with more precision.
  \item An accurate information of the trajectory is obtained applying a fit on the track.
@@ -179,11 +179,11 @@ of estimating the vertex parameters, in particular its position. The primary ver
 as the vertex with the higher sum of $\textrm{p}_{\textrm{T}}^{2}$ of the clusters of tracks.\\
 
 \noindent The resolution of the primary vertex depends on the number of tracks associated to it. Figure \ref{fig:RecoVertex} 
-shows the resolution of the x and z positions for the primary vertex reconstruction, using minimum vias 
-samples\footnote{Minimum vias samples pass a suit of triggers and minimum requirements on hit 
+shows the resolution of the x and z positions for the primary vertex reconstruction, using minimum-bias 
+samples\footnote{Minimum-bias events pass a suit of triggers and minimum requirements on hit 
 or track multiplicity.} and jet-enriched data samples \cite{TrackAndVertexReconstruction}. The resolution 
 of the x position is less than 20 $\mu$m and of the z position is less than 25 $\mu$m, for the 
-minimum vias samples, while for jet-enriched samples are less than 10 $\mu$m and less than 
+minimum-bias samples, while for jet-enriched samples are less than 10 $\mu$m and less than 
 12 $\mu$m, respectively. Figure \ref{fig:RecoVertex} (c) shows
 the efficiency of primary-vertex reconstruction as a function of the number of tracks. 
 
@@ -192,10 +192,10 @@ the efficiency of primary-vertex reconstruction as a function of the number of t
     \includegraphics[width=0.3\textwidth]{figuras/Chapter3/RecoVertex_x_resolution.png}
     \includegraphics[width=0.3\textwidth]{figuras/Chapter3/RecoVertex_y_resolution.png}
     \includegraphics[width=0.3\textwidth]{figuras/Chapter3/Effciiency_vertex_resolution.png}
-    \caption{Resolution of the x and z positions for primary vertex reconstruction, using a) minimum vias samples and b) jet-enriched samples. 
-    The resolution is improved using jet-enriched samples, since in these sample the \pt~mean is larger than minimum vias samples.  
-    For the primary vertex reconstruction efficiency shown in c), minimum vias MC samples were used. These results were estimated 
-    with pp collisions with a \centermassenergy~of 7 TeV. Figures were taken from \cite{TrackAndVertexReconstruction}.}
+    \caption{Resolution of the x and z positions for primary vertex reconstruction, using a) minimum-bias samples and b) jet-enriched samples. 
+    The resolution is improved using jet-enriched samples, since in these sample the \pt~mean is larger than minimum-bias samples.  
+    For the primary vertex reconstruction efficiency shown in c), minimum-bias MC samples were used. These results were estimated 
+    with pp collisions with a \centermassenergy~of 7 \TeV. Figures were taken from \cite{TrackAndVertexReconstruction}.}
     \label{fig:RecoVertex}
   \end{center}
 \end{figure}
@@ -319,7 +319,7 @@ three different approaches:
  Tracker System information. 
  \item \textbf{Tracker muon reconstruction (inside-out)}. In this approach, the muon reconstruction 
  starts from the tracker tracks, with \pt~$>$ 0.5 \GeV, and 
- with a total momentum higher than 2.5 GeV; these tracks are considered as 
+ with a total momentum higher than 2.5 \GeV; these tracks are considered as 
  possible muon candidates and, consequently, they are extrapolated towards 
  the Muon Chambers. In order to match a tracker track with a standalone-muon 
  track, additional information is taken into account, such as the magnetic field,
@@ -328,7 +328,7 @@ three different approaches:
  A segment refers to the fit among the hits reconstructed in only one Muon Chamber (DT or CSC).} 
  is associated with the tracker track, the match is 
  classified as \textit{Tracker Muon}. The tracker muon reconstruction is especially
- important for low-\pt~muons (\pt~$>$ 5 \GeV and \pt~$<$ 200 \GeV) due 
+ important for low-\pt~muons (\pt~$>$ 5 \GeV~and \pt~$<$ 200 \GeV) due 
  to its high efficiency (since it requires only one muon-segment), 
  and to its high energy resolution in this kinematic range. 
  % reduces the hadron-to-muon misidentification rate.   
@@ -414,7 +414,7 @@ was mentioned above. It starts selecting the seed crystal\footnote{The seed crys
 the higher collected energy in a defined region.} and then, it looks 
 progressively for crystals, in both $\phi$ directions, that exceed a threshold 
 energy. These crystals are grouped, resulting in the so called \textit{supercluster} (SC). In the 
-case of the ``multi-5$\times$5'' algorithm, since the endcap cristals are not arranged in 
+case of the ``multi-5$\times$5'' algorithm, since the endcap crystals are not arranged in 
 a $\eta-\phi$ geometry, a crystal is selected based on the high energy deposit and an 
 arrange of 5$\times$5 crystals centered on it are selected. The cluster reconstruction is complemented 
 with the PF algorithm, adding the contiguous crystals to the seed, whose 
@@ -462,12 +462,11 @@ track-cluster matches, the SC geometrical structure, the $f_{brem}$ fraction, am
 Different working points are defined according to the desired reconstruction efficiency for 
 each analysis (see Table \ref{eIDtable}). In order to reduce the electron-to-tau 
 misidentification rate, the 90$\%$ efficiency working point of the MVA 
-electron ID is selected for this analysis.
+electron ID is selected for this analysis.\\
 
 \begin{table}[ht]                                                                                                                              
 \begin{center}
- \caption{Electron ID Selections.\label{eIDtable}}
- \begin{tabular}{| l | c | c | }
+  \begin{tabular}{| l | c | c | }
  \hline\hline
        Category                             & MVA$_{\textrm{min cut}}$ (80\% signal eff)    & MVA$_{\textrm{min cut}}$ (90\% signal eff)  \\ \hline 
        Barrel ($\eta < 0.8$) $p_{T}>10$     & 0.941                                         & 0.837                     \\
@@ -476,6 +475,7 @@ electron ID is selected for this analysis.
  \hline
  \hline
  \end{tabular}
+ \caption{Electron ID Selections.\label{eIDtable}}
 \end{center}
 \end{table}
 
@@ -504,7 +504,7 @@ $\Delta R <$ 0.4.
 well defined color charge and, due to the confinement of the strong 
 interaction, they can not exist as free particles; instead, they 
 will follow a process of fragmentation and combination with quarks and gluons from the vacuum to form 
-colourless bound states called hadrons; this process is known as hadronization. The hadronization will 
+colorless bound states called hadrons; this process is known as hadronization. The hadronization will 
 give rise to showers of particles, which propagate in a similar direction forming a cone; this set 
 of particles is known as a jet (see Figure \ref{fig:JetScketch}). The aim of a jet reconstruction 
 algorithm is to determinate the energy and the direction of the initial parton. The PF technique 
@@ -544,14 +544,14 @@ sequential algorithms assume fluctuations on the jet area, where the boundaries 
 defined with a fixed maximum radius. The main features of these algorithms are:
 
 \begin{itemize}
- \item \textbf{SISCone} algorithm: checks all the particles in the event in order to 
+ \item \textbf{SISCone algorithm}: checks all the particles in the event in order to 
  identify stable combinations that are coherent with a jet. This algorithm explores randomly the $\eta-\phi$ plane
  using a circle, with a well defined area, until a particle matches with the circumference; then, the circumference
  is pivoted until a second particle comes in contact with it. The matches define the stable cones. The particles
  associated to an stable cone are removed from the list of particles of the event and the procedure is performed again 
  until no more stable cones are found. Finally, the stable cones are split or merged, according to an overlap parameter, in order to 
  reconstruct the jets \cite{ICRJet}. 
- 
+ \vspace{0.3cm}
  
  \item \textbf{kT-algorithm}: estimates the following distance variables for all pair of particles ($i,j$):
 \begin{equation} \label{eq:kt}  
@@ -568,8 +568,8 @@ proceeds by finding the minimum distances $d_{ij}$ and $d_{iB}$; if $d_{ij}$ is 
 of particles $i,j$ are recombined adding their four-momenta; if $d_{iB}$ is a minimum, the algorithm
 identify the particle $i$ as a jet. The distances are recalculated iteratively until all particles are  %%%OJO 
 part of the jet \cite{ktalgorithm, ICRJet}. 
- 
-\item \textbf{Cambridge-Aachen} algorithm: proceed similar to the kT algorithm, but defining 
+ \vspace{0.3cm}
+\item \textbf{Cambridge-Aachen algorithm}: proceed similar to the kT algorithm, but defining 
  the variable distances:
 
  \begin{equation}   \label{eq:Cambridge-Aachen}
@@ -582,7 +582,7 @@ part of the jet \cite{ktalgorithm, ICRJet}.
 be clearly defined and UE and PU processes will be included in the jet reconstruction. In spite of 
 that disadvantage, this algorithm is commonly used since it allows to determine the 
 jet compositeness \cite{Cambrigdealgorithm}.
- 
+ \vspace{0.3cm}
  \item \textbf{anti-kT algorithm}: defines the following distance variables for all particles pairs ($i,j$):
 
  \begin{equation}   \label{eq:antikt}
@@ -637,7 +637,7 @@ due to detector response and experimental effects, the
 reconstructed PF jet four-momentum does not correspond to the one
 at parton or hadron level, in consequence, corrections must be applied
 to the jet energy. These corrections are known as 
-\textit{Jet Energy corrections} (JEC). Different levels of JEC 
+\textit{Jet Energy corrections} (JEC) \cite{JECpileup,JESandJER}. Different levels of JEC 
 (see Figure \ref{fig:JEC_levels}) are applied in a fixed sequence: \\
 
 \begin{figure}[ht]%[!Hhtbp]
@@ -673,36 +673,15 @@ and $\gamma /$Z+jets samples for \pt~part.
  from light quarks have higher momentum particles than the ones coming from gluons \cite{JecJet}. 
 \end{itemize}
 
-DECIR ALGUNA COSA DE CMS RECONSTRUCTION.
+% \textbf{\textcolor{red}{DECIR ALGUNA COSA DE CMS RECONSTRUCTION.}}
 
-%An efficiency larger than 80% is obtained for jets with a p T > 20 GeV/c. The 100% plateau is reached above
-%40 GeV/c, at which point the mismatched jet rate is negligible
-
-%In this analysis, Jets are required to have $p_T >$ 30 GeV and $|\eta| <$ 2.4.
-%For the identification of jets the loose ID working point is used in this analysis.
-%Table 4 shows the selection criteria used for the recommended loose ID, which are validated in other studies~\cite{CMS-PAS-FSQ-12-035}.
-%The jet reconstruction and ID efficiency in simulation is $>$98\%. Table 4 does not include the most recent requirements
-%for $2.7 < \eta < 3$ since the jet ID in this analysis is used only in the context of those jets which will also be considered for b-tagging
-%(i.e. b-tagging only considers jets with $\eta < 2.4$).
-
-%\begin{table}[ht]
-%\begin{center}
-% \caption{Loose Jet-ID Selections.\label{tab:jetId}}
-% \begin{tabular}{|cc|}
-% \hline\hline
-%       Selection                        & Cut        \\[0.5ex] \hline
-%       Neutral Hadron Fraction          & $<0.99$      \\
-%       Neutral EM Fraction              & $<0.99$      \\
-%       Number of Constituents           & $> 1$        \\
-%       And for $\eta < 2.4$ , $\eta > -2.4$ in addition apply &\\
-%       Charged Hadron Fraction          & $> 0$   \\
-%       Charged Multiplicity             & $> 0$   \\
-%       Charged EM Fraction              & $<0.99$ \\
-% \hline
-% \hline
-% \end{tabular}
-%\end{center}
-%\end{table}
+\noindent The jet reconstruction is important for this analysis, since jets are taken 
+as an input in order to reconstruct the hadronic tau decay. In this work, the jet 
+reconstruction is performed with the anti-kT algorithm, using the distance 
+parameter $\Delta R(\phi,\eta) =$ 0.4. Jets are required 
+to have \pt~$>$ 30 \GeV~ and $|\eta| <$ 2.4. For the jet identification, the 
+the loose ID working point is used, which has a reconstruction efficiency in simulation greater than 98$\%$. The 
+jet energy corrections recommended by the CMS collaboration were applied \cite{JetPOG}.
 
 \section{b-jet Identification}
 \label{sec:bJet}
@@ -771,7 +750,7 @@ efficiency of 83$\%$, is used in this analysis.
     \includegraphics[width=0.6\textwidth]{figuras/Chapter3/bjet_performance_algos.pdf}
     \caption{Efficiency of non-b jets to be misidentified as b-jet, as a function of the b-jet efficiency 
 	     for several jet-identification algorithms. An enriched $t\bar{t}$ sample with 2.6 fb$^{-1}$ 
-	     from the data collected in 2015 at $\sqrt{s}=13$ TeV and a BX of 25 ns. Although cMVAv2 algorithm 
+	     from the data collected in 2015 at $\sqrt{s}=13$ \TeV~and a BX of 25 ns. Although cMVAv2 algorithm 
              shows the best performance, the CSVv2 algorithm is used for many analysis and shows 
              an improvement compared with the CSV algorithm used in Run I. Figure taken from \cite{bjetWP}}
     \label{fig:bjetRun1vsRun2}
@@ -810,7 +789,7 @@ magnitude is known as missing transverse energy (MET or \MET):
 \noindent Similar to the case of the jet reconstruction, the missing transverse momentum
 can be overestimated due to experimental effects such 
 as the pileup and the non-linearity and non-uniformity of the detector response to 
-hadrons (see section \ref{sec:Jet}). With the purpose to address this overestimation, 
+hadrons (see Section \ref{sec:Jet}). With the purpose to address this overestimation, 
 three kinds of corrections can be applied to the \METv~measurement:
 
 \begin{itemize}
@@ -836,29 +815,31 @@ three kinds of corrections can be applied to the \METv~measurement:
 \end{itemize}
 
 \noindent The ``type-I'' correction to \METv~is widely preferred by CMS analyses. For Run II, 
-the ``type-I'' correction requires jets with \pt~greater than 15 GeV (including JEC) whose  
+the ``type-I'' correction requires jets with \pt~greater than 15 \GeV~(including JEC) whose  
 energy fraction deposited in the ECAL is less than 0.9 \cite{METPerformance2}. \\
 
 \noindent The performance of \MET  ~reconstruction is estimated from Z bosons
 in di-lepton events. The \MET~resolution is dominated by the hadron activity 
 in the event since the leptons have high momentum resolution, which varies 
-from 1-6$\%$ for muons, 1-4$\%$ for eletrons$/$photons and 5-15$\%$ for 
+from 1-6$\%$ for muons, 1-4$\%$ for electrons$/$photons and 5-15$\%$ for 
 jets. Figure \ref{fig:MetPerfomance} shows a very good agreement between data and 
 simulated events for the \MET~distribution in the $Z\rightarrow \mu^{-}\mu^{+}$ 
-and $Z\rightarrow e^{-}e^{+}$ channels \cite{METPerformance2}.
+and $Z\rightarrow e^{-}e^{+}$ channels \cite{METPerformance2}.\\
  
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[width=0.43\textwidth]{figuras/Chapter3/METPerformancemumu.pdf}
     \includegraphics[width=0.43\textwidth]{figuras/Chapter3/METPerformanceee.pdf}
     \caption{\MET~distribution for $Z\rightarrow \mu^{-}\mu^{+}$ (left) and $Z\rightarrow e^{-}e^{+}$ (right). Data comes 
-    from pp collisions at \sqrts 13 TeV collected by CMS detector during 2016 (integrated luminosity up to 12.9 fb$^{-1}$).
+    from pp collisions at \sqrts 13 \TeV~ collected by CMS detector during 2016 (integrated luminosity up to 12.9 fb$^{-1}$).
     Figure taken from \cite{METPerformance2}.}
     \label{fig:MetPerfomance}
   \end{center}
 \end{figure} 
 
-PARRAFITO PARA TERMINAR. IN ESTE ANALYSIS SE USA TAL COSA Y TAL CORRECTION.
+\noindent In this analysis, the ``type-I'' correction to \METv~is applied. In order to reject 
+any anomalous event with high-\MET, the filters recommended by the CMS Collaboration
+were applied \cite{METPOG}. 
 
 \section{Tau Reconstruction and Identification}
 \label{sec:RecoTau}
@@ -911,7 +892,7 @@ algorithm has two stages:
 \begin{center}
 \begin{tabular}{|l|c|c|c|}
   \hline \hline 
-  Final State                                            &  Braching Fraction [$\%$] &  Resonance & Mass [GeV]   \\ \hline\hline
+  Final State                                            &  Branching Fraction [$\%$] &  Resonance & Mass [\GeV]   \\ \hline\hline
    $e^{-}\bar{\nu}_{e}\nu_{\tau}$                        & 17.8                    &            &   \\ \hline
    $\mu^{-}\bar{\nu}_{\mu}\nu_{\tau}$                    & 17.4                    &            &   \\ \hline \hline 
    $h^{-}\nu_{\tau}$                                     & 11.5                    &            &   \\ \hline
@@ -933,13 +914,13 @@ algorithm has two stages:
   \hline
 \end{tabular}
 \end{center}
-\caption{Branching fraction of $\tau^{-}$ modes\cite{PDG}.}\label{tab:taumodescomplete}
+ \caption{Branching fraction of $\tau^{-}$ modes \cite{bib:PDG}.}\label{tab:taumodescomplete}
 \end{table}
 
 
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{figuras/Chapter3/taudecays2.png}
+    \includegraphics[width=0.53\textwidth]{figuras/Chapter3/taudecays2.png}
     \caption{Schematic view of the $\pi^{-}\pi^{0}\nu_{\tau}$ final state, which represents the 57$\%$ of all hadronic tau decays.}
     \label{fig:taudecays2}
   \end{center}
@@ -974,7 +955,7 @@ developed based on these considerations (see Figure \ref{fig:StripReco}). \\
 
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{figuras/Chapter3/StripReco.png}
+    \includegraphics[width=0.53\textwidth]{figuras/Chapter3/StripReco.png}
     \caption{Representation of strip size definition during Run I and Run II.}
     \label{fig:StripReco}
   \end{center}
@@ -1027,7 +1008,7 @@ parameter, $d_{xy}$, is less than 0.1 cm. The \pt~requirement on the hadrons ens
 the selection of high quality tracks, which have a reconstruction efficiency 
 of $\sim$95$\%$, and have passed previous requirements, such as the number of reconstructed 
 hits on the Tracker System and the $\chi^{2}$ of the fit 
-(see section \ref{subsec:TrackReco}). The criterion on the transverse impact
+(see Section \ref{subsec:TrackReco}). The criterion on the transverse impact
 parameter reduces the background contamination coming from PU and spurious tracks; however, such 
 criterion is not so restrictive in order to avoid any rejection of high-\pt~taus, which
 would have a long lifetime. 
@@ -1050,21 +1031,29 @@ in order to reconstruct the tau candidate:
 \begin{enumerate}
  \item A mass criterion is applied since the tau candidate mass ($m_{\tau}$) must be consistent with the 
  mass of either of the resonances, $\rho$ or $a_{1}$. The mass is optimized for each decay mode
-in order to increase the reconstruction efficiency; the requirements are \textcolor{red}{REFERENCIA}:
+in order to increase the reconstruction efficiency; the requirements are \cite{CMS-PAS-TAU-16-002}:
 \begin{itemize}
- \item a mass window of 0.3 \GeV~$-~\Delta m_{\tau} < m_{\tau} < 1.3$ \GeV~$\cdot \sqrt{\textrm{p}_{\textrm{T}} (\textrm{GeV})} + \Delta m_{\tau}$ 
+\item a mass window of 
+$(0.3~\textrm{GeV}-\Delta m_{\tau}) < m_{\tau} < (1.3~\textrm{GeV}\cdot\sqrt{\textrm{p}_{\textrm{T}} (\textrm{GeV})} + \Delta m_{\tau})$
  for the h$^{\pm}$\picero~decay mode. The mass upper limit is constrained further to be between 1.3 to 4.2 \GeV;
- \item a mass window of 0.4 \GeV~$-~\Delta m_{\tau} < m_{\tau} < 1.2$ \GeV~$\cdot \sqrt{\textrm{p}_{\textrm{T}} (\textrm{GeV})} + \Delta m_{\tau}$
+ \item a mass window of 
+ $(0.4~\textrm{GeV}-\Delta m_{\tau}) < m_{\tau} < (1.2~\textrm{GeV}\cdot\sqrt{\textrm{p}_{\textrm{T}} (\textrm{GeV})} + \Delta m_{\tau})$
+%  0.4 \GeV$-\Delta m_{\tau} < m_{\tau} < 1.2$ \GeV~$\cdot \sqrt{\textrm{p}_{\textrm{T}} (\textrm{GeV})} + \Delta m_{\tau}$
  for the h$^{\pm}$\picero\picero~ decay mode. The mass upper limit is constrained further to be between 1.2 to 4.0 \GeV;
- \item a mass window of 0.3 \GeV~$ < m_{\tau} <$ 1.3 \GeV~$\cdot \sqrt{\textrm{p}_{\textrm{T}} (\textrm{GeV})}$ 
- for the h$^{\pm}$h$^{\mp}$h$^{\pm}$ decay mode. The mass upper limit is constrained further to be between 1.3 to 4.2 \GeV. 
-\end{itemize}
+ \item a mass window of
+ $0.3~\textrm{GeV} < m_{\tau} < 1.3~\textrm{GeV}\cdot\sqrt{\textrm{p}_{\textrm{T}} (\textrm{GeV})}$ 
+%  0.3 \GeV$< m_{\tau} <$ 1.3 \GeV~$\cdot \sqrt{\textrm{p}_{\textrm{T}} (\textrm{GeV})}$ 
+ for the h$^{\pm}$h$^{\mp}$h$^{\pm}$ decay mode. The mass upper limit is constrained further to be between 1.3 to 4.2 \GeV. \\
+
+ 
+ 
+ \end{itemize}
 \noindent where $\Delta m_{\tau}$ corresponds to the mass change due to the addition of $e/\gamma$ candidates 
 to the strip reconstruction. 
  \item The electric charge of the tau candidate must be $\pm$ 1, otherwise they will be rejected.
  \item The tau decay products must lie within the signal cone. The signal cone is centered in the 
  direction of the tau momentum, which initially is assumed as the direction of the hadron with highest momentum, and it 
- has a radius of $R_{sig}=3.0 / \textrm{p}_{\textrm{T}} (\GeV)$, where 
+ has a radius of $R_{sig}=3.0 / \textrm{p}_{\textrm{T}} (\textrm{GeV})$, where 
  \pt~corresponds to the sum of the charged hadrons momenta. The lower and upper limits on $R_{sig}$ are
  0.05 and 0.1, respectively.
 \end{enumerate}
@@ -1126,8 +1115,8 @@ are described.
 \label{subsubsec:IsoDiscriminators}
 
 The purpose of the tau isolation discriminator is to reduce the background contribution
-from QCD jets. Since the QCD jet energy is carried out by charged hadrons ($\sim 65 \%$), photons 
-from $\pi^{0}$ decays ($\sim 15 \%$) and neutral hadrons ($\sim 20 \%$) \cite{CMS-PAS-PFT-10-001},
+from QCD jets. Since the QCD jet energy is carried out by charged hadrons ($\sim65\%$), photons 
+from $\pi^{0}$ decays ($\sim15\%$) and neutral hadrons ($\sim20\%$) \cite{CMS-PAS-PFT-10-001},
 their signatures are similar to those produced by the hadronic tau decay modes; besides, QCD 
 jets have a cross section around eight orders of magnitude larger, making the discrimination
 against jets crucial for the \tauh~identification. The isolation discriminator
@@ -1147,7 +1136,7 @@ is centered in the \tauh~direction (see Figure \ref{fig:taucone}). \\
 
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{figuras/Chapter3/taucone}
+    \includegraphics[width=0.48\textwidth]{figuras/Chapter3/taucone}
     \caption{Cone definition for tau  isolation discriminator.}
     \label{fig:taucone}
   \end{center}
@@ -1181,17 +1170,18 @@ requirements on the production vertex of the charged hadrons ($d_{z}$):
 \noindent The loose, medium and tight working points (WP) for the 
 isolation-sum discriminant are defined requiring $I_{\tau}$ to be 
 less than 2.5 \GeV, 1.5 \GeV, and 0.8 \GeV, 
-respectively \cite{CMS-PAS-TAU-16-002}. Figure \ref{fig:IsoPerformance} shows 
+respectively \cite{CMS-PAS-TAU-16-002}. Figure \ref{fig:IsoSumPerformance} shows 
 a comparison of the isolation-sum discriminators' performance for 
 the previous and the current versions of the HPS algorithm. As was 
 mentioned in the previous section, the main difference between them is
 the size used for the strip reconstruction, which was fixed for 
 Run I, while for Run II it depends on the \pt~of the electrons and photons
-(dynamic strip reconstruction). The dynamic strip reconstruction
+(dynamic-strip reconstruction). The dynamic-strip reconstruction
 allows to include the photons (coming from the tau decay products)
 that might lie outside of the signal cone, reducing the 
-jet $\rightarrow$~\tauh~misidentification rate (see Figure \ref{fig:IsoPerformance}). In order to
-compare the performance of the working points (Figure \ref{fig:IsoPerformance}), MC signal 
+jet $\rightarrow$~\tauh~misidentification rate (see Figure \ref{fig:IsoSumPerformance}). In order to
+% compare the performance of the working points (Figure \ref{fig:IsoPerformance}), MC signal
+compare the performance of the working points, MC signal 
 samples corresponding to $H \rightarrow \tau\tau$ and \Zprimetotautau~events were used, while 
 MC background samples corresponding to QCD multijet processes were used. This study 
 was performed using pp collisions at \sqrts 13 \TeV. For the current version of the HPS algorithm,
@@ -1206,14 +1196,14 @@ of $\sim$60$\%$, and the QCD jet rejection rate is  $\sim$99.7$\%$.\\
     efficiency, evaluated using $H \rightarrow \tau\tau$ (left) and \Zprimetotautau~(right), 
     and multijet MC samples. Four configurations of the reconstruction and 
     isolation method are compared (three of them for strip reconstruction using a 
-    fixed  size, and the remaining one, for the dynamic strip reconstruction). The three points 
+    fixed  size, and the remaining one, for the dynamic-strip reconstruction). The three points 
     on each curve correspond to, from left to right, the tight, medium, and loose WPs. The
     misidentification probability is calculated relative to jets that pass minimal \tauh~reconstruction
-    requirements. For the current version of the HPS algorithm (dynamic strip reconstruction) the 
+    requirements. For the current version of the HPS algorithm (dynamic-strip reconstruction) the 
     tight isolation discriminator shows a better tau identification efficiency and a 
     lower misidentification rate. Taken from \cite{CMS-PAS-TAU-16-002}.
     }
-    \label{fig:IsoPerformance}
+    \label{fig:IsoSumPerformance}
   \end{center}
 \end{figure} 
 
@@ -1253,13 +1243,13 @@ signal, and QCD multijet MC samples for the background.
     \includegraphics[width=0.4\textwidth]{figuras/Chapter3/MVAIsoPerformanceHiggs}
     \includegraphics[width=0.4\textwidth]{figuras/Chapter3/MVAIsoPerformanceZprime}
     \caption{Misidentification probability as a function of \tauh~identification 
-    efficiency, evaluated using $H \rightarrow \tau\tau$ and QCD MC samples (left), and \Zprime~(2 TeV) 
+    efficiency, evaluated using $H \rightarrow \tau\tau$ and QCD MC samples (left), and \Zprime~(2 \TeV) 
     and QCD MC samples (right). The MVA-based discriminators are compared to 
     that of the isolation sum discriminators. The points correspond to working points 
     of the discriminators. The three working points of the isolation-sum discriminator 
     are Loose, Medium, and Tight working point. The six working points of the MVA-based 
     discriminators are Very Loose, Loose, Medium, Tight, Very Tight, and Very Very
-    Tight working point, respectivey. The misidentification probability is calculated with respect
+    Tight working point, respectively. The misidentification probability is calculated with respect
     to jets, which pass minimal $\tau$~reconstruction requirements. Taken from \cite{CMS-PAS-TAU-16-002}.
     }
     \label{fig:IsoPerformance}
@@ -1317,7 +1307,7 @@ uses the following variables as input:
  charged-hadron track,
  \item the fraction of the tau energy carried by the photons ($\sum E_{\gamma} / E_{\tau}$),
  \item the ratio between the ECAL energy and the inner tracker momentum, $(E_{e}+\sum E_{\gamma})/p_{in}$,
- \item the Bremsstrahlung fraction $f_{brem}$ measured by the GSF (see section \ref{sec:Electron}),
+ \item the Bremsstrahlung fraction $f_{brem}$ measured by the GSF (see Section \ref{sec:Electron}),
  \item the $\chi^{2}/N_{dof}$ of the GSF,
  \item the fraction $(N_{hits}^{\textrm{GSF}}-N_{hits}^{\textrm{KF}})/(N_{hits}^{\textrm{GSF}}+N_{hits}^{\textrm{KF}})$, where
  $N_{hits}^{\textrm{GSF}}$ and $N_{hits}^{\textrm{KF}}$ are the number of hits associated to the track by the GSF and the KF algorithms,
@@ -1325,14 +1315,14 @@ uses the following variables as input:
 \end{itemize}
  
 \noindent The MVA-based against discriminator is trained with the MC samples: 
-$Z/\gamma \rightarrow \tau\tau$, $H \rightarrow \tau\tau$, \Zprimetotautau, and $W^{\prime} 
+$Z/\gamma \rightarrow \tau\tau$, $H~\rightarrow \tau\tau$, \Zprimetotautau, and $W^{\prime}~
 \rightarrow \tau\bar{\nu_{\tau}}$ for the signal, while
-$Z/\gamma \rightarrow ee$, $H \rightarrow ee$, \Zprime$\rightarrow ee$, and $W^{\prime} 
+$Z/\gamma \rightarrow ee$, $H \rightarrow ee$, \Zprime~$\rightarrow ee$, and $W^{\prime}~
 \rightarrow e\bar{\nu_{e}}$ for the background. Five WP are defined according to the 
 tau-reconstruction efficiency. The efficiency and the misidentification rate are uniform over 
 \pt~(see Figure \ref{fig:AgainstElectron}). In this 
 analysis the Loose MVA-based against electron discriminator is used 
-since it keeps a high tau reconstruction efficiency (85$\%$) and a relative 
+since it keeps a high tau reconstruction efficiency ($\sim$83$\%$) and a relative 
 low fake rate ($10 ^{-2}$).
 
  \begin{figure}[ht]
@@ -1374,9 +1364,33 @@ working points have been defined:
 
 \noindent The tau identification efficiency for both WPs is more that 99$\%$ and
 the misidentification probability is 3.5 $\times 10^{-3}$ and 1.4 $\times 10^{-3}$
-for the loose and tight WP, respectively. In this analysis, the tight working point is used.
+for the loose and tight WP, respectively. In this analysis, the tight working point is used.\\
 
-%JER Article
+
+\noindent In summary, in this analysis the hadronic taus are reconstructed using the HPS algorithm,
+requiring 1or3-prongs with the \textit{newDMF} discriminator. The signal cone has 
+a radius of $R_{sig}=3.0 / \textrm{p}_{\textrm{T}} (\textrm{GeV})$ and it is centered in 
+the direction of the tau momentum. Since jets are used as input for 
+the HPS algorithm, its reconstruction is also crucial in this analysis. Jets are reconstructed 
+using anti-kT algorithm (loose WP), with the distance parameter $\Delta R(\phi,\eta) =$ 0.4.
+Jets are required to have \pt~$>$ 30 \GeV~ and $|\eta| <$ 2.4. In order to identify
+the hadronic taus from QCD-jets, the \textit{tight} WP of MVA-based isolation discriminator was 
+ used, reaching a $\sim$60$\%$  of $\tau$~identification efficiency and 
+ a $\sim$99.8$\%$ of rejection rate against QCD jets. The isolation cone has a 
+size of $\Delta R =$ 0.5 and it is centered in the \tauh~direction. Since
+b-jets can be misidentified as a hadronic taus, their identification are also 
+important for the \Zprimetotauh~search. The b-Jets are reconstructed using 
+the \textit{loose} working point of the CSVv2 algorithm, which provides an efficiency of
+83$\%$. In order to discriminate taus from electrons, the \textit{loose} MVA-based discriminator 
+was used, achieving a tau reconstruction efficiency of $\sim$83$\%$ and keeping a misidentification
+ rate of the order of $10 ^{-2}$. The electrons are reconstructed using the 90$\%$ efficiency 
+ working point of the MVA-based electron ID algorithm, with the isolation requirement of $\Delta R <$ 0.4.
+ In order to discriminate taus from muons, the \textit{tight} WP of cutoff-based discriminator was
+ required, which reaches a 99$\%$ of tau reconstruction efficiency and a 1.4 $\times 10^{-3}$ 
+ of misidentification rate. For the muon reconstruction, ``global muons'' with an 
+ isolation cone of $\Delta R <$ 0.4 are required. The \METv~is reconstructed
+ with the PF algorithm, where the “type-I” correction is applied. 
+
 %The jet p T resolutions are determined with both dijet and photon+jet events, as discussed in
 %section 8. The reference resolutions obtained from simulation are parameterized as a function of
 %particle-level jet p T, ptcl (defined in section 2) and average number μ of pileup interactions in bins
